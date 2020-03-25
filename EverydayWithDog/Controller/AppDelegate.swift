@@ -7,16 +7,40 @@
 //
 
 import UIKit
+import Firebase
+import GoogleMaps
+import GooglePlaces
+import FirebaseFirestore
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    //Google Maps API KEY
+//    AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k
+    
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+
+        let db = Firestore.firestore()
+               // [END default_firestore]
+        print(db) // silence warning
+        //下記GoogleMap認証
+        GMSServices.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")
+        GMSPlacesClient.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")
         return true
     }
+    
+    //FBログインに使うことっぽいので保留
+//    func application(_ application: UIApplication,open url: URL, sourceApplication: String?,annotation: Any) -> Bool {
+//        return
+//            UIApplicationDelegate.shar.shard.application(application, open: url, sourceApplication: sourceApplication,annotation: annotation)
+//    }
+//
+//    func applicationDidBecomeActive(_ application: UIApplication) {
+//        AppEvent
+//    }
 
     // MARK: UISceneSession Lifecycle
 
@@ -31,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
 
 
 }
