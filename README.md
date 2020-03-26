@@ -50,7 +50,7 @@ All the data entered in the app is stored in Firebase.
 The data structure is multi-layered. The app reads each document's feed when it's needed.
 
 ## Author
-
+Masaki Sugita
 Twitter: https://twitter.com/mark_1975M
 
 We'll continue to improve it.
