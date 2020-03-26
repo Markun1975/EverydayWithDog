@@ -16,6 +16,12 @@ This app is a dog's life log management app. The prototype is now complete.  In 
 |---|---|
 |![IMG_3613](https://user-images.githubusercontent.com/49276817/77616231-81099600-6f74-11ea-8aaf-907626c6e3b8.gif)|![IMG_3634](https://user-images.githubusercontent.com/49276817/77616468-11e07180-6f75-11ea-84fd-1559a2c95fe3.gif)
 
+- #### Calendar & Data view screen
+
+|Dog List|Log entry screen|
+|---|---|
+|![IMG_3631](https://user-images.githubusercontent.com/49276817/77617101-a4cddb80-6f76-11ea-9d24-0c51073728c4.gif)|![IMG_3633](https://user-images.githubusercontent.com/49276817/77617136-b7e0ab80-6f76-11ea-8773-7e220d1eb2c9.gif)
+
 
 
 ## What can you do?
