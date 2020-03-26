@@ -4,7 +4,7 @@ This app is a dog's life log management app. The prototype is now complete.  In 
 
 ## How to use?(image)
 
-- Login screen
+*Login screen*
 
 |Start Screen|Login Screen|
 |---|---|
