@@ -144,4 +144,21 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
         mapButton.layer.shadowOpacity = 0.3
         view.addSubview(mapButton)
     }
+    
+    
+    
+    func fetchDate(){
+        let selectedDay = UserDefaults.standard.object(forKey: "")
+        
+        
+    }
+class DateFormat {
+    class func dateFromString(string: String, format: String) -> Date {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.date(from: string)!
+    }
+}
+    
 }
