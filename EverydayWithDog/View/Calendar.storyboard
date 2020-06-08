@@ -97,20 +97,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iu5-TX-ISp">
-                                <rect key="frame" x="292" y="437" width="78" height="39"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.24705882352941178" green="0.35686274509803922" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="＋　追加">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapVibration:" destination="u4p-VT-2wz" eventType="touchUpInside" id="hhE-rj-yME"/>
-                                    <segue destination="CbQ-ec-RPH" kind="push" id="vIy-hy-syR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -122,10 +108,17 @@
                         <viewLayoutGuide key="safeArea" id="FhG-nv-lVI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="カレンダー" image="iconfinder_calendar_schedule_62771" id="kyz-wZ-l1w"/>
-                    <navigationItem key="navigationItem" title="カレンダー" id="bpM-Bj-Wal"/>
+                    <navigationItem key="navigationItem" title="カレンダー" id="bpM-Bj-Wal">
+                        <barButtonItem key="rightBarButtonItem" image="plus.circle" catalog="system" id="PGL-Sb-udi">
+                            <connections>
+                                <action selector="tapVibration:" destination="u4p-VT-2wz" id="Vlp-lA-HEo"/>
+                                <segue destination="CbQ-ec-RPH" kind="push" id="97r-ci-hyz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="iu5-TX-ISp" id="aZj-2x-efP"/>
+                        <outlet property="addButton" destination="PGL-Sb-udi" id="iMY-Za-pac"/>
                         <outlet property="calender" destination="52T-HZ-obg" id="fwf-82-O5T"/>
                         <outlet property="dayDate" destination="FhS-7h-5Jg" id="lkP-AP-Foa"/>
                         <outlet property="scheduleTableView" destination="CGn-Um-6ql" id="Olx-WU-hC3"/>
@@ -383,5 +376,6 @@
     </scenes>
     <resources>
         <image name="iconfinder_calendar_schedule_62771" width="40" height="40"/>
+        <image name="plus.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

@@ -80,4 +80,36 @@ class ProfileViewController: UIViewController {
         filariaLabel!.text = filaria!
         memoLabel!.text = memo!
     }
+    
+    @IBAction func dogDeleteMethod(_ sender: Any) {
+        
+        //AlertInstance
+        let dogDeleteAlert: UIAlertController =
+            UIAlertController(title: "削除してよろしいですか？", message: "ワンちゃんの情報を削除します", preferredStyle: UIAlertController.Style.alert)
+        
+        //AlertAction
+        let dogDeleteAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            
+            
+            self.dismiss(animated: true, completion: nil)
+            print("OK")
+        })
+        //CancelAction
+        let dogDeleteCancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+              // ボタンが押された時の処理を書く（クロージャ実装）
+              (action: UIAlertAction!) -> Void in
+            dogDeleteAlert.dismiss(animated: true, completion: nil)
+              print("Cancel")
+          })
+        
+        dogDeleteAlert.addAction(dogDeleteAction)
+        dogDeleteAlert.addAction(dogDeleteCancelAction)
+        
+        present(dogDeleteAlert, animated: true, completion: nil)
+        
+    }
+    
+    
 }

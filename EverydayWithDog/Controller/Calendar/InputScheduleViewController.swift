@@ -13,6 +13,18 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
+class DateFormat {
+    
+    class func deteFormatString(string: String, format: String) -> Date {
+    let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.date(from: string)!
+    }
+}
+    
+
+
 
 class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     
@@ -38,6 +50,8 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     
     let titleColor = CGColor(srgbRed: 81, green: 178, blue: 255, alpha: 100)
     
+    
+    
     let datePicker: UIDatePicker = {
     let datePicker = UIDatePicker()
     //日付ありきか時間のみか
@@ -54,19 +68,21 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.tabBarController?.tabBar.isHidden = true
         textFieldSetup()
         mapButtonSetUp()
         saveButton.layer.cornerRadius = 5
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let selectDay = UserDefaults.standard.object(forKey: "selectedDay") as! String
-        selectedDayLabel.text = selectDay
+        fetchDay()
     }
     
     
@@ -146,19 +162,18 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     }
     
     
-    
-    func fetchDate(){
-        let selectedDay = UserDefaults.standard.object(forKey: "")
+    func fetchDay(){
         
+      let selectDay = UserDefaults.standard.object(forKey: "selectedDay") as! String
+      selectedDayLabel.text = selectDay
+      print(selectDay,"最高！")
+        
+     let dateToPicker = DateFormat.deteFormatString(string: selectDay, format: "yyyy年MM月dd日")
+     datePicker.date = dateToPicker
+     datePicker2.date = dateToPicker
         
     }
-class DateFormat {
-    class func dateFromString(string: String, format: String) -> Date {
-        let formatter: DateFormatter = DateFormatter()
-        formatter.calendar = Calendar(identifier: .gregorian)
-        formatter.dateFormat = format
-        return formatter.date(from: string)!
-    }
-}
     
 }
+
+

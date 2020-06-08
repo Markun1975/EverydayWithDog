@@ -1,10 +1,10 @@
 import UIKit
-import GoogleMaps
+//import GoogleMaps
 import GooglePlaces
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
-    var mapView = GMSMapView()
+//    var mapView = GMSMapView()
     
     
     @IBOutlet var serchView: UIView!
@@ -22,7 +22,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //        setupLocationManager()
         self.navigationController?.navigationBar.isHidden = false
         self.tabBarController?.tabBar.isHidden = true
-        setMap()
+//        setMap()
         infomationWindow()
         requestLoacion()
         
@@ -79,15 +79,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //    }
     
     
-    private func setMap() {
-        let camera = GMSCameraPosition.camera(withLatitude: 35.6812226, longitude: 139.7670594, zoom: 12.0)
-        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: mapView.frame.size.height - 100, width: mapView.frame.size.width, height: mapView.frame.size.height), camera: camera)
-        mapView.isMyLocationEnabled = true
-        view = mapView
-        buttonSetup()
-//        view.addSubview(nawPlaceButton)
-        view.addSubview(serchView)
-    }
+//    private func setMap() {
+//        let camera = GMSCameraPosition.camera(withLatitude: 35.6812226, longitude: 139.7670594, zoom: 12.0)
+//        mapView = GMSMapView.map(withFrame: CGRect(x: 0, y: mapView.frame.size.height - 100, width: mapView.frame.size.width, height: mapView.frame.size.height), camera: camera)
+//        mapView.isMyLocationEnabled = true
+//        view = mapView
+//        buttonSetup()
+////        view.addSubview(nawPlaceButton)
+//        view.addSubview(serchView)
+//    }
     
     private func requestLoacion() {
            // ユーザにアプリ使用中のみ位置情報取得の許可を求めるダイアログを表示
@@ -112,6 +112,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         view.addSubview(nawPlaceButton)
     }
     @IBAction func nawPlace(_ sender: Any) {
-        mapView.isMyLocationEnabled = true
+//        mapView.isMyLocationEnabled = true
     }
 }

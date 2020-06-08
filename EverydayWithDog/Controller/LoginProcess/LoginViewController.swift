@@ -21,7 +21,11 @@ class LoginViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         newLogin.layer.cornerRadius = 27
         loginView.layer.cornerRadius = 27
         setUpAnimation()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     @IBAction func newLoginAction(_ sender: Any) {

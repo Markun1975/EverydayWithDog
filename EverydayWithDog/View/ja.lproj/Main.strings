@@ -1,0 +1,69 @@
+
+/* Class = "UITabBarItem"; title = "今日の体調"; ObjectID = "2Lu-ww-Euv"; */
+"2Lu-ww-Euv.title" = "今日の体調";
+
+/* Class = "UILabel"; text = "新規アカウント作成"; ObjectID = "3rs-JS-NbM"; */
+"3rs-JS-NbM.text" = "新規アカウント作成";
+
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "4DK-Ww-C6g"; */
+"4DK-Ww-C6g.normalTitle" = "ログイン";
+
+/* Class = "UILabel"; text = "愛犬と楽しい毎日を"; ObjectID = "4Io-FU-9ZV"; */
+"4Io-FU-9ZV.text" = "愛犬と楽しい毎日を";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "4Kg-cO-sbs"; */
+"4Kg-cO-sbs.placeholder" = "パスワード";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "5Sv-fH-0a2"; */
+"5Sv-fH-0a2.placeholder" = "メールアドレス";
+
+/* Class = "UIButton"; normalTitle = "登録メールを送る"; ObjectID = "5sG-Hd-QJv"; */
+"5sG-Hd-QJv.normalTitle" = "登録メールを送る";
+
+/* Class = "UIButton"; normalTitle = "新規登録"; ObjectID = "8tJ-pe-16h"; */
+"8tJ-pe-16h.normalTitle" = "新規登録";
+
+/* Class = "UILabel"; text = "メールアドレス"; ObjectID = "MUS-kp-1MH"; */
+"MUS-kp-1MH.text" = "メールアドレス";
+
+/* Class = "UITabBarItem"; title = "データ"; ObjectID = "RY1-bY-qFg"; */
+"RY1-bY-qFg.title" = "データ";
+
+/* Class = "UILabel"; text = "ログインが完了しました！"; ObjectID = "Rll-0m-M3Z"; */
+"Rll-0m-M3Z.text" = "ログインが完了しました！";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "TIl-2V-3eb"; */
+"TIl-2V-3eb.placeholder" = "パスワード";
+
+/* Class = "UIButton"; normalTitle = "メイン画面へ"; ObjectID = "U8N-Ut-T35"; */
+"U8N-Ut-T35.normalTitle" = "メイン画面へ";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "bzA-0M-KEa"; */
+"bzA-0M-KEa.placeholder" = "メールアドレス";
+
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "cTx-fp-z5g"; */
+"cTx-fp-z5g.normalTitle" = "ログイン";
+
+/* Class = "UILabel"; text = "まいにちわんこ"; ObjectID = "mBz-aX-KRS"; */
+"mBz-aX-KRS.text" = "まいにちわんこ";
+
+/* Class = "UILabel"; text = "パスワード"; ObjectID = "nLv-Le-Bx1"; */
+"nLv-Le-Bx1.text" = "パスワード";
+
+/* Class = "UITabBarItem"; title = "リスト"; ObjectID = "qmE-31-52E"; */
+"qmE-31-52E.title" = "リスト";
+
+/* Class = "UITabBarItem"; title = "カレンダー"; ObjectID = "ra5-Co-eSg"; */
+"ra5-Co-eSg.title" = "カレンダー";
+
+/* Class = "UILabel"; text = "アカウントログイン"; ObjectID = "sXv-Ef-fDv"; */
+"sXv-Ef-fDv.text" = "アカウントログイン";
+
+/* Class = "UILabel"; text = "メールアドレス"; ObjectID = "t5I-wR-Fdh"; */
+"t5I-wR-Fdh.text" = "メールアドレス";
+
+/* Class = "UILabel"; text = "パスワード"; ObjectID = "uNg-wD-ffw"; */
+"uNg-wD-ffw.text" = "パスワード";
+
+/* Class = "UITextField"; placeholder = "ユーザーネーム"; ObjectID = "x5d-tZ-fLn"; */
+"x5d-tZ-fLn.placeholder" = "ユーザーネーム";

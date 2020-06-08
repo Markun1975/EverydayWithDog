@@ -1,0 +1,6 @@
+framework module Pods_EverydayWithDog {
+  umbrella header "Pods-EverydayWithDog-umbrella.h"
+
+  export *
+  module * { export * }
+}

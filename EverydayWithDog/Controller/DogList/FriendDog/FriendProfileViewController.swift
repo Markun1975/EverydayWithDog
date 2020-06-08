@@ -59,5 +59,36 @@ override func viewDidLoad() {
         typeLabel!.text = dogType!
         memoLabel!.text = memo!
     }
+    
+    
+    @IBAction func friendDogDeleteMethod(_ sender: Any) {
+        //AlertInstance
+        let friendDogDeleteAlert: UIAlertController =
+            UIAlertController(title: "削除してよろしいですか？", message: "友達の情報を削除します", preferredStyle: UIAlertController.Style.alert)
+        
+        //AlertAction
+        let dogDeleteAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
+            (action: UIAlertAction!) -> Void in
+            
+            
+            
+            self.dismiss(animated: true, completion: nil)
+            print("OK")
+        })
+        //CancelAction
+        let dogDeleteCancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+              // ボタンが押された時の処理を書く（クロージャ実装）
+              (action: UIAlertAction!) -> Void in
+            friendDogDeleteAlert.dismiss(animated: true, completion: nil)
+              print("Cancel")
+          })
+        
+        friendDogDeleteAlert.addAction(dogDeleteAction)
+        friendDogDeleteAlert.addAction(dogDeleteCancelAction)
+        
+        present(friendDogDeleteAlert, animated: true, completion: nil)
+    }
+    
+    
 }
 

@@ -132,6 +132,9 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
                         //読み込みが終わったタイミングですぐにTableViewにリロードして反映
                         self.tableView.reloadData()
                 }
+                let friendDogsCounts =  String(self.aFriendArray.count)
+                print(friendDogsCounts)
+                UserDefaults.standard.set(friendDogsCounts, forKey: "friendDogcounts")
             }
         }
     }

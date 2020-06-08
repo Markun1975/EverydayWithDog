@@ -16,6 +16,8 @@ class DogListViewController: SegementSlideViewController{
     
     var viewnumber: Int = 0
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,6 +27,7 @@ class DogListViewController: SegementSlideViewController{
         //NavigationBar設定
         self.navigationItem.title = "わんこリスト"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: .done, target: self, action: #selector(buttonNavigation))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "設定", style: .done, target: self, action: #selector(settingNavigation))
         
         //ナヴィゲーションバーの犬追加ボタン設定
         NotificationCenter.default.addObserver(
@@ -49,6 +52,10 @@ class DogListViewController: SegementSlideViewController{
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        
+        //セルの数をカウント
+        
     }
     
    @objc func buttonNavigation(){
@@ -58,6 +65,10 @@ class DogListViewController: SegementSlideViewController{
         } else if viewnumber == 1 {
             self.performSegue(withIdentifier: "addFriend", sender: nil)
         }
+    }
+    
+    @objc func settingNavigation(){
+        self.performSegue(withIdentifier: "toSetting", sender: nil)
     }
     
     // 表示されているViewのViewNumberアイテムを取得
