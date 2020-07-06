@@ -18,9 +18,21 @@ class LoginViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newLogin.layer.cornerRadius = 27
-        loginView.layer.cornerRadius = 27
-        setUpAnimation()
+        newLogin.layer.cornerRadius = 23
+        loginView.layer.cornerRadius = 23
+        
+        newLogin.layer.shadowColor = UIColor.black.cgColor
+        newLogin.layer.shadowOffset = CGSize(width: 0, height: 1)
+        newLogin.layer.shadowOpacity = 0.2
+        newLogin.layer.shadowRadius = 1
+        
+        loginView.layer.shadowColor = UIColor.black.cgColor
+        loginView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        loginView.layer.shadowOpacity = 0.1
+        loginView.layer.shadowRadius = 1
+        
+        view.addSubview(newLogin)
+        view.addSubview(loginView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,18 +48,5 @@ class LoginViewController: UIViewController,UIImagePickerControllerDelegate,UINa
     @IBAction func login(_ sender: Any) {
         self.performSegue(withIdentifier: "login", sender: nil)
     }
-    
-    //アニメーション設定
-    func setUpAnimation(){
-         let animationView = AnimationView()
-         let animation = Animation.named("dogAnimation")
-         animationView.frame = CGRect(x: 23, y: 338, width: 329, height: 207)
-         animationView.animation = animation
-         animationView.contentMode = .scaleAspectFit
-         animationView.loopMode = .loop
-         animationView.play()
-        self.view.addSubview(animationView)
-    }
-    
 }
         

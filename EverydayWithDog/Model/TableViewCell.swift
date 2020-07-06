@@ -14,10 +14,17 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet var cellView: UIView!
     
+    @IBOutlet var colorLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellView.layer.cornerRadius = 27
+        cellView.layer.cornerRadius = cellView.bounds.height/21
         cellView.layer.borderWidth = 0.05
+        cellView.layer.shadowColor = UIColor.black.cgColor
+        cellView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cellView.layer.shadowOpacity = 0.5
+        cellView.layer.shadowRadius = 1
+        cellView.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -17,11 +17,37 @@ class confirmViewController: UIViewController {
     
     @IBOutlet var loginButton: UIButton!
     
-    @IBOutlet var lineView: UIView!
+    @IBOutlet var forgotPasswordButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = 22
+        
+        //アドレス入力欄設定
+        mailAddress.layer.cornerRadius = 10
+        mailAddress.layer.borderColor = UIColor.black.cgColor
+        mailAddress.layer.shadowColor = UIColor.black.cgColor
+        mailAddress.layer.shadowOffset = CGSize(width: 0, height: 1)
+        mailAddress.layer.shadowOpacity = 0.2
+        mailAddress.layer.shadowRadius = 1
+        
+
+        //パスワード入力欄設定
+        passWord.layer.cornerRadius = 10
+        passWord.layer.borderColor = UIColor.black.cgColor
+        passWord.layer.shadowColor = UIColor.black.cgColor
+        passWord.layer.shadowOffset = CGSize(width: 0, height: 1)
+        passWord.layer.shadowOpacity = 0.2
+        passWord.layer.shadowRadius = 1
+
+        //ログインボタン設定
+        loginButton.layer.cornerRadius = 23
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        loginButton.layer.shadowOpacity = 0.2
+        loginButton.layer.shadowRadius = 1
+        
+        view.addSubview(loginButton)
     }
     
     @IBAction func loginAction(_ sender: Any) {
@@ -29,7 +55,7 @@ class confirmViewController: UIViewController {
        let password = passWord.text ?? ""
        
        if email == "" || password == "" {
-           displayAlertMessage(userMesage:"全て入力してください")
+           displayAlertMessage(userMessage:"全て入力してください")
            return
        }else {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
@@ -44,6 +70,15 @@ class confirmViewController: UIViewController {
             }
          }
        }
+    }
+    
+    
+    @IBAction func resetPasswordProcessing(_ sender: Any) {
+        let mailText = mailAddress.text
+        if mailText == "" { displayAlertMessage(userMessage:"メールアドレスを入力してください")
+        } else {
+            resetPasswordAlertMessage()
+        }
     }
     
     
@@ -93,13 +128,28 @@ class confirmViewController: UIViewController {
         
         
 
-    func displayAlertMessage(userMesage: String) {
-            let userMessage = ""
+    func displayAlertMessage(userMessage: String) {
+//            let userMessage = ""
             let alert = UIAlertController(title: "確認", message: userMessage, preferredStyle: UIAlertController.Style.alert)
             let okMessage = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(okMessage)
             present(alert,animated: true, completion: nil)
         }
+    
+    func resetPasswordAlertMessage() {
+        let alert = UIAlertController(title: "確認", message: "パスワードの再設定をしますか？", preferredStyle: UIAlertController.Style.alert)
+        let resetMessage = UIAlertAction(title: "再設定", style: UIAlertAction.Style.default)
+        { _ in
+            UserDefaults.standard.set(self.mailAddress.text!, forKey: "emailString")
+            self.performSegue(withIdentifier: "resetPassword", sender: nil)
+        }
+        let calcelMessage = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.default, handler: nil)
+        
+        
+        alert.addAction(calcelMessage)
+        alert.addAction(resetMessage)
+        present(alert,animated: true, completion: nil)
+    }
 
 }
 

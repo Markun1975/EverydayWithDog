@@ -16,6 +16,7 @@ class ScheduleObject {
     var endString: String = ""
     var contentsString: String = ""
     var scheduleDateString: String = ""
+    var selectedColor: String = ""
     
     func saveScheduleObject() {
         print(title)
@@ -23,6 +24,7 @@ class ScheduleObject {
         print(endString)
         print(contentsString)
         print(scheduleDateString)
+        print(selectedColor)
         
     } 
 }

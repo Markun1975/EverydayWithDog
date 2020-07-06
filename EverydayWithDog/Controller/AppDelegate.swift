@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //          var errorMessage = error.message
 //        })
         
+        
         //下記GoogleMap認証
         GMSServices.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")
         GMSPlacesClient.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")

@@ -2,6 +2,8 @@ import UIKit
 //import GoogleMaps
 import GooglePlaces
 
+
+//今後実装予定の機能
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
 //    var mapView = GMSMapView()

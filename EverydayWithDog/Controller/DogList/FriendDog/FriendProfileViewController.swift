@@ -8,10 +8,12 @@
 
 import UIKit
 import SDWebImage
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
 
 class FriendProfileViewController: UIViewController {
-
- @IBOutlet var friendView: UIView!
  
  var profileImageData = UIImage()
  var profile:String! //プロフィール写真
@@ -25,7 +27,8 @@ class FriendProfileViewController: UIViewController {
  
  @IBOutlet var nameLabel: UILabel!
  
- @IBOutlet var sexLabel: UILabel!
+ @IBOutlet var sexIcon: UIImageView!
+    
  
  @IBOutlet var typeLabel: UILabel!
     
@@ -54,8 +57,17 @@ override func viewDidLoad() {
 //        profileIconImage.sd_setImage(with: URL(string: UserDefaults.standard.object(forKey: "imageString") as! String), completed: nil)
         
         profileIconImage!.sd_setImage(with: URL(string: profile!), completed: nil)
+        if sex == "男の子" {
+            sexIcon.image = UIImage(named: "male")
+            sexIcon.tintColor = UIColor.blue
+        } else if sex == "女の子"{
+            sexIcon.image = UIImage(named: "female")
+            sexIcon.tintColor = UIColor.red
+        } else {
+            sexIcon.image = UIImage(named: "male")
+            sexIcon.tintColor = UIColor.red
+        }
         nameLabel!.text = name!
-        sexLabel!.text = sex!
         typeLabel!.text = dogType!
         memoLabel!.text = memo!
     }
@@ -70,17 +82,26 @@ override func viewDidLoad() {
         let dogDeleteAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
             (action: UIAlertAction!) -> Void in
             
+            let documentID = UserDefaults.standard.object(forKey: "friendDogId")
             
-            
+            let dogID = UserDefaults.standard.object(forKey: "deleteNecessaryDogId")
+                //FriendDocument情報を削除
+                let db =  Firestore.firestore().collection("user").document(uid!).collection("friendList").document(documentID as! String)
+                db.delete() { err in
+                    if let err = err {
+                        print("Error removing document: \(err)")
+                    } else {
+                        print("delete Success")
+                }
+            }
             self.dismiss(animated: true, completion: nil)
-            print("OK")
+            NotificationCenter.default.post(name: Notification.Name("deleteFriendDocument"), object: nil)
         })
         //CancelAction
         let dogDeleteCancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
               // ボタンが押された時の処理を書く（クロージャ実装）
               (action: UIAlertAction!) -> Void in
             friendDogDeleteAlert.dismiss(animated: true, completion: nil)
-              print("Cancel")
           })
         
         friendDogDeleteAlert.addAction(dogDeleteAction)
@@ -89,6 +110,11 @@ override func viewDidLoad() {
         present(friendDogDeleteAlert, animated: true, completion: nil)
     }
     
+    
+
+    @IBAction func closeProfile(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 

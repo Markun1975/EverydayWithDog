@@ -8,8 +8,15 @@
 
 import UIKit
 import SDWebImage
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
+
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet var TopProfileView: UIView!
     
     var profileImageData = UIImage()
     var profile:String! //プロフィール写真
@@ -29,7 +36,7 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     
-    @IBOutlet var sexLabel: UILabel!
+    @IBOutlet var sexIcon: UIImageView!
     
     @IBOutlet var typeLabel: UILabel!
     
@@ -47,14 +54,44 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var memoLabel: UILabel!
     
+    @IBOutlet var Label1: UILabel!
+    
+    @IBOutlet var Label2: UILabel!
+    
+    @IBOutlet var Label3: UILabel!
+    
+    @IBOutlet var Label4: UILabel!
+    
+    @IBOutlet var Label5: UILabel!
+    
+    @IBOutlet var Label6: UILabel!
+    
+    @IBOutlet var Label7: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileIconImage.layer.cornerRadius = profileIconImage.frame.size.width * 0.5
+        //ImageView設定
+        profileIconImage.layer.cornerRadius = profileIconImage.frame.size.width/2
         profileIconImage.clipsToBounds = true
+        profileIconImage.layer.borderColor = UIColor.white.cgColor
+        profileIconImage.layer.borderWidth = 4
+        
+        allLabelSetup()
+        
     }
         
     override func viewWillAppear(_ animated: Bool) {
+        setMyDogData()
+    }
+    
+    
+    
+    
+    func setMyDogData(){
+        //各Labelへ犬の情報を表示させる
         profile = UserDefaults.standard.object(forKey: "imageString") as! String
         name = UserDefaults.standard.object(forKey: "name") as! String
         sex = UserDefaults.standard.object(forKey: "sex") as! String
@@ -67,10 +104,18 @@ class ProfileViewController: UIViewController {
         filaria = UserDefaults.standard.object(forKey: "filaria") as! String
         memo = UserDefaults.standard.object(forKey: "memo") as! String
         
-//        profileIconImage.sd_setImage(with: URL(string: UserDefaults.standard.object(forKey: "imageString") as! String), completed: nil)
         profileIconImage!.sd_setImage(with: URL(string: profile!), completed: nil)
         nameLabel!.text = name!
-        sexLabel!.text = sex!
+        if sex == "男の子" {
+            sexIcon.image = UIImage(named: "male")
+            sexIcon.tintColor = UIColor.blue
+        } else if sex == "女の子"{
+            sexIcon.image = UIImage(named: "female")
+            sexIcon.tintColor = UIColor.red
+        } else {
+            sexIcon.image = UIImage(named: "male")
+            sexIcon.tintColor = UIColor.red
+        }
         typeLabel!.text = dogType!
         birthLabel!.text = birth!
         chipIdLabel!.text = chipId!
@@ -82,6 +127,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func dogDeleteMethod(_ sender: Any) {
+        let myDogId = UserDefaults.standard.object(forKey: "myDogId")
         
         //AlertInstance
         let dogDeleteAlert: UIAlertController =
@@ -91,10 +137,18 @@ class ProfileViewController: UIViewController {
         let dogDeleteAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: {
             (action: UIAlertAction!) -> Void in
             
-            
-            
+            //FriendDocument情報を削除
+            let db =  Firestore.firestore().collection("user").document(uid!).collection("dogList").document(myDogId as! String)
+                db.delete() { err in
+                    if let err = err {
+                        print("Error removing document: \(err)")
+                    } else {
+                        print("delete Success")
+                }
+            }
             self.dismiss(animated: true, completion: nil)
-            print("OK")
+            NotificationCenter.default.post(name: Notification.Name("deleteMyDogDocument"), object: nil)
+            print("愛犬の情報削除OK")
         })
         //CancelAction
         let dogDeleteCancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
@@ -111,5 +165,24 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func closeProfile(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
+    private func allLabelSetup(){
+        labelSetup(setLabel: Label1)
+        labelSetup(setLabel: Label2)
+        labelSetup(setLabel: Label3)
+        labelSetup(setLabel: Label4)
+        labelSetup(setLabel: Label5)
+        labelSetup(setLabel: Label6)
+        labelSetup(setLabel: Label7)
+    }
+    
+    func labelSetup(setLabel: UILabel){
+        var label = UILabel()
+        label = setLabel
+        label.layer.borderWidth = 0.25  // 枠線の幅
+        label.layer.borderColor = UIColor.lightGray.cgColor
+    }
 }

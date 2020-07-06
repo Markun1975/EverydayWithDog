@@ -18,17 +18,18 @@ import FirebaseFirestore
 class Page1ViewController: UITableViewController,SegementSlideContentScrollViewDelegate {
     
     var dogInfoArray = [DogInfo]()
-    
     let profileVC = ProfileViewController()
-    
     let page2 = Page2ViewController()
-    
     var viewNumber = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchDogData()
+        //NavigationBar設定
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = "MyDogs List"
+        //愛犬を消去した際の処理を反映
+        NotificationCenter.default.addObserver(
+        self,selector: #selector(catchDeleteMyDogNotification(notification:)),name:Notification.Name("deleteMyDogDocument"),object: nil)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +63,7 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         
         let dogInfomation = dogInfoArray[indexPath.row]
         //セルをタップしたときにプロフィール表示に必要な情報(文字列を保存する)
+        UserDefaults.standard.set(dogInfomation.dogID, forKey: "myDogId")
         UserDefaults.standard.set(dogInfomation.profileImgString, forKey: "imageString")
         UserDefaults.standard.set(dogInfomation.nameString, forKey: "name")
         UserDefaults.standard.set(dogInfomation.sexString, forKey: "sex")
@@ -98,6 +100,7 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
         //データベースから犬の情報を取得する　referenceする
         //インプット（登録ボタン）押したときに登録した、Key値("dogList")を使って情報を取得する
         let uid = Auth.auth().currentUser?.uid
+        UserDefaults.standard.set(uid!, forKey: "userId")
         let fetchDogInfo =  Firestore.firestore().collection("user").document(uid!).collection("dogList")
         fetchDogInfo.getDocuments() { snapShot, err in
             
@@ -110,32 +113,18 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
                     if let postData = snap.data() as? [String: Any]{
                         //String型で保存していたものを取り出す
                         let nameData = postData["dogName"] as? String
-                        
                         let iconData = postData["dogProfileImage"] as? String
-                        
                         let sexData = postData["dogSex"] as? String
-                        
                         let typeData = postData["dogType"] as? String
-                        
                         let birthData = postData["dogBirth"] as? String
-                        
                         let chipData = postData["chipId"] as? String
-                        
                         let contraceptionData = postData["dogContraception"] as? String
-                        
                         let personalityData = postData["dogPersonality"] as? String
-                        
                         let rabiesData = postData["dogRabies"] as? String
-                        
                         let filariaData = postData["dogFilaria"] as? String
-                        
                         let memoData = postData["dogMemo"] as? String
-                        
                         let postDate:Timestamp? = postData["postDate"] as? Timestamp
-                        
-                        
                         let dogID = snap.documentID
-                        
 
                         //postDateをを時間に変換する
                         let timeString = postDate?.dateValue()
@@ -147,13 +136,19 @@ class Page1ViewController: UITableViewController,SegementSlideContentScrollViewD
                         
                         self.dogInfoArray.append(DogInfo(dogID: dogID,profileImgString: iconData!, nameString: nameData!, sexString: sexData!, dogTypeString: typeData!, birthString: birthData!, chipIdString: chipData!, contraceptionString: contraceptionData!, personalityString: personalityData!, rabiesString: rabiesData!, filariaString: filariaData!, memoString: memoData!, inputDateString: date))
                 }
-                    //読み込みが終わったタイミングですぐにTableViewにリロードして反映
-                    self.tableView.reloadData()
             }
+            //読み込みが終わったタイミングですぐにTableViewにリロードして反映
+            self.tableView.reloadData()
             //セルの数をカウント(犬の数)
             let dogCounts =  String(self.dogInfoArray.count)
             print(dogCounts)
             UserDefaults.standard.set(dogCounts, forKey: "dogcounts")
         }
     }
+    
+    @objc func catchDeleteMyDogNotification(notification: Notification) -> Void {
+         //項目の削除が終わったら、リロードして即時にCell数を反映する
+        self.fetchDogData()
+     }
+    
 }

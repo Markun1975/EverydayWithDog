@@ -8,17 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		738059BB351055F1C73F5E0D /* Pods_EverydayWithDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D8A21DC1498C95F5364C55 /* Pods_EverydayWithDog.framework */; };
-		F40B7B26241F54E20086F94D /* MealDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B25241F54E20086F94D /* MealDataTableViewController.swift */; };
-		F40B7B28241F55330086F94D /* WaterDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B27241F55330086F94D /* WaterDataTableViewController.swift */; };
+		F40130172478C33100F84F01 /* DogDataViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40130162478C33100F84F01 /* DogDataViewController1.swift */; };
 		F40B7B2A241F620B0086F94D /* MealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B29241F620B0086F94D /* MealInfo.swift */; };
 		F40B7B2C241F63340086F94D /* WaterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B2B241F63340086F94D /* WaterInfo.swift */; };
-		F4100FFF241B9298002C732D /* DogDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4100FFE241B9298002C732D /* DogDataViewController.swift */; };
-		F4101001241B979F002C732D /* ToiletDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4101000241B979F002C732D /* ToiletDataTableViewController.swift */; };
-		F4101003241B97C4002C732D /* WalkDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4101002241B97C4002C732D /* WalkDataTableViewController.swift */; };
 		F4101005241C03E6002C732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4101004241C03E6002C732D /* Assets.xcassets */; };
 		F4128CBB241B4C8D00A7719F /* dogAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F4128CBA241B4C8D00A7719F /* dogAnimation.json */; };
 		F412C7C02408F79300C1C0A8 /* dogListSideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412C7BF2408F79300C1C0A8 /* dogListSideMenuController.swift */; };
 		F412C7C224092BF400C1C0A8 /* SimpleDogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412C7C124092BF400C1C0A8 /* SimpleDogInfo.swift */; };
+		F412F93424705083009DC291 /* deleteAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412F93324705083009DC291 /* deleteAlert.swift */; };
 		F41372D624112A92005C5125 /* ToiletInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41372D524112A92005C5125 /* ToiletInfo.swift */; };
 		F413733423F11FD9003EF61F /* WalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413733323F11FD9003EF61F /* WalkViewController.swift */; };
 		F413733623F12896003EF61F /* WaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413733523F12896003EF61F /* WaterViewController.swift */; };
@@ -30,7 +27,6 @@
 		F4191D24244F07050096D951 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4191D23244F07050096D951 /* SettingViewController.swift */; };
 		F41C2B0A241770C200B05A72 /* WalkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2B09241770C200B05A72 /* WalkInfo.swift */; };
 		F42444EF242BB0D700C7825A /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42444EE242BB0D700C7825A /* FriendProfileViewController.swift */; };
-		F433F094245D454600DC58F8 /* FetchDogLifeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F433F093245D454600DC58F8 /* FetchDogLifeData.swift */; };
 		F444ED22241B664F00466D33 /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = F444ED21241B664E00466D33 /* check.json */; };
 		F444ED24241B73D000466D33 /* calendarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = F444ED23241B73D000466D33 /* calendarAnimation.json */; };
 		F444ED26241B74CF00466D33 /* EndInputScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F444ED25241B74CF00466D33 /* EndInputScheduleViewController.swift */; };
@@ -38,7 +34,11 @@
 		F444ED2A241B7A5200466D33 /* EndInputConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F444ED29241B7A5200466D33 /* EndInputConditionViewController.swift */; };
 		F45210902465102C00A602D2 /* CustomPlanDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F452108F2465102C00A602D2 /* CustomPlanDisplayView.swift */; };
 		F45210942465107D00A602D2 /* CustomPlanDisplayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45210932465107D00A602D2 /* CustomPlanDisplayView.xib */; };
+		F464DD6624AC671900714CAA /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464DD6524AC671300714CAA /* InputTextField.swift */; };
 		F467934523FE566B00B19B6B /* ScheduleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F467934423FE566B00B19B6B /* ScheduleObject.swift */; };
+		F46CECCC24A46EE200BA3EA6 /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46CECCB24A46EE200BA3EA6 /* CustomUITextField.swift */; };
+		F46E8912246EF2F8008CC710 /* deleteCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46E8911246EF2F8008CC710 /* deleteCollection.swift */; };
+		F477F3DF24A223BD00F43BE6 /* ButtonBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */; };
 		F479313023D9549000125D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479312F23D9549000125D47 /* AppDelegate.swift */; };
 		F479313223D9549000125D47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479313123D9549000125D47 /* SceneDelegate.swift */; };
 		F479313423D9549000125D47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479313323D9549000125D47 /* ViewController.swift */; };
@@ -64,12 +64,19 @@
 		F479318123D96B0F00125D47 /* IMG_0436.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F479317F23D96B0F00125D47 /* IMG_0436.JPG */; };
 		F479318323D973D500125D47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F479318223D973D400125D47 /* GoogleService-Info.plist */; };
 		F4839BCF244EC88400940E27 /* DataSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4839BCE244EC88400940E27 /* DataSideMenu.swift */; };
-		F4A69C4E242096B400975EBB /* GetFirstDogID.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A69C4D242096B400975EBB /* GetFirstDogID.swift */; };
+		F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */; };
+		F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */; };
+		F4A60E71247BFDB500C31767 /* ToiletDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */; };
+		F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E72247CB0FB00C31767 /* FetchDogData.swift */; };
+		F4A60E7524864B1700C31767 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */; };
+		F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */; };
+		F4B7577B246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */; };
 		F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */; };
 		F4C83E992414D7730036BF26 /* ScheduleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E982414D7730036BF26 /* ScheduleContent.swift */; };
 		F4C83E9C24154B3B0036BF26 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */; };
 		F4C83E9D24154B3B0036BF26 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C83E9B24154B3B0036BF26 /* TableViewCell.xib */; };
 		F4CF529E2415FB9800711B37 /* FriendProfileInputControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF529D2415FB9700711B37 /* FriendProfileInputControllerViewController.swift */; };
+		F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */; };
 		F4E7007D23ED368600CC715C /* Friend1ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */; };
 		F4EFE3C523F6411A00F3C6EC /* timeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */; };
 		F4EFE3C723F9158F00F3C6EC /* InputScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */; };
@@ -79,17 +86,14 @@
 		25D8A21DC1498C95F5364C55 /* Pods_EverydayWithDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EverydayWithDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C186DAD5FBDE567BA537B43 /* Pods-EverydayWithDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayWithDog.release.xcconfig"; path = "Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog.release.xcconfig"; sourceTree = "<group>"; };
 		E73370DE60F88A6B0F4F27EC /* Pods-EverydayWithDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayWithDog.debug.xcconfig"; path = "Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog.debug.xcconfig"; sourceTree = "<group>"; };
-		F40B7B25241F54E20086F94D /* MealDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataTableViewController.swift; sourceTree = "<group>"; };
-		F40B7B27241F55330086F94D /* WaterDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataTableViewController.swift; sourceTree = "<group>"; };
+		F40130162478C33100F84F01 /* DogDataViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataViewController1.swift; sourceTree = "<group>"; };
 		F40B7B29241F620B0086F94D /* MealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfo.swift; sourceTree = "<group>"; };
 		F40B7B2B241F63340086F94D /* WaterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInfo.swift; sourceTree = "<group>"; };
-		F4100FFE241B9298002C732D /* DogDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataViewController.swift; sourceTree = "<group>"; };
-		F4101000241B979F002C732D /* ToiletDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletDataTableViewController.swift; sourceTree = "<group>"; };
-		F4101002241B97C4002C732D /* WalkDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataTableViewController.swift; sourceTree = "<group>"; };
 		F4101004241C03E6002C732D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4128CBA241B4C8D00A7719F /* dogAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dogAnimation.json; sourceTree = "<group>"; };
 		F412C7BF2408F79300C1C0A8 /* dogListSideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogListSideMenuController.swift; sourceTree = "<group>"; };
 		F412C7C124092BF400C1C0A8 /* SimpleDogInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDogInfo.swift; sourceTree = "<group>"; };
+		F412F93324705083009DC291 /* deleteAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteAlert.swift; sourceTree = "<group>"; };
 		F41372D524112A92005C5125 /* ToiletInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletInfo.swift; sourceTree = "<group>"; };
 		F413733323F11FD9003EF61F /* WalkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkViewController.swift; sourceTree = "<group>"; };
 		F413733523F12896003EF61F /* WaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 		F4191D23244F07050096D951 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F41C2B09241770C200B05A72 /* WalkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkInfo.swift; sourceTree = "<group>"; };
 		F42444EE242BB0D700C7825A /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
-		F433F093245D454600DC58F8 /* FetchDogLifeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogLifeData.swift; sourceTree = "<group>"; };
 		F444ED21241B664E00466D33 /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
 		F444ED23241B73D000466D33 /* calendarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendarAnimation.json; sourceTree = "<group>"; };
 		F444ED25241B74CF00466D33 /* EndInputScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputScheduleViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +112,11 @@
 		F444ED29241B7A5200466D33 /* EndInputConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndInputConditionViewController.swift; sourceTree = "<group>"; };
 		F452108F2465102C00A602D2 /* CustomPlanDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlanDisplayView.swift; sourceTree = "<group>"; };
 		F45210932465107D00A602D2 /* CustomPlanDisplayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPlanDisplayView.xib; sourceTree = "<group>"; };
+		F464DD6524AC671300714CAA /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		F467934423FE566B00B19B6B /* ScheduleObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleObject.swift; sourceTree = "<group>"; };
+		F46CECCB24A46EE200BA3EA6 /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
+		F46E8911246EF2F8008CC710 /* deleteCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteCollection.swift; sourceTree = "<group>"; };
+		F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorderColor.swift; sourceTree = "<group>"; };
 		F479312F23D9549000125D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F479313123D9549000125D47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F479313323D9549000125D47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,12 +144,23 @@
 		F479317F23D96B0F00125D47 /* IMG_0436.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0436.JPG; sourceTree = "<group>"; };
 		F479318223D973D400125D47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4839BCE244EC88400940E27 /* DataSideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSideMenu.swift; sourceTree = "<group>"; };
-		F4A69C4D242096B400975EBB /* GetFirstDogID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFirstDogID.swift; sourceTree = "<group>"; };
+		F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataTableViewController1.swift; sourceTree = "<group>"; };
+		F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataTableViewController1.swift; sourceTree = "<group>"; };
+		F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletDataTableViewController1.swift; sourceTree = "<group>"; };
+		F4A60E72247CB0FB00C31767 /* FetchDogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogData.swift; sourceTree = "<group>"; };
+		F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		F4B7576D246C5D1400753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F4B7576E246C5D1600753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F4B7576F246C5D2900753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		F4B75770246C5D3200753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataViewCellTableViewCell.swift; sourceTree = "<group>"; };
+		F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkDataViewCellTableViewCell.xib; sourceTree = "<group>"; };
 		F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F4C83E982414D7730036BF26 /* ScheduleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleContent.swift; sourceTree = "<group>"; };
 		F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F4C83E9B24154B3B0036BF26 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		F4CF529D2415FB9700711B37 /* FriendProfileInputControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileInputControllerViewController.swift; sourceTree = "<group>"; };
+		F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataTableViewController1.swift; sourceTree = "<group>"; };
 		F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend1ProfileViewController.swift; sourceTree = "<group>"; };
 		F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagement.swift; sourceTree = "<group>"; };
 		F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScheduleViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +212,8 @@
 				F479317E23D96B0E00125D47 /* IMG_2638.PNG */,
 				F452108F2465102C00A602D2 /* CustomPlanDisplayView.swift */,
 				F45210932465107D00A602D2 /* CustomPlanDisplayView.xib */,
+				F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */,
+				F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +261,7 @@
 		F42444F0242BB60800C7825A /* MyDog */ = {
 			isa = PBXGroup;
 			children = (
+				F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */,
 				F479316123D966B700125D47 /* Page1ViewController.swift */,
 				F414CDD323E6B96C000CD579 /* ProfileViewController.swift */,
 				F479315B23D965D400125D47 /* ProfileInputController.swift */,
@@ -310,12 +331,12 @@
 		F479317123D9688F00125D47 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				F4100FFE241B9298002C732D /* DogDataViewController.swift */,
-				F40B7B25241F54E20086F94D /* MealDataTableViewController.swift */,
-				F40B7B27241F55330086F94D /* WaterDataTableViewController.swift */,
-				F4101002241B97C4002C732D /* WalkDataTableViewController.swift */,
-				F4101000241B979F002C732D /* ToiletDataTableViewController.swift */,
 				F4839BCE244EC88400940E27 /* DataSideMenu.swift */,
+				F40130162478C33100F84F01 /* DogDataViewController1.swift */,
+				F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */,
+				F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */,
+				F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */,
+				F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -332,10 +353,14 @@
 				F41C2B09241770C200B05A72 /* WalkInfo.swift */,
 				F41372D524112A92005C5125 /* ToiletInfo.swift */,
 				F4C83E982414D7730036BF26 /* ScheduleContent.swift */,
-				F4A69C4D242096B400975EBB /* GetFirstDogID.swift */,
-				F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */,
 				F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */,
-				F433F093245D454600DC58F8 /* FetchDogLifeData.swift */,
+				F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */,
+				F46E8911246EF2F8008CC710 /* deleteCollection.swift */,
+				F412F93324705083009DC291 /* deleteAlert.swift */,
+				F4A60E72247CB0FB00C31767 /* FetchDogData.swift */,
+				F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */,
+				F46CECCB24A46EE200BA3EA6 /* CustomUITextField.swift */,
+				F464DD6524AC671300714CAA /* InputTextField.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,8 +376,8 @@
 				F479312823D9549000125D47 /* Sources */,
 				F479312923D9549000125D47 /* Frameworks */,
 				F479312A23D9549000125D47 /* Resources */,
-				EF142B5C559D9DCC448EB761 /* [CP] Embed Pods Frameworks */,
-				A69F6A34C0671BEE30EC37BA /* [CP] Copy Pods Resources */,
+				EF69B17C735E4C94FA1155B4 /* [CP] Embed Pods Frameworks */,
+				31DB7FDC3DA46EF29DF5C9D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,6 +410,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F479312323D9548F00125D47;
 			productRefGroup = F479312323D9548F00125D47;
@@ -410,6 +436,7 @@
 				F444ED24241B73D000466D33 /* calendarAnimation.json in Resources */,
 				F415C21723E086CB00C50148 /* Main.storyboard in Resources */,
 				F479313C23D9549900125D47 /* LaunchScreen.storyboard in Resources */,
+				F4B7577B246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib in Resources */,
 				F479317323D968B800125D47 /* Data.storyboard in Resources */,
 				F479316923D9679A00125D47 /* Today'sBodyCondition.storyboard in Resources */,
 				F444ED22241B664F00466D33 /* check.json in Resources */,
@@ -423,6 +450,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31DB7FDC3DA46EF29DF5C9D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		96C4743AE247D51636831E4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,24 +489,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A69F6A34C0671BEE30EC37BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF142B5C559D9DCC448EB761 /* [CP] Embed Pods Frameworks */ = {
+		EF69B17C735E4C94FA1155B4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,52 +516,58 @@
 				F4C83E9C24154B3B0036BF26 /* TableViewCell.swift in Sources */,
 				F479313423D9549000125D47 /* ViewController.swift in Sources */,
 				F412C7C02408F79300C1C0A8 /* dogListSideMenuController.swift in Sources */,
-				F4101001241B979F002C732D /* ToiletDataTableViewController.swift in Sources */,
 				F45210902465102C00A602D2 /* CustomPlanDisplayView.swift in Sources */,
 				F41C2B0A241770C200B05A72 /* WalkInfo.swift in Sources */,
 				F479316223D966B700125D47 /* Page1ViewController.swift in Sources */,
 				F479317923D96A6300125D47 /* DogsInfo.swift in Sources */,
+				F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController1.swift in Sources */,
+				F4A60E71247BFDB500C31767 /* ToiletDataTableViewController1.swift in Sources */,
 				F479315723D961C300125D47 /* addNewAccountViewController.swift in Sources */,
-				F4101003241B97C4002C732D /* WalkDataTableViewController.swift in Sources */,
 				F413733423F11FD9003EF61F /* WalkViewController.swift in Sources */,
 				F444ED2A241B7A5200466D33 /* EndInputConditionViewController.swift in Sources */,
 				F479316423D966F600125D47 /* Page2ViewController.swift in Sources */,
 				F415C20E23E05F9B00C50148 /* finishLoginViewController.swift in Sources */,
 				F479316623D9674B00125D47 /* completeRegisterViewController.swift in Sources */,
 				F41372D624112A92005C5125 /* ToiletInfo.swift in Sources */,
-				F433F094245D454600DC58F8 /* FetchDogLifeData.swift in Sources */,
 				F40B7B2C241F63340086F94D /* WaterInfo.swift in Sources */,
 				F479313023D9549000125D47 /* AppDelegate.swift in Sources */,
 				F479313223D9549000125D47 /* SceneDelegate.swift in Sources */,
 				F467934523FE566B00B19B6B /* ScheduleObject.swift in Sources */,
-				F40B7B26241F54E20086F94D /* MealDataTableViewController.swift in Sources */,
 				F4C83E992414D7730036BF26 /* ScheduleContent.swift in Sources */,
 				F4191D24244F07050096D951 /* SettingViewController.swift in Sources */,
+				F40130172478C33100F84F01 /* DogDataViewController1.swift in Sources */,
 				F40B7B2A241F620B0086F94D /* MealInfo.swift in Sources */,
 				F4EFE3C523F6411A00F3C6EC /* timeManagement.swift in Sources */,
+				F464DD6624AC671900714CAA /* InputTextField.swift in Sources */,
+				F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */,
 				F479316B23D967BD00125D47 /* Today'sConditionViewController.swift in Sources */,
 				F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */,
-				F40B7B28241F55330086F94D /* WaterDataTableViewController.swift in Sources */,
-				F4A69C4E242096B400975EBB /* GetFirstDogID.swift in Sources */,
+				F46CECCC24A46EE200BA3EA6 /* CustomUITextField.swift in Sources */,
 				F479316023D9667500125D47 /* DogListViewController.swift in Sources */,
+				F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController1.swift in Sources */,
 				F4CF529E2415FB9800711B37 /* FriendProfileInputControllerViewController.swift in Sources */,
+				F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */,
 				F479315C23D965D400125D47 /* ProfileInputController.swift in Sources */,
 				F42444EF242BB0D700C7825A /* FriendProfileViewController.swift in Sources */,
+				F412F93424705083009DC291 /* deleteAlert.swift in Sources */,
+				F4A60E7524864B1700C31767 /* ResetPasswordViewController.swift in Sources */,
 				F413733623F12896003EF61F /* WaterViewController.swift in Sources */,
 				F479315323D960BB00125D47 /* LoginViewController.swift in Sources */,
 				F4E7007D23ED368600CC715C /* Friend1ProfileViewController.swift in Sources */,
 				F479315123D95DE200125D47 /* newAccountViewController.swift in Sources */,
 				F479317D23D96AE400125D47 /* FriendsInfo.swift in Sources */,
+				F477F3DF24A223BD00F43BE6 /* ButtonBorderColor.swift in Sources */,
 				F4EFE3C723F9158F00F3C6EC /* InputScheduleViewController.swift in Sources */,
 				F413733A23F1490F003EF61F /* ToiletViewController.swift in Sources */,
 				F479317023D9685400125D47 /* CalendarViewController.swift in Sources */,
+				F46E8912246EF2F8008CC710 /* deleteCollection.swift in Sources */,
 				F412C7C224092BF400C1C0A8 /* SimpleDogInfo.swift in Sources */,
-				F4100FFF241B9298002C732D /* DogDataViewController.swift in Sources */,
 				F4839BCF244EC88400940E27 /* DataSideMenu.swift in Sources */,
 				F413733823F12968003EF61F /* MealViewController.swift in Sources */,
 				F414CDD423E6B96C000CD579 /* ProfileViewController.swift in Sources */,
 				F444ED26241B74CF00466D33 /* EndInputScheduleViewController.swift in Sources */,
 				F479315523D9617A00125D47 /* confirmViewController.swift in Sources */,
+				F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +578,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F415C21623E086CB00C50148 /* Base */,
+				F4B7576D246C5D1400753745 /* ja */,
+				F4B7576F246C5D2900753745 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -553,6 +588,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F479313B23D9549900125D47 /* Base */,
+				F4B7576E246C5D1600753745 /* ja */,
+				F4B75770246C5D3200753745 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -564,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -624,6 +662,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

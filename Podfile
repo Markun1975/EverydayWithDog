@@ -7,6 +7,7 @@ use_frameworks!
 
   # Pods for EverydayWithDog
 pod 'FSCalendar'
+pod 'SideMenu'
 pod 'Eureka'
 pod 'ImageRow', '~> 4.0'
 pod 'SDWebImage', '~> 5.0'
@@ -18,10 +19,10 @@ pod 'Firebase/Storage'
 pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'FirebaseFirestore'
-pod 'SideMenu'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
 pod 'lottie-ios'
+pod 'MaterialComponents/FlexibleHeader'
 
 
 

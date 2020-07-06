@@ -37,29 +37,12 @@ class ProfileInputController: FormViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         input()
-        
-        
         self.tabBarController?.tabBar.isHidden = true
-        
     }
     
     func input(){
         
             form
-                //ヘッダー設定も可能
-                //ヘッダー　高さで変えられるよ！
-//                            +++ Section() {
-//                            $0.header = {
-//                                let header = HeaderFooterView<UIView>(.callback({
-//                                    let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
-//        //                            let image1 = UIImage(named: "heli") // (1)
-//        //                            let imageView = UIImageView(image:image1)   // (2)
-//        //                            view.addSubview(imageView)  // (3)
-//                                    return view
-//                                }))
-//                                return header
-//                            }()
-//                        }
                 //写真に選択フォーム
                     +++ Section("写真")
                     <<< ImageRow() {
@@ -228,7 +211,6 @@ class ProfileInputController: FormViewController{
                 
             }
 func upLoadData(){
-("upLoadData呼ばれてる！")
         var ref: DatabaseReference!
         //ユーザーID取得
         let uid = Auth.auth().currentUser?.uid

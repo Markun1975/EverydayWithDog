@@ -23,11 +23,15 @@ class DataSideMenu: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.tintColor = .clear
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = .lightGray
-        self.navigationItem.title = "ワンちゃん一覧"
+        //NavigationController設定
+               self.navigationController?.navigationBar.barTintColor = UIColor(red: 242/255, green: 87/255, blue: 129/255, alpha: 1)
+               //NavigationBarの上にViewが出た時、NavigationBarを透明にするかどうか（透かして、下のNavigationBarの色に合わせるか）
+               self.navigationController?.navigationBar.isTranslucent = false
+               self.navigationController?.navigationBar.backgroundColor = .clear
+               self.navigationItem.title = "ワンちゃん一覧"
+               self.navigationController?.navigationBar.titleTextAttributes
+               = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
+                  .foregroundColor: UIColor(red: 255, green: 255, blue: 255, alpha: 0.87)]
         
     }
     
@@ -54,7 +58,7 @@ class DataSideMenu: UITableViewController {
     }
     
     
-    //セルがタップされたときに画面遷移を行う
+    //セルがタップされたときにサイドメニューを閉じる
      override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let ID = self.dogInfoArray[indexPath.row].dogID
         let NAME = self.dogInfoArray[indexPath.row].nameString
@@ -62,25 +66,19 @@ class DataSideMenu: UITableViewController {
 
         // セルの選択を解除
         tableView.deselectRow(at: indexPath, animated: true)
-        // サイドバーを閉じる
-        dismiss(animated: true, completion: nil)
         NotificationCenter.default.post(name: Notification.Name("dataDogID"), object: nil, userInfo: ["dataDogId" : ID])
         NotificationCenter.default.post(name: Notification.Name("dataDogNAME"), object: nil, userInfo: ["dataDogName" : NAME])
         
+        // サイドバーを閉じる
+        dismiss(animated: true, completion: nil)
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchDogData()
-    }
     
     
     func fetchDogData() {
         //データベースから犬の情報を取得する　referenceする
         //インプット（登録ボタン）押したときに登録した、Key値("dogList")を使って情報を取得する
         let fetchDogInfo =  Firestore.firestore().collection("user").document(uid!).collection("dogList")
-//        fetchDogInfo.addSnapshotListener { snapShot, err in
             fetchDogInfo.getDocuments() { snapShot, err in
                 
             self.dogInfoArray.removeAll()
@@ -92,7 +90,6 @@ class DataSideMenu: UITableViewController {
                     if let postData = snap.data() as? [String: Any]{
                         
                         let dogID = snap.documentID
-//                        print(snap.documentID)
                         
                         //String型で保存していたものをFirebaseから取り出す
                         let nameData = postData["dogName"] as? String
@@ -107,8 +104,8 @@ class DataSideMenu: UITableViewController {
                         let date = f.string(from: timeString!)
                         self.dogInfoArray.append(SimpleDogInfo(nameString: nameData!,inputDateString: date,dogID: dogID))
                 }
-                     self.tableView.reloadData()
             }
+                self.tableView.reloadData()
         }
     }
 }

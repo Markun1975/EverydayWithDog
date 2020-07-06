@@ -23,11 +23,15 @@ class dogListSideMenuController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.tintColor = .clear
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = .lightGray
+        //NavigationController設定
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 242/255, green: 87/255, blue: 129/255, alpha: 1)
+        //NavigationBarの上にViewが出た時、NavigationBarを透明にするかどうか（透かして、下のNavigationBarの色に合わせるか）
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.backgroundColor = .clear
         self.navigationItem.title = "ワンちゃん一覧"
+        self.navigationController?.navigationBar.titleTextAttributes
+        = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20),
+           .foregroundColor: UIColor(red: 255, green: 255, blue: 255, alpha: 0.87)]
         
     }
     

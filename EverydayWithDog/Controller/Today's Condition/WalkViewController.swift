@@ -26,13 +26,22 @@ class WalkViewController: UIViewController {
     
     @IBOutlet var saveButton: UIButton!
     
+    let setTexField = InputTextField()
     
-    let datePicker: UIDatePicker = {
+    //開始日時
+    let datePicker1: UIDatePicker = {
        let datePicker = UIDatePicker()
        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
        datePicker.locale = Locale(identifier: "ja_JP")
            datePicker.addTarget(self, action:#selector(dateChange), for: .valueChanged); return datePicker}()
-       
+    
+    //終了日時
+       let datePicker2: UIDatePicker = {
+          let datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePicker.Mode.time
+          datePicker.locale = Locale(identifier: "ja_JP")
+              datePicker.addTarget(self, action:#selector(dateChange), for: .valueChanged); return datePicker}()
+       var dogId:String?
        var startTimeString: String?
        var drinkimeData: UIDatePicker = UIDatePicker()
        var endTimeString: String?
@@ -41,8 +50,9 @@ class WalkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        walkStartTimeView.inputView = datePicker
-        walkEndTimeView.inputView = datePicker
+        dogId = UserDefaults.standard.object(forKey: "dogID") as! String
+        walkStartTimeView.inputView = datePicker1
+        walkEndTimeView.inputView = datePicker2
         contentsClass.contentsTextView = wakePlaceTextView
         contentsClass.toolBar()
         textFieldSetup()
@@ -59,9 +69,15 @@ class WalkViewController: UIViewController {
     
     @objc func dateChange(){
         let formatter = DateFormatter()
+        let timeFormatter = DateFormatter()
         formatter.dateFormat = "MM月dd日 HH時mm分"
-        walkStartTimeView.text = "\(formatter.string(from: datePicker.date))"
-        walkEndTimeView.text = "\(formatter.string(from: datePicker.date))"
+        timeFormatter.dateFormat = "HH時mm分"
+        walkStartTimeView.text = "\(formatter.string(from: datePicker1.date))"
+        walkEndTimeView.text = "\(timeFormatter.string(from: datePicker2.date))"
+        
+       
+        
+        
     }
 
     @objc func done(){
@@ -75,32 +91,36 @@ class WalkViewController: UIViewController {
         walkPlaceString = wakePlaceTextView.text!
         walkDistanceStirng = walkDistanceView.text!
         
-        let walkInfoArray:Dictionary = ["walkPlaceString": walkPlaceString as Any,"startTimeString": startTimeString as Any,"endTimeString": endTimeString as Any,"walkDistanceStirng":walkDistanceStirng as Any] as [String:Any]
-            
-        print(walkPlaceString!)
-        print(startTimeString!)
-        print(endTimeString!)
-        print(walkDistanceStirng!)
+        //散歩時間を入力値の差分で計算し、保存する
+        let d1 = datePicker1.date
+        let d2 = datePicker2.date
+        let diff = d2.timeIntervalSince(d1)
+        let timeFmt = DateComponentsFormatter()
+        timeFmt.unitsStyle = .brief
+        //秒数を時間分に変換
+        let walkTime = timeFmt.string(from: diff)
+        print(walkTime!)
+        
+        
+        let walkInfoArray:Dictionary = ["walkTime": walkTime as Any,"walkPlaceString": walkPlaceString as Any,"startTimeString": startTimeString as Any,"walkDistanceStirng":walkDistanceStirng as Any] as [String:Any]
+        
         let uid = Auth.auth().currentUser?.uid
-        let dogId = UserDefaults.standard.object(forKey: "dogID") as! String
-        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId as! String)
+        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId!)
         aDog.collection("walkInfomation").addDocument(data: walkInfoArray)
         self.performSegue(withIdentifier: "FinishedWalk", sender: nil)
     }
     
         func textFieldSetup(){
-            walkStartTimeView.layer.cornerRadius = 6
-            walkStartTimeView.layer.borderWidth = 0.8
-            
-            walkEndTimeView.layer.cornerRadius = 6
-            walkEndTimeView.layer.borderWidth = 0.8
-            
-            wakePlaceTextView.layer.cornerRadius = 6
-            wakePlaceTextView.layer.borderWidth = 0.8
-            
-            walkDistanceView.layer.cornerRadius = 6
-            walkDistanceView.layer.borderWidth = 0.8
-            
+            setTexField.setPuTextField(setText: walkStartTimeView)
+            setTexField.setPuTextField(setText: walkEndTimeView)
+            setTexField.setPuTextField(setText: wakePlaceTextView)
+            setTexField.setPuTextField(setText: walkDistanceView)
             saveButton.layer.cornerRadius = 5
+            saveButton.layer.cornerRadius = 5
+            saveButton.layer.shadowColor = UIColor.black.cgColor
+            saveButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+            saveButton.layer.shadowOpacity = 0.2
+            saveButton.layer.shadowRadius = 0.2
         }
+    
 }

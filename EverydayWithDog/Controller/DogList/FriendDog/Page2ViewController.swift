@@ -25,10 +25,17 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            fetchFriendsDogData()
+            //NavigationBar設定
             self.navigationController?.navigationBar.isHidden = false
             self.navigationItem.title = "FriendDogs List"
+            //フレンド消去した際の処理を反映
+            NotificationCenter.default.addObserver(
+            self,selector: #selector(catchDeleteFriendNotification(notification:)),name:Notification.Name("deleteFriendDocument"),object: nil)
         }
+    
+    
+    
     @objc func addFriendButton(){
          self.performSegue(withIdentifier: "addFriend", sender: nil)
      }
@@ -64,6 +71,7 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
             
             let dogInfomation = aFriendArray[indexPath.row]
             
+            UserDefaults.standard.set(dogInfomation.friendDogID, forKey: "friendDogId")
             UserDefaults.standard.set(dogInfomation.friendImgString, forKey: "friendDogProfileImage")
             UserDefaults.standard.set(dogInfomation.friendNameString, forKey: "friendDogName")
             UserDefaults.standard.set(dogInfomation.friendSexString, forKey: "friendDogSex")
@@ -129,13 +137,21 @@ class Page2ViewController: UITableViewController,SegementSlideContentScrollViewD
                             
                             self.aFriendArray.append(FriendsInfo(friendDogID: dogID, friendImgString: iconData!, friendNameString: nameData!, friendSexString: sexData!, friendDogTypeString: typeData!, friendMemoString: memoData!, friendInputDateString: date))
                     }
-                        //読み込みが終わったタイミングですぐにTableViewにリロードして反映
-                        self.tableView.reloadData()
                 }
+                //読み込みが終わったタイミングですぐにTableViewにリロードして反映
+                self.tableView.reloadData()
+                //セルの数をカウント(フレンド犬の数)
                 let friendDogsCounts =  String(self.aFriendArray.count)
                 print(friendDogsCounts)
                 UserDefaults.standard.set(friendDogsCounts, forKey: "friendDogcounts")
             }
         }
+    
+    
+       @objc func catchDeleteFriendNotification(notification: Notification) -> Void {
+        //項目の削除が終わったら、リロードして即時にCell数を反映する
+        self.fetchFriendsDogData()
+    }
+    
     }
 

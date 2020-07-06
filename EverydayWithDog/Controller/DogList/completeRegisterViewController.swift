@@ -15,6 +15,11 @@ class completeRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        backTop.layer.shadowColor = UIColor.black.cgColor
+        backTop.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        backTop.layer.shadowOpacity = 0.5
+        
         let backButtonItem = UIBarButtonItem(title: "戻る", style: .plain, target: nil, action: nil)
         
         navigationItem.backBarButtonItem = backButtonItem

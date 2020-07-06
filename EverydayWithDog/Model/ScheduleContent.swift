@@ -13,11 +13,15 @@ class ScheduleContent {
     var scheduleStartTimeString: String = ""
     var scheduleEndTimeString: String = ""
     var scheduleContentString: String = ""
+    var scheduleDocumentId: String = ""
+    var scheduleSelectedColor: String = ""
     
-    init(titleString:String,startString:String,endString:String,contentString:String) {
+    init(titleString:String,startString:String,endString:String,contentString:String,documentId:String,colorString:String){
         self.scheduleTitleString = titleString
         self.scheduleStartTimeString = startString
         self.scheduleEndTimeString = endString
         self.scheduleContentString = contentString
+        self.scheduleDocumentId = documentId
+        self.scheduleSelectedColor = colorString
     }
 }

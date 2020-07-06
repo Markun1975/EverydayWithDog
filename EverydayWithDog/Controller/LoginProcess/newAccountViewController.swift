@@ -28,7 +28,11 @@ class newAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerButton.layer.cornerRadius = 22
+        registerButton.layer.cornerRadius = 23
+        registerButton.layer.shadowColor = UIColor.black.cgColor
+        registerButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        registerButton.layer.shadowOpacity = 0.2
+        registerButton.layer.shadowRadius = 1
     }
     
     //ログイン条件設定

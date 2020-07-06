@@ -22,12 +22,14 @@ class ToiletViewController: UIViewController {
     
     @IBOutlet var saveButton: UIButton!
     
+    let setTexField = InputTextField()
+    
     let datePicker: UIDatePicker = {
        let datePicker = UIDatePicker()
        datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
        datePicker.locale = Locale(identifier: "ja_JP")
            datePicker.addTarget(self, action:#selector(dateChange), for: .valueChanged); return datePicker}()
-       
+       var dogId:String?
        var toiletTimeString: String?
        var drinkimeData: UIDatePicker = UIDatePicker()
        var toitelPlaceString: String?
@@ -36,6 +38,8 @@ class ToiletViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dogId = UserDefaults.standard.object(forKey: "dogID") as! String
         toiletTimeView.inputView = datePicker
         toolBar()
         self.tabBarController?.tabBar.isHidden = true
@@ -72,27 +76,22 @@ class ToiletViewController: UIViewController {
         print(toiletTimeString!)
         print(toitelPlaceString!)
         let uid = Auth.auth().currentUser?.uid
-        let dogId = UserDefaults.standard.object(forKey: "dogID") as! String
-        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId as! String)
+        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId!)
         aDog.collection("toiletInfomation").addDocument(data: toiletInfoArray)
         self.performSegue(withIdentifier: "FinishToilet", sender: nil)
     }
     
     //以下各入力フォームの設定
     func textFieldSetup(){
-          
-           toiletTimeView.layer.cornerRadius = 6
-           toiletTimeView.layer.borderWidth = 0.8
-           
-          
-           toiletPlaceView.layer.cornerRadius = 6
-           toiletPlaceView.layer.borderWidth = 0.8
-           
-        
-           ToiletTypeView.layer.cornerRadius = 6
-           ToiletTypeView.layer.borderWidth = 0.8
-           
-           saveButton.layer.cornerRadius = 5
+        setTexField.setPuTextField(setText: toiletTimeView)
+        setTexField.setPuTextField(setText: toiletPlaceView)
+        setTexField.setPuTextField(setText: ToiletTypeView)
+        saveButton.layer.cornerRadius = 5
+        saveButton.layer.shadowColor = UIColor.black.cgColor
+        saveButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        saveButton.layer.shadowOpacity = 0.2
+        saveButton.layer.shadowRadius = 0.2
        }
+    
 }
 

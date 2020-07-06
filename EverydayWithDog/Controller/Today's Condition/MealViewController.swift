@@ -22,6 +22,9 @@ class MealViewController: UIViewController {
     
     @IBOutlet var saveButton: UIButton!
     
+    let setTexField = InputTextField()
+    
+        var dogId:String?
         var mealString: String?
         var mealTimeData: UIDatePicker = UIDatePicker()
         var mealTimeString: String?
@@ -30,7 +33,6 @@ class MealViewController: UIViewController {
     let datePicker: UIDatePicker = {
                let datePicker = UIDatePicker()
                datePicker.datePickerMode = UIDatePicker.Mode.dateAndTime
-       //        dp.timeZone = NSTimeZone.local
                datePicker.locale = Locale(identifier: "ja_JP")
                datePicker.addTarget(self, action: #selector(dateChange), for: .valueChanged)
                return datePicker
@@ -39,6 +41,7 @@ class MealViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dogId = UserDefaults.standard.object(forKey: "dogID") as! String
         mealTimeTextView.inputView = datePicker
         toolBar()
         self.tabBarController?.tabBar.isHidden = true
@@ -46,20 +49,23 @@ class MealViewController: UIViewController {
     }
     
     
-    @IBAction func saveSMMealtring(_ sender: Any) {
+    @IBAction func saveMealString(_ sender: Any) {
         mealString = mealQuantityView.text!
         mealTimeString = mealTimeTextView.text!
         mealContentString = mealContentTextView.text!
         
-        let mealInfoArray:Dictionary = ["mealString": mealString as Any,"mealTimeString": mealTimeString as Any,"mealTimeStanp": Timestamp(date: datePicker.date) as Any,"mealContentString": mealContentString as Any] as [String:Any]
+        let mealInfoArray:Dictionary = ["mealString": mealString as Any,"mealTimeString": mealTimeString as Any,"mealContentString": mealContentString as Any] as [String:Any]
+        
             
-        print(mealString!+"g")
+        print(mealString!)
         print(mealTimeString!)
         print(mealContentString!)
         let uid = Auth.auth().currentUser?.uid
-        let dogId = UserDefaults.standard.object(forKey: "dogID") as! String
-        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId as! String)
+
+        let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId!)
         aDog.collection("mealInfomation").addDocument(data: mealInfoArray)
+        print(uid!,"meal登録できてる")
+        print(dogId!,"meal登録できてる")
         self.performSegue(withIdentifier: "FinishedMeal", sender: nil)
         
     }
@@ -86,17 +92,18 @@ class MealViewController: UIViewController {
      @objc func done(){
         mealQuantityView.endEditing(true)
     }
-    
+
     func textFieldSetup(){
-        mealQuantityView.layer.cornerRadius = 6
-        mealQuantityView.layer.borderWidth = 0.8
+        setTexField.setPuTextField(setText: mealQuantityView)
+        setTexField.setPuTextField(setText: mealTimeTextView)
+        setTexField.setPuTextField(setText: mealContentTextView)
         
-        mealTimeTextView.layer.cornerRadius = 6
-        mealTimeTextView.layer.borderWidth = 0.8
-        
-        mealContentTextView.layer.cornerRadius = 6
-        mealContentTextView.layer.borderWidth = 0.8
-        
+        //SaveButtonの設定も行う
         saveButton.layer.cornerRadius = 5
+        saveButton.layer.cornerRadius = 5
+        saveButton.layer.shadowColor = UIColor.black.cgColor
+        saveButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        saveButton.layer.shadowOpacity = 0.2
+        saveButton.layer.shadowRadius = 0.2
     }
 }

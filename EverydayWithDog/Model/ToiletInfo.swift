@@ -12,10 +12,12 @@ class ToiletInfo {
     
     var toiletTimeString:String = "" //トイレをした時間
     var toiletPlaceString:String = "" //トイレをした場所
+    var toiletDocumentId:String = "" //ドキュメントID
     
-    init(toiletTimeString:String,toiletPlaceString:String){
+    init(toiletTimeString:String,toiletPlaceString:String,toiletDocumentId:String){
         
         self.toiletTimeString = toiletTimeString
         self.toiletPlaceString = toiletPlaceString
+        self.toiletDocumentId = toiletDocumentId
     }
 }

@@ -16,23 +16,42 @@ class DogListViewController: SegementSlideViewController{
     
     var viewnumber: Int = 0
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //必須
         reloadData()
         scrollToSlide(at: 0, animated: true)
         
-        //NavigationBar設定
-        self.navigationItem.title = "わんこリスト"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: .done, target: self, action: #selector(buttonNavigation))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "設定", style: .done, target: self, action: #selector(settingNavigation))
+        self.view.backgroundColor = .white
         
-        //ナヴィゲーションバーの犬追加ボタン設定
-        NotificationCenter.default.addObserver(
-            self,selector: #selector(catchSelectMenuNotification(notification:)),name: Notification.Name("viewNumber"),object: nil)
+        //NavigationBar設定
+        self.navigationController?.navigationBar.isTranslucent = false //くもりガラスを取る
+        self.navigationController?.navigationBar.shadowImage = UIImage() //下線を消去
+        self.navigationController?.navigationBar.titleTextAttributes
+        = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22),
+           .foregroundColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.87)]
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 242/255, green: 87/255, blue: 129/255, alpha: 1)
+        
+        //NavigationButton設定
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "account"), style: .done, target: self, action: #selector(settingNavigation))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "plus"), style: .done, target: self, action: #selector(buttonNavigation))
+        
+            NotificationCenter.default.addObserver(self,selector: #selector(catchSelectMenuNotification(notification:)),name: Notification.Name("viewNumber"),object: nil)
+        
+        //TabBar設定
+          self.tabBarController?.tabBar.barTintColor = UIColor.white
+          self.tabBarController?.tabBar.tintColor = UIColor(red: 242/255, green: 87/255, blue: 129/255, alpha: 1)
+          self.tabBarController?.tabBar.layer.borderWidth = 0.5
+          self.tabBarController?.tabBar.layer.borderColor = UIColor.gray.cgColor
+          self.tabBarController?.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+          self.tabBarController?.tabBar.layer.shadowRadius = 4.0
+          self.tabBarController?.tabBar.layer.shadowOpacity = 0.6
+          self.tabBarController?.tabBar.clipsToBounds = true
+        
         scrollToSlide(at: 0, animated: true)
+        
     }
     
     override var titlesInSwitcher: [String]{
