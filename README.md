@@ -2,7 +2,27 @@
 
 This app is a dog's life log management app. The prototype is now complete.  In addition to your dog, dogs You meet on your walks can be registered as friends. Then you can see on the table view what your dog ate and drank, when and how many walks he took.
 
-**I have implemented a significant redesign of this app.(06/07/2020)**
+**I have implemented a significant redesign of this app.(06/07/2020)**  
+The Icons in this app are Google Material Design Icon and Nounproject's Icons.This design is based on Flat Design 2.0, with elements of Material Design We have also designed it to incorporate.  
+- ### Color palette
+  
+   - MainColor(Primarycolor)  
+   HEX Color **#F25781**
+   - Primary variant1 color  
+   HEX Color **#AD0045**　　
+   - Primary variant2 color  
+   HEX Color **#F788A4**  
+   - Complementary color  
+   HEX Color **#F5F5F5**  
+   
+     - Calendar Tag Color(Red)  
+     HEX Color **#FF680A**  
+     -Calendar Tag Color(Blue)  
+     HEX Color **#4BABE7**  
+     -Calendar Tag Color(Yellow)  
+     HEX Color **#FDE74C**  
+     -Calendar Tag Color(Green)  
+     HEX Color **#88B7B5**  
 
 ## How to use?(image)
 
