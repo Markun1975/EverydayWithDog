@@ -116,5 +116,16 @@ override func viewDidLoad() {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        iconCornerRadius()
+    }
+    
+    private func iconCornerRadius(){
+        //Icon
+        profileIconImage.layer.cornerRadius = profileIconImage.frame.height/2
+        profileIconImage.clipsToBounds = true
+    }
+    
 }
 

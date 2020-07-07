@@ -185,4 +185,15 @@ class ProfileViewController: UIViewController {
         label.layer.borderWidth = 0.25  // 枠線の幅
         label.layer.borderColor = UIColor.lightGray.cgColor
     }
+    
+    override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+           iconCornerRadius()
+       }
+       
+       private func iconCornerRadius(){
+           //Icon
+           profileIconImage.layer.cornerRadius = profileIconImage.frame.height/2
+           profileIconImage.clipsToBounds = true
+       }
 }

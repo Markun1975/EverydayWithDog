@@ -46,7 +46,7 @@ class SettingViewController: UIViewController {
         extendedLayoutIncludesOpaqueBars = true
         
         centerLabel.layer.borderWidth = 1
-        centerLabel.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.26).cgColor
+        centerLabel.layer.borderColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.26).cgColor
         
         let user = Auth.auth().currentUser
         

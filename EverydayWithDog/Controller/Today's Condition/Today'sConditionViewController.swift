@@ -173,38 +173,53 @@ class Today_sConditionViewController: UIViewController {
     
     func iconSetup(setButtonIcon: UIImageView){
         
-          var setIcon = UIImageView()
+        var setIcon = UIImageView()
         setIcon = setButtonIcon
-        setIcon.layer.cornerRadius = setIcon.frame.size.width/2
-        setIcon.clipsToBounds = true
-          setIcon.layer.shadowColor = UIColor.black.cgColor
-          setIcon.layer.shadowOffset = CGSize(width: 0, height: 1)
-          setIcon.layer.shadowOpacity = 0.2
+        setIcon.layer.shadowColor = UIColor.black.cgColor
+        setIcon.layer.shadowOffset = CGSize(width: 0, height: 1)
+        setIcon.layer.shadowOpacity = 0.2
         setIcon.layer.shadowRadius = 0.2
       }
     
-    func iconSetup1(setButtonIcon: UIImageView,setUIButton: UIButton){
-       var setIcon = UIImageView()
-       var setButton = UIButton()
-       setIcon = setButtonIcon
-       setButton = setUIButton
-        
-        setIcon.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(setIcon)
-       
-        
-        setIcon.topAnchor.constraint(equalTo: setButton.topAnchor, constant: 28).isActive = true
-        setIcon.leftAnchor.constraint(equalTo: setButton.leftAnchor, constant: 29.0).isActive = true
-        
-        setIcon.bottomAnchor.constraint(equalTo: setButton.bottomAnchor, constant: 27).isActive = true
-        
-        
-        
-        setIcon.widthAnchor.constraint(equalTo: setIcon.heightAnchor, multiplier: 1.0).isActive = true
-        
-        setIcon.widthAnchor.constraint(equalTo: setIcon.widthAnchor, multiplier: 1.0).isActive = true
-
-        setIcon.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        iconCornerRadius()
     }
+    
+    private func iconCornerRadius(){
+        //Icon
+        petFoodIcon.layer.cornerRadius = petFoodIcon.frame.height/2
+        petFoodIcon.clipsToBounds = true
+        waterIcon.layer.cornerRadius = petFoodIcon.frame.height/2
+        waterIcon.clipsToBounds = true
+        walkIcon.layer.cornerRadius = petFoodIcon.frame.height/2
+        walkIcon.clipsToBounds = true
+        toiletIcon.layer.cornerRadius = petFoodIcon.frame.height/2
+        toiletIcon.clipsToBounds = true
+    }
+    
+//    func iconSetup1(setButtonIcon: UIImageView,setUIButton: UIButton){
+//       var setIcon = UIImageView()
+//       var setButton = UIButton()
+//       setIcon = setButtonIcon
+//       setButton = setUIButton
+//        
+//        setIcon.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(setIcon)
+//       
+//        
+//        setIcon.topAnchor.constraint(equalTo: setButton.topAnchor, constant: 28).isActive = true
+//        setIcon.leftAnchor.constraint(equalTo: setButton.leftAnchor, constant: 29.0).isActive = true
+//        
+//        setIcon.bottomAnchor.constraint(equalTo: setButton.bottomAnchor, constant: 27).isActive = true
+//        
+//        
+//        
+//        setIcon.widthAnchor.constraint(equalTo: setIcon.heightAnchor, multiplier: 1.0).isActive = true
+//        
+//        setIcon.widthAnchor.constraint(equalTo: setIcon.widthAnchor, multiplier: 1.0).isActive = true
+//
+//        setIcon.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//    }
 }
 
