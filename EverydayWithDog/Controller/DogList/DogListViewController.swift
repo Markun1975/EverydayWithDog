@@ -10,20 +10,23 @@ import UIKit
 import SegementSlide
 import SDWebImage
 
-class DogListViewController: SegementSlideViewController{
+class DogListViewController: SegementSlideDefaultViewController{
+    
     
     @IBOutlet var DogList: UIView!
     
     var viewnumber: Int = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //必須
-        reloadData()
-        scrollToSlide(at: 0, animated: true)
         
         self.view.backgroundColor = .white
+        
+        //必須
+        reloadData()
+        defaultSelectedIndex = 0
         
         //NavigationBar設定
         self.navigationController?.navigationBar.isTranslucent = false //くもりガラスを取る
@@ -49,14 +52,14 @@ class DogListViewController: SegementSlideViewController{
           self.tabBarController?.tabBar.layer.shadowRadius = 4.0
           self.tabBarController?.tabBar.layer.shadowOpacity = 0.6
           self.tabBarController?.tabBar.clipsToBounds = true
-        
-        scrollToSlide(at: 0, animated: true)
-        
     }
     
+
+    
     override var titlesInSwitcher: [String]{
-              return["My Dogs","Friends"]
-          }
+        return ["My Dog","Friend Dogs"]
+    }
+
     
     override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
         switch index {
@@ -71,10 +74,6 @@ class DogListViewController: SegementSlideViewController{
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        
-        //セルの数をカウント
-        
     }
     
    @objc func buttonNavigation(){

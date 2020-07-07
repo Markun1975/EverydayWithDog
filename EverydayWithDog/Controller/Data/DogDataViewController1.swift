@@ -14,7 +14,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class DogDataViewController1: SegementSlideViewController{
+class DogDataViewController1: SegementSlideDefaultViewController{
     
     let fetchFirstDogIdInfo = FetchDogData()
     
@@ -57,7 +57,8 @@ class DogDataViewController1: SegementSlideViewController{
         
         //下記コード必ず必要
         reloadData()
-        scrollToSlide(at: 0, animated: true)
+        defaultSelectedIndex = 0
+        
         
         
         //TabBar設定
@@ -89,10 +90,10 @@ class DogDataViewController1: SegementSlideViewController{
              self.navigationController?.setNavigationBarHidden(false, animated: true)
          }
     
+    override var titlesInSwitcher: [String] {
+        return ["食事", "お水", "運動", "トイレ"]
+    }
     
-     override var titlesInSwitcher: [String]{
-        return["食事","お水","運動","トイレ"]
-        }
     
      override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
                 switch index {
@@ -110,31 +111,30 @@ class DogDataViewController1: SegementSlideViewController{
             }
     
     
-    
-    
-    override var headerView: UIView?{
+    override func segementSlideHeaderView() -> UIView? {
+        
         let headerView = UIView()
 
-        
-        headerView.isUserInteractionEnabled = false
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        let headerHeight:CGFloat
-        if #available(iOS 11.0, *){
-            headerHeight = view.bounds.height/14 + view.safeAreaInsets.top
-        }else{
-            headerHeight = view.bounds.height/14 + topLayoutGuide.length
-        }
-        headerView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: headerHeight)
-        headerView.heightAnchor.constraint(equalToConstant: headerHeight).isActive = true
-        
-        //NameLabelの設定
-        dogNamelabel.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height/16)
-        dogNamelabel.textAlignment = NSTextAlignment.center
-        dogNamelabel.font = UIFont.boldSystemFont(ofSize: 20)
-        dogNamelabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.87)
-        headerView.addSubview(dogNamelabel)
-        
-        return headerView
+         
+         headerView.isUserInteractionEnabled = false
+         headerView.translatesAutoresizingMaskIntoConstraints = false
+         let headerHeight:CGFloat
+         if #available(iOS 11.0, *){
+             headerHeight = view.bounds.height/14 + view.safeAreaInsets.top
+         }else{
+             headerHeight = view.bounds.height/14 + topLayoutGuide.length
+         }
+         headerView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: headerHeight)
+         headerView.heightAnchor.constraint(equalToConstant: headerHeight).isActive = true
+         
+         //NameLabelの設定
+         dogNamelabel.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height/16)
+         dogNamelabel.textAlignment = NSTextAlignment.center
+         dogNamelabel.font = UIFont.boldSystemFont(ofSize: 20)
+         dogNamelabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.87)
+         headerView.addSubview(dogNamelabel)
+         
+         return headerView
     }
     
     
