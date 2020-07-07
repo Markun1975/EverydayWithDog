@@ -10,7 +10,7 @@ The Icons in this app are Google Material Design Icon and Nounproject's Icons.Th
    HEX Color **#F25781**
    - Primary variant1 color  
    HEX Color **#AD0045**　　
-   - Primary variant1 color  
+   - Primary variant2 color  
    HEX Color **#F788A4**  
    - Complementary color  
    HEX Color **#F5F5F5**  
