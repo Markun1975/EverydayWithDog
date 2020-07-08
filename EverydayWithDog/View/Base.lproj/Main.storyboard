@@ -15,7 +15,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pi4-lZ-42Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-330"/>
+            <point key="canvasLocation" x="1354" y="-408"/>
         </scene>
         <!--Today'sBodyCondition-->
         <scene sceneID="sdw-Ug-wh7">
@@ -25,7 +25,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzv-Lc-HbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="129"/>
+            <point key="canvasLocation" x="1354" y="151"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="u06-4X-2Pf">
@@ -35,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ik-gS-LdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="580"/>
+            <point key="canvasLocation" x="1354" y="610"/>
         </scene>
         <!--Data-->
         <scene sceneID="fcp-vG-fbp">
@@ -45,7 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbg-lz-pLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="810"/>
+            <point key="canvasLocation" x="1354" y="859"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="50e-5H-UXZ">
@@ -308,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSY-eH-FY7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626.4000000000001" y="-252.70935960591135"/>
+            <point key="canvasLocation" x="-1449" y="-255"/>
         </scene>
         <!--Finish Login View Controller-->
         <scene sceneID="rlh-S3-wab">
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wx0-dW-i0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-743.20000000000005" y="145.56650246305421"/>
+            <point key="canvasLocation" x="-303" y="151"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="iY4-9d-blV">
@@ -520,12 +520,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkJ-D4-FBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1626.4000000000001" y="492.85714285714289"/>
+            <point key="canvasLocation" x="-1450" y="524"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="tqX-VL-hAc">
             <objects>
-                <viewController id="yh2-cp-EeI" customClass="ResetPasswordViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yh2-cp-EeI" customClass="resetPasswordViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8g-Jc-Cnc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,7 +553,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0n-Za-zg6">
                                 <rect key="frame" x="16" y="228" width="343" height="212"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-St-TGq" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-St-TGq" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
                                         <rect key="frame" x="21" y="34" width="300" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -580,16 +580,17 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2r-BAb">
                                         <rect key="frame" x="21" y="119" width="300" height="50"/>
-                                        <color key="backgroundColor" red="0.10588235294117647" green="0.76078431372549016" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0039215686274509803" green="0.72941176470588232" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KJk-qi-MFa"/>
                                             <constraint firstAttribute="height" constant="50" id="Nxc-e6-yb4"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="メールを送る">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="sendResetPassButton:" destination="yh2-cp-EeI" eventType="touchUpInside" id="qmX-5V-oaT"/>
+                                            <action selector="sendResetPassButton:" destination="yh2-cp-EeI" eventType="touchUpInside" id="0Kb-hi-egw"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -625,10 +626,15 @@
                         <viewLayoutGuide key="safeArea" id="1S0-nU-N5j"/>
                     </view>
                     <navigationItem key="navigationItem" id="a6G-sP-KMv"/>
+                    <connections>
+                        <outlet property="baseView" destination="q0n-Za-zg6" id="xRN-yd-54n"/>
+                        <outlet property="mailAddress" destination="i2b-St-TGq" id="eY6-Mf-0xv"/>
+                        <outlet property="sendResetButton" destination="TYd-2r-BAb" id="lgO-rT-95j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYi-RW-1AK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746.39999999999998" y="879.31034482758628"/>
+            <point key="canvasLocation" x="-303" y="918"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="FhH-R1-BtT">
@@ -651,7 +657,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwR-Zx-0CV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+            <point key="canvasLocation" x="706" y="168"/>
         </scene>
     </scenes>
     <resources>
@@ -667,6 +673,6 @@
         <image name="username" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yRl-db-jlP"/>
+        <segue reference="HKJ-5Z-fRb"/>
     </inferredMetricsTieBreakers>
 </document>

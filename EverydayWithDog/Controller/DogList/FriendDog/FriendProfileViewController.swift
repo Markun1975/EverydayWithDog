@@ -38,9 +38,12 @@ class FriendProfileViewController: UIViewController {
  
 override func viewDidLoad() {
         super.viewDidLoad()
-        
-        profileIconImage.layer.cornerRadius = profileIconImage.frame.size.width * 0.5
-        profileIconImage.clipsToBounds = true
+    
+    //ImageView設定
+    profileIconImage.layer.cornerRadius = profileIconImage.frame.size.width/2
+    profileIconImage.clipsToBounds = true
+    profileIconImage.layer.borderColor = UIColor.white.cgColor
+    profileIconImage.layer.borderWidth = 4
     }
         
     override func viewWillAppear(_ animated: Bool) {

@@ -10,6 +10,7 @@ import UIKit
 import SideMenu
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 import FirebaseStorage
 import FirebaseFirestore
 

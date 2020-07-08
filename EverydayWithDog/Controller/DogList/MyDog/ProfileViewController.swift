@@ -104,6 +104,7 @@ class ProfileViewController: UIViewController {
         filaria = UserDefaults.standard.object(forKey: "filaria") as! String
         memo = UserDefaults.standard.object(forKey: "memo") as! String
         
+        
         profileIconImage!.sd_setImage(with: URL(string: profile!), completed: nil)
         nameLabel!.text = name!
         if sex == "男の子" {

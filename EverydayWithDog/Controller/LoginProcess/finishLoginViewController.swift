@@ -17,7 +17,7 @@ class finishLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCheckAnimation()
-        setupMenuButton()
+        setupMainButton()
     }
     
     @IBAction func TopMenu(_ sender: Any) {
@@ -40,7 +40,7 @@ class finishLoginViewController: UIViewController {
         self.view.addSubview(animationView)
     }
     
-    func setupMenuButton() {
+    func setupMainButton() {
         nemuButton.layer.cornerRadius = 23
         nemuButton.layer.shadowColor = UIColor.black.cgColor
         nemuButton.layer.shadowOffset = CGSize(width: 0, height: 1)

@@ -24,29 +24,11 @@ class confirmViewController: UIViewController {
         super.viewDidLoad()
         
         //アドレス入力欄設定
-        mailAddress.layer.cornerRadius = 10
-        mailAddress.layer.borderColor = UIColor.black.cgColor
-        mailAddress.layer.shadowColor = UIColor.black.cgColor
-        mailAddress.layer.shadowOffset = CGSize(width: 0, height: 1)
-        mailAddress.layer.shadowOpacity = 0.2
-        mailAddress.layer.shadowRadius = 1
-        
-
+        mailAddressSetup()
         //パスワード入力欄設定
-        passWord.layer.cornerRadius = 10
-        passWord.layer.borderColor = UIColor.black.cgColor
-        passWord.layer.shadowColor = UIColor.black.cgColor
-        passWord.layer.shadowOffset = CGSize(width: 0, height: 1)
-        passWord.layer.shadowOpacity = 0.2
-        passWord.layer.shadowRadius = 1
-
+        passwordSetup()
         //ログインボタン設定
-        loginButton.layer.cornerRadius = 23
-        loginButton.layer.shadowColor = UIColor.black.cgColor
-        loginButton.layer.shadowOffset = CGSize(width: 0, height: 1)
-        loginButton.layer.shadowOpacity = 0.2
-        loginButton.layer.shadowRadius = 1
-        
+        loginButtonSetup()
         view.addSubview(loginButton)
     }
     
@@ -75,7 +57,7 @@ class confirmViewController: UIViewController {
     
     @IBAction func resetPasswordProcessing(_ sender: Any) {
         let mailText = mailAddress.text
-        if mailText == "" { displayAlertMessage(userMessage:"メールアドレスを入力してください")
+        if mailText == nil || mailText == "" { displayAlertMessage(userMessage:"メールアドレスを入力してください")
         } else {
             resetPasswordAlertMessage()
         }
@@ -137,10 +119,10 @@ class confirmViewController: UIViewController {
         }
     
     func resetPasswordAlertMessage() {
+        UserDefaults.standard.set(self.mailAddress.text!, forKey: "emailString")
         let alert = UIAlertController(title: "確認", message: "パスワードの再設定をしますか？", preferredStyle: UIAlertController.Style.alert)
         let resetMessage = UIAlertAction(title: "再設定", style: UIAlertAction.Style.default)
         { _ in
-            UserDefaults.standard.set(self.mailAddress.text!, forKey: "emailString")
             self.performSegue(withIdentifier: "resetPassword", sender: nil)
         }
         let calcelMessage = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.default, handler: nil)
@@ -149,6 +131,32 @@ class confirmViewController: UIViewController {
         alert.addAction(calcelMessage)
         alert.addAction(resetMessage)
         present(alert,animated: true, completion: nil)
+    }
+    
+    private func mailAddressSetup(){
+        mailAddress.layer.cornerRadius = 10
+        mailAddress.layer.borderColor = UIColor.black.cgColor
+        mailAddress.layer.shadowColor = UIColor.black.cgColor
+        mailAddress.layer.shadowOffset = CGSize(width: 0, height: 1)
+        mailAddress.layer.shadowOpacity = 0.2
+        mailAddress.layer.shadowRadius = 1
+    }
+    
+    private func passwordSetup(){
+        passWord.layer.cornerRadius = 10
+        passWord.layer.borderColor = UIColor.black.cgColor
+        passWord.layer.shadowColor = UIColor.black.cgColor
+        passWord.layer.shadowOffset = CGSize(width: 0, height: 1)
+        passWord.layer.shadowOpacity = 0.2
+        passWord.layer.shadowRadius = 1
+    }
+    
+    private func loginButtonSetup(){
+        loginButton.layer.cornerRadius = 23
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+        loginButton.layer.shadowOpacity = 0.2
+        loginButton.layer.shadowRadius = 1
     }
 
 }

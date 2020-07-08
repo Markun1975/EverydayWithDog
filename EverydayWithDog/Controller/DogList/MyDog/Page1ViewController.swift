@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SegementSlide
 import SDWebImage
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
+import SegementSlide
 
 
 class Page1ViewController: UITableViewController,SegementSlideContentScrollViewDelegate {

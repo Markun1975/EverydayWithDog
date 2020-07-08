@@ -68,7 +68,6 @@
 		F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */; };
 		F4A60E71247BFDB500C31767 /* ToiletDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */; };
 		F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E72247CB0FB00C31767 /* FetchDogData.swift */; };
-		F4A60E7524864B1700C31767 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */; };
 		F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */; };
 		F4B7577B246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */; };
 		F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */; };
@@ -80,6 +79,7 @@
 		F4E7007D23ED368600CC715C /* Friend1ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */; };
 		F4EFE3C523F6411A00F3C6EC /* timeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */; };
 		F4EFE3C723F9158F00F3C6EC /* InputScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */; };
+		F4FECC5A24B59CDE008FF0F6 /* resetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FECC5924B59CDE008FF0F6 /* resetPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +148,6 @@
 		F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataTableViewController1.swift; sourceTree = "<group>"; };
 		F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletDataTableViewController1.swift; sourceTree = "<group>"; };
 		F4A60E72247CB0FB00C31767 /* FetchDogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogData.swift; sourceTree = "<group>"; };
-		F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		F4B7576D246C5D1400753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		F4B7576E246C5D1600753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F4B7576F246C5D2900753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -164,6 +163,7 @@
 		F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend1ProfileViewController.swift; sourceTree = "<group>"; };
 		F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagement.swift; sourceTree = "<group>"; };
 		F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScheduleViewController.swift; sourceTree = "<group>"; };
+		F4FECC5924B59CDE008FF0F6 /* resetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +254,7 @@
 				F479315423D9617A00125D47 /* confirmViewController.swift */,
 				F479315623D961C300125D47 /* addNewAccountViewController.swift */,
 				F415C20D23E05F9B00C50148 /* finishLoginViewController.swift */,
+				F4FECC5924B59CDE008FF0F6 /* resetPasswordViewController.swift */,
 			);
 			path = LoginProcess;
 			sourceTree = "<group>";
@@ -261,7 +262,6 @@
 		F42444F0242BB60800C7825A /* MyDog */ = {
 			isa = PBXGroup;
 			children = (
-				F4A60E7424864B1700C31767 /* ResetPasswordViewController.swift */,
 				F479316123D966B700125D47 /* Page1ViewController.swift */,
 				F414CDD323E6B96C000CD579 /* ProfileViewController.swift */,
 				F479315B23D965D400125D47 /* ProfileInputController.swift */,
@@ -541,6 +541,7 @@
 				F464DD6624AC671900714CAA /* InputTextField.swift in Sources */,
 				F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */,
 				F479316B23D967BD00125D47 /* Today'sConditionViewController.swift in Sources */,
+				F4FECC5A24B59CDE008FF0F6 /* resetPasswordViewController.swift in Sources */,
 				F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */,
 				F46CECCC24A46EE200BA3EA6 /* CustomUITextField.swift in Sources */,
 				F479316023D9667500125D47 /* DogListViewController.swift in Sources */,
@@ -550,7 +551,6 @@
 				F479315C23D965D400125D47 /* ProfileInputController.swift in Sources */,
 				F42444EF242BB0D700C7825A /* FriendProfileViewController.swift in Sources */,
 				F412F93424705083009DC291 /* deleteAlert.swift in Sources */,
-				F4A60E7524864B1700C31767 /* ResetPasswordViewController.swift in Sources */,
 				F413733623F12896003EF61F /* WaterViewController.swift in Sources */,
 				F479315323D960BB00125D47 /* LoginViewController.swift in Sources */,
 				F4E7007D23ED368600CC715C /* Friend1ProfileViewController.swift in Sources */,
@@ -730,7 +730,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.masaki.EverydayWithDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -751,7 +751,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.masaki.EverydayWithDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
