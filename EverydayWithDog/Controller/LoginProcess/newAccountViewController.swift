@@ -28,11 +28,11 @@ class newAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerButton.layer.cornerRadius = 23
-        registerButton.layer.shadowColor = UIColor.black.cgColor
-        registerButton.layer.shadowOffset = CGSize(width: 0, height: 1)
-        registerButton.layer.shadowOpacity = 0.2
-        registerButton.layer.shadowRadius = 1
+        
+        userNameSetup()
+        mailAddressSetup()
+        passwordSetup()
+        registerButtonSetup()
     }
     
     //ログイン条件設定
@@ -161,4 +161,40 @@ class newAccountViewController: UIViewController {
                   alert.addAction(okMessage)
                   present(alert,animated: true, completion: nil)
               }
+    
+    
+    private func userNameSetup(){
+           userName.layer.cornerRadius = 10
+           userName.layer.borderColor = UIColor.black.cgColor
+           userName.layer.shadowColor = UIColor.black.cgColor
+           userName.layer.shadowOffset = CGSize(width: 0, height: 1)
+           userName.layer.shadowOpacity = 0.2
+           userName.layer.shadowRadius = 1
+       }
+    
+    private func mailAddressSetup(){
+        mailAddress.layer.cornerRadius = 10
+        mailAddress.layer.borderColor = UIColor.black.cgColor
+        mailAddress.layer.shadowColor = UIColor.black.cgColor
+        mailAddress.layer.shadowOffset = CGSize(width: 0, height: 1)
+        mailAddress.layer.shadowOpacity = 0.2
+        mailAddress.layer.shadowRadius = 1
+    }
+    
+    private func passwordSetup(){
+           passWord.layer.cornerRadius = 10
+           passWord.layer.borderColor = UIColor.black.cgColor
+           passWord.layer.shadowColor = UIColor.black.cgColor
+           passWord.layer.shadowOffset = CGSize(width: 0, height: 1)
+           passWord.layer.shadowOpacity = 0.2
+           passWord.layer.shadowRadius = 1
+       }
+    
+    private func registerButtonSetup(){
+           registerButton.layer.cornerRadius = 23
+           registerButton.layer.shadowColor = UIColor.black.cgColor
+           registerButton.layer.shadowOffset = CGSize(width: 0, height: 1)
+           registerButton.layer.shadowOpacity = 0.2
+           registerButton.layer.shadowRadius = 1
+       }
 }
