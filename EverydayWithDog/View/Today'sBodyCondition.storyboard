@@ -96,7 +96,7 @@
                                         <color key="textColor" white="0.0" alpha="0.87221746575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Petfood" translatesAutoresizingMaskIntoConstraints="NO" id="hSH-S9-ZD1">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petfood" translatesAutoresizingMaskIntoConstraints="NO" id="hSH-S9-ZD1">
                                         <rect key="frame" x="51" y="75" width="55" height="55"/>
                                         <color key="backgroundColor" red="1" green="0.40392156862745099" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -721,7 +721,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Petfood" width="16" height="16"/>
         <image name="Water" width="700" height="700"/>
         <image name="memo" width="24" height="24"/>
         <image name="petfood" width="700" height="700"/>
