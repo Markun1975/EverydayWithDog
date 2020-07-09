@@ -462,7 +462,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="友達犬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-ce-Q07">
-                                        <rect key="frame" x="180" y="132" width="131" height="25"/>
+                                        <rect key="frame" x="180" y="119" width="131" height="33"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="0.77335723458904104" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -484,7 +484,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="私の犬" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="FJO-Jt-pK0">
-                                        <rect key="frame" x="32" y="129" width="131" height="28"/>
+                                        <rect key="frame" x="32" y="119" width="131" height="33"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="0.77450770547945202" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -497,21 +497,22 @@
                                     <constraint firstItem="Ru1-C6-gvK" firstAttribute="top" secondItem="yqw-VI-aYj" secondAttribute="bottom" constant="33" id="CXm-RB-oJl"/>
                                     <constraint firstItem="FJO-Jt-pK0" firstAttribute="trailing" secondItem="Ru1-C6-gvK" secondAttribute="trailing" id="Cjm-Qc-eZh"/>
                                     <constraint firstItem="FJO-Jt-pK0" firstAttribute="baseline" secondItem="gjq-ce-Q07" secondAttribute="baseline" id="EPn-aE-X1t"/>
-                                    <constraint firstAttribute="bottom" secondItem="FJO-Jt-pK0" secondAttribute="bottom" constant="3" id="I1a-Xq-Wev"/>
+                                    <constraint firstAttribute="bottom" secondItem="FJO-Jt-pK0" secondAttribute="bottom" constant="8" id="I1a-Xq-Wev"/>
                                     <constraint firstItem="yqw-VI-aYj" firstAttribute="trailing" secondItem="5y2-ff-7ww" secondAttribute="trailing" id="Iaf-Jw-y9e"/>
                                     <constraint firstItem="5y2-ff-7ww" firstAttribute="leading" secondItem="gjq-ce-Q07" secondAttribute="leading" id="Ifn-i0-hga"/>
                                     <constraint firstItem="yqw-VI-aYj" firstAttribute="leading" secondItem="Ru1-C6-gvK" secondAttribute="leading" id="Ng6-zh-QsT"/>
                                     <constraint firstItem="yqw-VI-aYj" firstAttribute="leading" secondItem="FJO-Jt-pK0" secondAttribute="leading" id="Wsz-3K-I18"/>
                                     <constraint firstItem="hFU-8r-F7e" firstAttribute="centerX" secondItem="DuD-dn-tyn" secondAttribute="centerX" id="XNS-JT-g3c"/>
-                                    <constraint firstItem="gjq-ce-Q07" firstAttribute="top" secondItem="5y2-ff-7ww" secondAttribute="bottom" constant="45" id="aDd-ra-f7i"/>
+                                    <constraint firstItem="gjq-ce-Q07" firstAttribute="top" secondItem="5y2-ff-7ww" secondAttribute="bottom" constant="32" id="aDd-ra-f7i"/>
                                     <constraint firstItem="5y2-ff-7ww" firstAttribute="baseline" secondItem="Ru1-C6-gvK" secondAttribute="firstBaseline" id="aug-OL-Qpb"/>
+                                    <constraint firstAttribute="bottom" secondItem="gjq-ce-Q07" secondAttribute="bottom" constant="8" id="bLM-WY-PsX"/>
                                     <constraint firstItem="yqw-VI-aYj" firstAttribute="leading" secondItem="DuD-dn-tyn" secondAttribute="leading" constant="32" id="bQK-EI-wgI"/>
                                     <constraint firstItem="5y2-ff-7ww" firstAttribute="leading" secondItem="hFU-8r-F7e" secondAttribute="trailing" constant="8" id="bqY-Ms-EaR"/>
                                     <constraint firstItem="5y2-ff-7ww" firstAttribute="baseline" secondItem="Ru1-C6-gvK" secondAttribute="baseline" id="c5q-x1-JlG"/>
                                     <constraint firstItem="yqw-VI-aYj" firstAttribute="top" secondItem="DuD-dn-tyn" secondAttribute="top" constant="7" id="c7W-Ec-uBm"/>
                                     <constraint firstItem="5y2-ff-7ww" firstAttribute="firstBaseline" secondItem="Ru1-C6-gvK" secondAttribute="baseline" id="cMz-D1-mNa"/>
                                     <constraint firstItem="hFU-8r-F7e" firstAttribute="leading" secondItem="Ru1-C6-gvK" secondAttribute="trailing" constant="8" id="dUK-sq-YkK"/>
-                                    <constraint firstItem="FJO-Jt-pK0" firstAttribute="top" secondItem="Ru1-C6-gvK" secondAttribute="bottom" constant="42" id="iYp-SU-qv2"/>
+                                    <constraint firstItem="FJO-Jt-pK0" firstAttribute="top" secondItem="Ru1-C6-gvK" secondAttribute="bottom" constant="32" id="iYp-SU-qv2"/>
                                     <constraint firstAttribute="bottom" secondItem="hFU-8r-F7e" secondAttribute="bottom" constant="25" id="mgi-f6-axy"/>
                                     <constraint firstItem="hFU-8r-F7e" firstAttribute="centerX" secondItem="yqw-VI-aYj" secondAttribute="centerX" id="x7E-H2-faA"/>
                                 </constraints>

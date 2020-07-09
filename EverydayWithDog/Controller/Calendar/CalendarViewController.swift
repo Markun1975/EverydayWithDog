@@ -208,7 +208,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     //以下TableViewの設定
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 143
+        return 138
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
