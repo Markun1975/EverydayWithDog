@@ -24,7 +24,7 @@ class EndInputScheduleViewController: UIViewController {
     func setUpCalendarAnimation(){
          let animationView = AnimationView()
          let animation = Animation.named("calendarAnimation")
-         animationView.frame = CGRect(x: 45, y: 320, width: 285, height: 172)
+        animationView.frame = CGRect(x: view.frame.width/4, y: view.frame.height/3, width: view.frame.width/2, height: view.frame.height/3)
          animationView.animation = animation
          animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .playOnce
@@ -33,7 +33,8 @@ class EndInputScheduleViewController: UIViewController {
     }
     
     @IBAction func selfnavigationControllerpopToRootViewControlleranimatedtruebackToCalendar(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+//        self.navigationController?.popToRootViewController(animated: true)
         self.navigationController?.navigationBar.isHidden = false
+        self.dismiss(animated: true, completion: nil)
     }
 }

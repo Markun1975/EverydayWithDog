@@ -22,6 +22,8 @@ class MealViewController: UIViewController {
     
     @IBOutlet var saveButton: UIButton!
     
+    var timer:Timer!
+    
     let setTexField = InputTextField()
     
         var dogId:String?
@@ -45,7 +47,9 @@ class MealViewController: UIViewController {
         mealTimeTextView.inputView = datePicker
         toolBar()
         self.tabBarController?.tabBar.isHidden = true
-        textFieldSetup()
+        //数字のみ入力Keybord指定
+        self.mealQuantityView.keyboardType = UIKeyboardType.numberPad
+        saveButtonSetup()
     }
     
     
@@ -66,8 +70,16 @@ class MealViewController: UIViewController {
         aDog.collection("mealInfomation").addDocument(data: mealInfoArray)
         print(uid!,"meal登録できてる")
         print(dogId!,"meal登録できてる")
-        self.performSegue(withIdentifier: "FinishedMeal", sender: nil)
         
+        //登録完了のポップアップを出す
+        let storyBoard: UIStoryboard = self.storyboard!
+        
+        let popupView = storyBoard.instantiateViewController(withIdentifier: "EndInputConditionView")
+        popupView.modalPresentationStyle = .overFullScreen
+        popupView.modalTransitionStyle = .crossDissolve
+        self.present(popupView, animated: true, completion: nil)
+        //二秒後にTop画面へ繊維
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
     }
     
     @objc func dateChange(){
@@ -76,7 +88,14 @@ class MealViewController: UIViewController {
         mealTimeTextView.text = "\(formatter.string(from: datePicker.date))"
        }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //キーボードを閉じる
             self.view.endEditing(true)
     }
     
@@ -86,18 +105,13 @@ class MealViewController: UIViewController {
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolBar.setItems([spaceItem, doneItem], animated: true)
+        mealQuantityView.inputAccessoryView = toolBar
         mealTimeTextView.inputAccessoryView = toolBar
-    }
-    
-     @objc func done(){
-        mealQuantityView.endEditing(true)
+        mealContentTextView.inputAccessoryView = toolBar
+        
     }
 
-    func textFieldSetup(){
-        setTexField.setPuTextField(setText: mealQuantityView)
-        setTexField.setPuTextField(setText: mealTimeTextView)
-        setTexField.setPuTextField(setText: mealContentTextView)
-        
+    func saveButtonSetup(){
         //SaveButtonの設定も行う
         saveButton.layer.cornerRadius = 5
         saveButton.layer.cornerRadius = 5
@@ -105,5 +119,19 @@ class MealViewController: UIViewController {
         saveButton.layer.shadowOffset = CGSize(width: 0, height: 1)
         saveButton.layer.shadowOpacity = 0.2
         saveButton.layer.shadowRadius = 0.2
+    }
+    
+    @IBAction func closePage(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func done(){
+        mealQuantityView.endEditing(true)
+        mealTimeTextView.endEditing(true)
+        mealContentTextView.endEditing(true)
+    }
+    
+    @objc func backToConditionView(){
+           self.dismiss(animated: true, completion: nil)
     }
 }

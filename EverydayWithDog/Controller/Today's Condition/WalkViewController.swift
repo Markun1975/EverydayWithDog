@@ -26,6 +26,8 @@ class WalkViewController: UIViewController {
     
     @IBOutlet var saveButton: UIButton!
     
+    var timer:Timer!
+    
     let setTexField = InputTextField()
     
     //開始日時
@@ -54,8 +56,10 @@ class WalkViewController: UIViewController {
         walkStartTimeView.inputView = datePicker1
         walkEndTimeView.inputView = datePicker2
         contentsClass.contentsTextView = wakePlaceTextView
+        //数字のみ入力Keybord指定
+        self.walkDistanceView.keyboardType = UIKeyboardType.numberPad
         contentsClass.toolBar()
-        textFieldSetup()
+        saveButtonSetup()
         self.tabBarController?.tabBar.isHidden = true
     }
     
@@ -64,24 +68,10 @@ class WalkViewController: UIViewController {
         let spaceItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: self, action: nil)
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         toolBar.setItems([spaceItem, doneItem], animated: true)
+        walkStartTimeView.inputAccessoryView = toolBar
+        walkEndTimeView.inputAccessoryView = toolBar
         wakePlaceTextView.inputAccessoryView = toolBar
-    }
-    
-    @objc func dateChange(){
-        let formatter = DateFormatter()
-        let timeFormatter = DateFormatter()
-        formatter.dateFormat = "MM月dd日 HH時mm分"
-        timeFormatter.dateFormat = "HH時mm分"
-        walkStartTimeView.text = "\(formatter.string(from: datePicker1.date))"
-        walkEndTimeView.text = "\(timeFormatter.string(from: datePicker2.date))"
-        
-       
-        
-        
-    }
-
-    @objc func done(){
-        wakePlaceTextView.endEditing(true)
+        walkDistanceView.inputAccessoryView = toolBar
     }
     
     
@@ -108,13 +98,31 @@ class WalkViewController: UIViewController {
         let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId!)
         aDog.collection("walkInfomation").addDocument(data: walkInfoArray)
         self.performSegue(withIdentifier: "FinishedWalk", sender: nil)
+        
+        //登録完了のポップアップを出す
+        let storyBoard: UIStoryboard = self.storyboard!
+        
+        let popupView = storyBoard.instantiateViewController(withIdentifier: "EndInputConditionView")
+        popupView.modalPresentationStyle = .overFullScreen
+        popupView.modalTransitionStyle = .crossDissolve
+        self.present(popupView, animated: true, completion: nil)
+        //二秒後にTop画面へ繊維
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
     }
     
-        func textFieldSetup(){
-            setTexField.setPuTextField(setText: walkStartTimeView)
-            setTexField.setPuTextField(setText: walkEndTimeView)
-            setTexField.setPuTextField(setText: wakePlaceTextView)
-            setTexField.setPuTextField(setText: walkDistanceView)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //キーボードを閉じる
+            self.view.endEditing(true)
+    }
+    
+    
+        func saveButtonSetup(){
             saveButton.layer.cornerRadius = 5
             saveButton.layer.cornerRadius = 5
             saveButton.layer.shadowColor = UIColor.black.cgColor
@@ -122,5 +130,30 @@ class WalkViewController: UIViewController {
             saveButton.layer.shadowOpacity = 0.2
             saveButton.layer.shadowRadius = 0.2
         }
+    
+    @IBAction func closePage(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func dateChange(){
+        let formatter = DateFormatter()
+        let timeFormatter = DateFormatter()
+        formatter.dateFormat = "MM月dd日 HH時mm分"
+        timeFormatter.dateFormat = "HH時mm分"
+        walkStartTimeView.text = "\(formatter.string(from: datePicker1.date))"
+        walkEndTimeView.text = "\(timeFormatter.string(from: datePicker2.date))"
+    }
+
+    @objc func done(){
+        walkStartTimeView.endEditing(true)
+        walkEndTimeView.endEditing(true)
+        wakePlaceTextView.endEditing(true)
+        walkDistanceView.endEditing(true)
+    }
+    
+    @objc func backToConditionView(){
+           self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }

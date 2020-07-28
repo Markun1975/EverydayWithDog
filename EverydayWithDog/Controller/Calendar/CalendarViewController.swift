@@ -44,6 +44,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     var selectedDayId: String?
     
+    @IBOutlet var addButton: UIButton!
+    
     var scheduleContentArray = [ScheduleContent]()
     
     let deleteVC = deleteCollection()
@@ -96,23 +98,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         
         
         //Calendar予定追加ボタン
-        let addButton = UIButton(type: .system)
-        addButton.semanticContentAttribute = .forceRightToLeft
-        addButton.setImage(UIImage(named: "plus"), for: .normal)
-        addButton.tintColor = UIColor.white
-        addButton.addTarget(self, action: #selector(addSchedule), for: .touchUpInside)
-        let addScheduleButton = UIBarButtonItem.init(customView: addButton)
-        navigationItem.rightBarButtonItem = addScheduleButton
-        addButton.frame = CGRect(x: self.view.frame.size.width/11, y:0, width: self.view.frame.size.width/11, height: self.view.frame.size.width/11)
-        addButton.layer.cornerRadius = addButton.frame.size.height/2
-        addButton.layer.backgroundColor =  UIColor(red: 247/255, green: 136/255, blue: 164/255, alpha: 1).cgColor
-        
+        addButton.layer.cornerRadius = addButton.frame.height/2
         addButton.layer.shadowColor = UIColor.black.cgColor
         addButton.layer.shadowOffset = CGSize(width: 0, height: 1)
         addButton.layer.shadowOpacity = 0.6
         addButton.layer.shadowRadius = 1
-        
         addButton.clipsToBounds = false
+        addButton.addTarget(self, action: #selector(addSchedule), for: .touchUpInside)
     }
     
     
@@ -136,6 +128,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     //カレンダー上の日付をタップした時
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        //カレンダーの日付がタップされた時、他のタップられた日付の予定を表示させないためにScheduleを初期化しなければならない
+        self.scheduleContentArray = []
         let tmpDate = Calendar(identifier: .gregorian)
         let year = tmpDate.component(.year, from: date)
         let month = tmpDate.component(.month, from: date)
@@ -157,7 +151,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
                                 return
                             }
                     //カレンダーの日付がタップされた時、他のタップられた日付の予定を表示させないためにScheduleを初期化しなければならない
-                    self.scheduleContentArray = []
+//                    self.scheduleContentArray = []
                                 for snap in documents {
                                     if let postData = snap.data() as? [String: Any]{
                                         self.selectedDayId = snap.documentID
@@ -203,7 +197,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     //スケジュールの追加ボタン
     @objc func addSchedule(){
-        self.performSegue(withIdentifier: "toAddSchedule", sender: nil)
+//        self.performSegue(withIdentifier: "toAddSchedule", sender: nil)
+        self.performSegue(withIdentifier: "toAddSumple", sender: nil)
       }
     
     //以下TableViewの設定

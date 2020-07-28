@@ -12,6 +12,9 @@ import Lottie
 class EndInputConditionViewController: UIViewController {
     
     var timer:Timer!
+    
+    @IBOutlet var popUp: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +29,18 @@ class EndInputConditionViewController: UIViewController {
     
     //登録完了のアニメーションの設定
     func setUpMemoAnimation(){
+        
             let animationView = AnimationView()
             let animation = Animation.named("memoAnimation")
-            animationView.frame = CGRect(x: 45, y: 320, width: 285, height: 172)
+        self.popUp.addSubview(animationView)
+        //Animationが中央に来ないためX軸で調整
+        animationView.frame = CGRect(x: popUp.frame.width/4, y: 0, width: popUp.frame.width/2, height: popUp.frame.height - popUp.frame.height/4)
+        animationView.centerYAnchor.constraint(equalTo: self.popUp.centerYAnchor).isActive = true
             animationView.animation = animation
-            animationView.contentMode = .scaleAspectFit
+        animationView.contentMode = .scaleAspectFill
             animationView.loopMode = .playOnce
             animationView.play()
-           self.view.addSubview(animationView)
+           
        }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -47,5 +54,6 @@ class EndInputConditionViewController: UIViewController {
     @objc func backConditionView(){
         self.navigationController?.popToRootViewController(animated: true)
         self.navigationController?.navigationBar.isHidden = false
+        self.dismiss(animated: true, completion: nil)
     }
 }

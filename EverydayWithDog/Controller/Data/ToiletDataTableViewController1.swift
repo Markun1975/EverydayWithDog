@@ -139,8 +139,10 @@ class ToiletDataTableViewController1: UITableViewController,SegementSlideContent
                          let toiletTimeString = toiletData["toiletTimeString"] as? String
 
                          let toiletPlaceString = toiletData["toitelPlaceString"] as? String
+                        
+                         let toiletTypeString = toiletData["toiletTypeString"]
 
-                        self.toiletDataInfoArray.append(ToiletInfo(toiletTimeString: toiletTimeString!, toiletPlaceString: toiletPlaceString!, toiletDocumentId: documentId))
+                        self.toiletDataInfoArray.append(ToiletInfo(toiletTimeString: toiletTimeString!, toiletPlaceString: toiletPlaceString!, toiletDocumentId: documentId, toiletTypeString: toiletTypeString as! String))
                                 }
                             }
                    //読み込みが終わったタイミングですぐにTableViewにリロードして反映

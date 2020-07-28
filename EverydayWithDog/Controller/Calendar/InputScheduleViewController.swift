@@ -44,9 +44,9 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var yellowButton: UIButton!
     
-    @IBOutlet var scheduleContentsView: UITextField!
+        @IBOutlet var greenButton: UIButton!
     
-    @IBOutlet var greenButton: UIButton!
+    @IBOutlet var scheduleContentsView: UITextField!
     
 //    @IBOutlet var mapButton: UIButton!
     
@@ -151,17 +151,8 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
     
     private func textFieldSetup(){
         self.waveLabel.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
-        
-        setTexField.setPuTextField(setText: scheduleTitletext)
-        
-        setTexField.setPuTextField(setText: scheduleStartText)
         scheduleStartText.inputView = datePicker
-        
-        setTexField.setPuTextField(setText: scheduleEndText)
-        scheduleEndText.inputView = datePicker2
-        
-        setTexField.setPuTextField(setText: scheduleContentsView)
-        
+        scheduleEndText.inputView = datePicker2 
         view.addSubview(scheduleStartText)
         view.addSubview(scheduleEndText)
     }
@@ -221,6 +212,7 @@ class InputScheduleViewController: UIViewController, MKMapViewDelegate {
         scheduleEndText.resignFirstResponder()
         scheduleContentsView.resignFirstResponder()
     }
+    
     
     //GoogleMap検索機能を使用する際に必要（今後実装）
 //    private func mapButtonSetUp(){

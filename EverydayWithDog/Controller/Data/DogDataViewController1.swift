@@ -25,13 +25,16 @@ class DogDataViewController1: SegementSlideDefaultViewController{
     
     var dogID:String?
     var dogsName:String?
+    
+    override func viewWillAppear(_ animated: Bool) {
+    //画面表示初期の名前を表示
+    fetchFirstDogIdInfo.fetchFirstDogId()
+    self.tabBarController?.tabBar.isHidden = false
+    self.navigationController?.setNavigationBarHidden(false, animated: true)
+     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //画面表示初期の名前を表示
-        fetchFirstDogIdInfo.fetchFirstDogId()
         
         self.dogsName = UserDefaults.standard.object(forKey: "dogFirstName") as? String
         if self.dogsName != nil {
@@ -54,12 +57,9 @@ class DogDataViewController1: SegementSlideDefaultViewController{
         //アイコンの色
         self.navigationController?.navigationBar.tintColor = UIColor(red: 242/255, green: 87/255, blue: 129/255, alpha: 1)
         
-        
         //下記コード必ず必要
         reloadData()
         defaultSelectedIndex = 0
-        
-        
         
         //TabBar設定
        self.tabBarController?.tabBar.barTintColor = UIColor.white
@@ -83,12 +83,6 @@ class DogDataViewController1: SegementSlideDefaultViewController{
         self.view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         print("DogdataViewメイン読み込み")
     }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-             self.tabBarController?.tabBar.isHidden = false
-             self.navigationController?.setNavigationBarHidden(false, animated: true)
-         }
     
     override var titlesInSwitcher: [String] {
         return ["食事", "お水", "運動", "トイレ"]

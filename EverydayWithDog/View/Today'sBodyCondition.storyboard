@@ -62,7 +62,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walk" translatesAutoresizingMaskIntoConstraints="NO" id="rCq-Tp-R8f">
-                                        <rect key="frame" x="46" y="370" width="65" height="65"/>
+                                        <rect key="frame" x="46" y="369.66666666666669" width="65" height="65"/>
                                         <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -80,8 +80,8 @@
                                             <action selector="toToiletInfo:" destination="Dg2-fc-0pk" eventType="touchUpInside" id="28F-0s-im5"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="oZk-a9-pkk">
-                                        <rect key="frame" x="46" y="520" width="65" height="65"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="oZk-a9-pkk">
+                                        <rect key="frame" x="46" y="519.66666666666663" width="65" height="65"/>
                                         <color key="backgroundColor" red="0.46666666666666667" green="0.1803921568627451" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -96,16 +96,16 @@
                                         <color key="textColor" white="0.0" alpha="0.87221746575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petfood" translatesAutoresizingMaskIntoConstraints="NO" id="hSH-S9-ZD1">
-                                        <rect key="frame" x="46" y="70" width="65" height="65"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petfood" translatesAutoresizingMaskIntoConstraints="NO" id="hSH-S9-ZD1">
+                                        <rect key="frame" x="46" y="69.666666666666657" width="65" height="65"/>
                                         <color key="backgroundColor" red="1" green="0.40392156862745099" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="hSH-S9-ZD1" secondAttribute="height" multiplier="1:1" id="8Bt-6A-JIa"/>
+                                            <constraint firstAttribute="width" secondItem="hSH-S9-ZD1" secondAttribute="height" multiplier="1:1" id="Wvx-wL-9R8"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="YTS-uG-fKY">
-                                        <rect key="frame" x="46" y="220" width="65" height="65"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="YTS-uG-fKY">
+                                        <rect key="frame" x="46" y="219.66666666666669" width="65" height="65"/>
                                         <color key="backgroundColor" red="0.015686274509803921" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -115,16 +115,13 @@
                                     <constraint firstItem="Xpo-c1-hVD" firstAttribute="top" secondItem="TeT-eu-lit" secondAttribute="top" constant="0.67000000000000004" id="03T-NN-It4"/>
                                     <constraint firstItem="7vf-Lb-3HZ" firstAttribute="trailing" secondItem="tKv-fA-EhR" secondAttribute="trailing" id="0qG-sD-IDb"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="height" secondItem="EIc-Cg-GmC" secondAttribute="height" id="1La-kT-B4I"/>
+                                    <constraint firstItem="hSH-S9-ZD1" firstAttribute="width" secondItem="7lq-7m-wi4" secondAttribute="height" multiplier="13:22" id="1bh-eS-99a"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="leading" secondItem="EIc-Cg-GmC" secondAttribute="leading" id="4mb-VW-rKE"/>
-                                    <constraint firstItem="7vf-Lb-3HZ" firstAttribute="top" secondItem="hSH-S9-ZD1" secondAttribute="bottom" constant="62" id="5VW-w5-3lf"/>
                                     <constraint firstAttribute="trailing" secondItem="EIc-Cg-GmC" secondAttribute="trailing" constant="22" id="8gs-Fl-tPI"/>
-                                    <constraint firstItem="hSH-S9-ZD1" firstAttribute="top" secondItem="TeT-eu-lit" secondAttribute="top" constant="70" id="9zH-Jk-jfy"/>
-                                    <constraint firstItem="tKv-fA-EhR" firstAttribute="top" secondItem="YTS-uG-fKY" secondAttribute="bottom" constant="62" id="A5Q-jo-CMr"/>
                                     <constraint firstItem="hSH-S9-ZD1" firstAttribute="height" secondItem="YTS-uG-fKY" secondAttribute="height" id="AXP-SM-OPr"/>
                                     <constraint firstItem="7vf-Lb-3HZ" firstAttribute="height" secondItem="tKv-fA-EhR" secondAttribute="height" id="CLC-b4-m8K"/>
                                     <constraint firstAttribute="trailing" secondItem="tKv-fA-EhR" secondAttribute="trailing" constant="22" id="CY9-kZ-62S"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="trailing" secondItem="EIc-Cg-GmC" secondAttribute="trailing" id="Cke-MN-XT4"/>
-                                    <constraint firstItem="oZk-a9-pkk" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="46" id="Czo-xp-IP7"/>
                                     <constraint firstItem="hSH-S9-ZD1" firstAttribute="centerX" secondItem="YTS-uG-fKY" secondAttribute="centerX" id="D70-WB-0nH"/>
                                     <constraint firstItem="7lq-7m-wi4" firstAttribute="top" secondItem="TeT-eu-lit" secondAttribute="top" constant="47" id="FPU-Hq-xpd"/>
                                     <constraint firstItem="YTS-uG-fKY" firstAttribute="width" secondItem="rCq-Tp-R8f" secondAttribute="width" id="FdB-lD-h4S"/>
@@ -132,9 +129,11 @@
                                     <constraint firstItem="YTS-uG-fKY" firstAttribute="height" secondItem="rCq-Tp-R8f" secondAttribute="height" id="HvR-Xb-8ew"/>
                                     <constraint firstItem="Xpo-c1-hVD" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="117.67" id="IUf-q9-TCN"/>
                                     <constraint firstItem="7lq-7m-wi4" firstAttribute="top" secondItem="Xpo-c1-hVD" secondAttribute="bottom" constant="22.329999999999998" id="L6E-Zl-1bw"/>
-                                    <constraint firstItem="hSH-S9-ZD1" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="46" id="LLS-ZH-tnC"/>
+                                    <constraint firstItem="hSH-S9-ZD1" firstAttribute="centerY" secondItem="7lq-7m-wi4" secondAttribute="centerY" id="MHN-Sr-CZF"/>
+                                    <constraint firstItem="hSH-S9-ZD1" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="46" id="OZa-Dh-R6z"/>
                                     <constraint firstItem="7lq-7m-wi4" firstAttribute="trailing" secondItem="7vf-Lb-3HZ" secondAttribute="trailing" id="SEk-uL-0Bj"/>
                                     <constraint firstAttribute="trailing" secondItem="7vf-Lb-3HZ" secondAttribute="trailing" constant="22" id="VAM-2r-CI5"/>
+                                    <constraint firstItem="YTS-uG-fKY" firstAttribute="centerY" secondItem="7vf-Lb-3HZ" secondAttribute="centerY" id="WBn-ad-Upp"/>
                                     <constraint firstAttribute="bottom" secondItem="EIc-Cg-GmC" secondAttribute="bottom" constant="34" id="Wib-uF-o2X"/>
                                     <constraint firstItem="EIc-Cg-GmC" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="22" id="X2o-wy-8bQ"/>
                                     <constraint firstItem="EIc-Cg-GmC" firstAttribute="top" secondItem="tKv-fA-EhR" secondAttribute="bottom" constant="40" id="XiQ-g0-9CW"/>
@@ -149,13 +148,13 @@
                                     <constraint firstItem="7lq-7m-wi4" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="22" id="i5b-8s-TS2"/>
                                     <constraint firstItem="rCq-Tp-R8f" firstAttribute="height" secondItem="oZk-a9-pkk" secondAttribute="height" id="iee-sl-OD4"/>
                                     <constraint firstItem="rCq-Tp-R8f" firstAttribute="width" secondItem="oZk-a9-pkk" secondAttribute="width" id="jPC-ad-Sxu"/>
-                                    <constraint firstAttribute="bottom" secondItem="oZk-a9-pkk" secondAttribute="bottom" constant="56" id="lbR-Mk-lFf"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="width" secondItem="EIc-Cg-GmC" secondAttribute="width" id="mOy-jZ-vCU"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="22" id="pCq-gJ-CYN"/>
                                     <constraint firstItem="7vf-Lb-3HZ" firstAttribute="leading" secondItem="tKv-fA-EhR" secondAttribute="leading" id="qNc-Jl-qpD"/>
+                                    <constraint firstItem="rCq-Tp-R8f" firstAttribute="centerY" secondItem="tKv-fA-EhR" secondAttribute="centerY" id="t2v-7H-uPI"/>
                                     <constraint firstItem="7vf-Lb-3HZ" firstAttribute="width" secondItem="tKv-fA-EhR" secondAttribute="width" id="thh-EM-aNn"/>
+                                    <constraint firstItem="oZk-a9-pkk" firstAttribute="centerY" secondItem="EIc-Cg-GmC" secondAttribute="centerY" id="uJx-cg-kac"/>
                                     <constraint firstItem="7vf-Lb-3HZ" firstAttribute="leading" secondItem="TeT-eu-lit" secondAttribute="leading" constant="22" id="wSl-4c-CFa"/>
-                                    <constraint firstItem="EIc-Cg-GmC" firstAttribute="top" secondItem="rCq-Tp-R8f" secondAttribute="bottom" constant="62" id="xyz-Bd-iKj"/>
                                     <constraint firstItem="tKv-fA-EhR" firstAttribute="top" secondItem="7vf-Lb-3HZ" secondAttribute="bottom" constant="40" id="yLL-bM-gVA"/>
                                     <constraint firstAttribute="trailing" secondItem="7lq-7m-wi4" secondAttribute="trailing" constant="22" id="zy0-0I-G2x"/>
                                 </constraints>
@@ -184,10 +183,10 @@
                         <outlet property="walkIcon" destination="rCq-Tp-R8f" id="ca7-fd-1cs"/>
                         <outlet property="waterButton" destination="7vf-Lb-3HZ" id="hCq-xX-vDC"/>
                         <outlet property="waterIcon" destination="YTS-uG-fKY" id="jum-Oa-d6z"/>
-                        <segue destination="aMY-qd-RSn" kind="push" identifier="addMeal" id="R36-gT-PJg"/>
-                        <segue destination="IJJ-JE-TzW" kind="push" identifier="addWater" id="ZfD-ab-QrL"/>
-                        <segue destination="Plx-Ib-aFp" kind="push" identifier="addWalk" id="4Ri-uY-3Eb"/>
-                        <segue destination="ZIm-Mf-lGH" kind="push" identifier="addToilet" id="yzR-UB-J1V"/>
+                        <segue destination="aMY-qd-RSn" kind="modal" identifier="addMeal" id="R36-gT-PJg"/>
+                        <segue destination="IJJ-JE-TzW" kind="modal" identifier="addWater" id="ZfD-ab-QrL"/>
+                        <segue destination="Plx-Ib-aFp" kind="modal" identifier="addWalk" id="4Ri-uY-3Eb"/>
+                        <segue destination="ZIm-Mf-lGH" kind="modal" identifier="addToilet" id="yzR-UB-J1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbL-C3-jxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -240,13 +239,13 @@
         <!--Meal View Controller-->
         <scene sceneID="Xap-Zq-lFF">
             <objects>
-                <viewController id="aMY-qd-RSn" customClass="MealViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="aMY-qd-RSn" customClass="MealViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdk-NS-vZQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どのくらい食べた？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrl-xk-tNw">
-                                <rect key="frame" x="32" y="171" width="311" height="26"/>
+                                <rect key="frame" x="32" y="110" width="311" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Qrl-xk-tNw" secondAttribute="height" multiplier="311:26" id="gOq-jw-d4g"/>
                                 </constraints>
@@ -254,23 +253,40 @@
                                 <color key="textColor" white="0.0" alpha="0.7693172089041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-gO-Lik">
-                                <rect key="frame" x="32" y="228" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-gO-Lik" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="213" width="246" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.77461472600000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhy-Nl-ZL3">
-                                <rect key="frame" x="32" y="477" width="311" height="26"/>
+                                <rect key="frame" x="32" y="442" width="311" height="28"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.77461472602739723" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiW-zJ-eWr">
-                                <rect key="frame" x="22" y="720" width="331" height="58"/>
+                                <rect key="frame" x="22" y="667" width="331" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.40392156862745099" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
@@ -279,54 +295,97 @@
                                 </state>
                                 <connections>
                                     <action selector="saveMealString:" destination="aMY-qd-RSn" eventType="touchUpInside" id="D7X-NL-Yh6"/>
-                                    <segue destination="aFc-jw-2IY" kind="push" identifier="FinishedMeal" id="Uhd-Pe-dqt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="いつ？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da2-P6-r3f">
-                                <rect key="frame" x="32" y="324" width="311" height="26"/>
+                                <rect key="frame" x="32" y="302" width="311" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.77065496575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-dg-TFt" customClass="SetupTextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="32" y="381" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-dg-TFt" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.77461472600000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petfood" translatesAutoresizingMaskIntoConstraints="NO" id="GPy-x0-99V">
-                                <rect key="frame" x="97" y="90" width="45" height="45"/>
+                                <rect key="frame" x="97" y="20" width="45" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="1" green="0.40392156862745099" blue="0.0" alpha="0.87475920380000005" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="食事" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="hbP-o2-i0k">
-                                <rect key="frame" x="150" y="88" width="75" height="45"/>
+                                <rect key="frame" x="150" y="16" width="75" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.86710723458904104" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-PK-cOv">
-                                <rect key="frame" x="32" y="534" width="312" height="90"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-PK-cOv" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="498" width="312" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.77461472600000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf1-La-zZL">
+                                <rect key="frame" x="16" y="16" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="closePage:" destination="aMY-qd-RSn" eventType="touchUpInside" id="hZ1-TP-vU2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="g" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCn-gt-SI1">
+                                <rect key="frame" x="302" y="213" width="33" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hbP-o2-i0k" firstAttribute="height" secondItem="cdk-NS-vZQ" secondAttribute="height" multiplier="0.0554187" id="0p8-dP-yT8"/>
                             <constraint firstItem="GPy-x0-99V" firstAttribute="width" secondItem="cdk-NS-vZQ" secondAttribute="width" multiplier="0.12" id="1uR-2q-ddy"/>
                             <constraint firstItem="KRg-8u-9NA" firstAttribute="trailing" secondItem="Qrl-xk-tNw" secondAttribute="trailing" constant="32" id="2UG-gW-1T8"/>
-                            <constraint firstItem="hbP-o2-i0k" firstAttribute="top" secondItem="KRg-8u-9NA" secondAttribute="top" id="D7C-da-Sw1"/>
-                            <constraint firstItem="GPy-x0-99V" firstAttribute="top" secondItem="KRg-8u-9NA" secondAttribute="top" constant="2" id="IwB-Rb-bbZ"/>
+                            <constraint firstItem="hbP-o2-i0k" firstAttribute="top" secondItem="KRg-8u-9NA" secondAttribute="top" constant="16" id="D7C-da-Sw1"/>
+                            <constraint firstItem="GPy-x0-99V" firstAttribute="top" secondItem="KRg-8u-9NA" secondAttribute="top" constant="20" id="IwB-Rb-bbZ"/>
                             <constraint firstItem="hbP-o2-i0k" firstAttribute="leading" secondItem="GPy-x0-99V" secondAttribute="trailing" constant="8" id="K6j-i0-4i3"/>
                             <constraint firstItem="hbP-o2-i0k" firstAttribute="width" secondItem="cdk-NS-vZQ" secondAttribute="width" multiplier="0.2" id="KDE-9o-yAv"/>
-                            <constraint firstItem="Qrl-xk-tNw" firstAttribute="top" secondItem="GPy-x0-99V" secondAttribute="bottom" constant="36" id="XUm-K5-WzX"/>
+                            <constraint firstItem="Qrl-xk-tNw" firstAttribute="top" secondItem="GPy-x0-99V" secondAttribute="bottom" constant="48" id="XUm-K5-WzX"/>
                             <constraint firstItem="hbP-o2-i0k" firstAttribute="centerX" secondItem="cdk-NS-vZQ" secondAttribute="centerX" id="afJ-GY-QJK"/>
                             <constraint firstItem="KRg-8u-9NA" firstAttribute="trailing" secondItem="hbP-o2-i0k" secondAttribute="trailing" constant="150" id="cKf-QS-5B9"/>
                             <constraint firstItem="Qrl-xk-tNw" firstAttribute="leading" secondItem="KRg-8u-9NA" secondAttribute="leading" constant="32" id="cWv-J6-w2W"/>
@@ -349,53 +408,98 @@
         <!--Toilet View Controller-->
         <scene sceneID="HlD-Do-U9D">
             <objects>
-                <viewController id="ZIm-Mf-lGH" customClass="ToiletViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toilet" id="ZIm-Mf-lGH" customClass="ToiletViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ebo-Xh-6Gk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どっち？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-cz-wTc">
-                                <rect key="frame" x="32" y="477" width="315" height="35"/>
+                                <rect key="frame" x="32" y="442" width="315" height="36"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.77266160110000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どこで？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh7-2I-ulH">
-                                <rect key="frame" x="32" y="324" width="315" height="35"/>
+                                <rect key="frame" x="32" y="302" width="315" height="28"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.77266160110000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5o-cp-ah1">
-                                <rect key="frame" x="32" y="228" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5o-cp-ah1" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="213" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.77266160110000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgo-BS-wkD">
-                                <rect key="frame" x="32" y="381" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgo-BS-wkD" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.77266160110000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Sd-xo6" userLabel="ToiletType">
-                                <rect key="frame" x="32" y="534" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Sd-xo6" userLabel="ToiletType" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="498" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="トイレ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-LE-7GS">
-                                <rect key="frame" x="150" y="88" width="90" height="45"/>
+                                <rect key="frame" x="150" y="16" width="90" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.86820419525205483" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いつ？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-0K-gQw">
-                                <rect key="frame" x="32" y="169" width="311" height="26"/>
+                                <rect key="frame" x="32" y="78" width="311" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AVK-0K-gQw" secondAttribute="height" multiplier="311:26" id="eHS-z4-EFo"/>
                                 </constraints>
@@ -404,7 +508,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-2q-xg9">
-                                <rect key="frame" x="22" y="720" width="331" height="58"/>
+                                <rect key="frame" x="22" y="667" width="331" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46666666666666667" green="0.1803921568627451" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -413,26 +517,34 @@
                                 </state>
                                 <connections>
                                     <action selector="saveWalkInfo:" destination="ZIm-Mf-lGH" eventType="touchUpInside" id="hJm-oN-Z90"/>
-                                    <segue destination="aFc-jw-2IY" kind="push" identifier="FinishToilet" id="WYK-Mi-JXl"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="vAd-x8-dg6">
-                                <rect key="frame" x="97" y="88" width="45" height="45"/>
+                                <rect key="frame" x="97" y="16" width="45" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.46666666666666667" green="0.1803921568627451" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJH-Cn-TsK">
+                                <rect key="frame" x="16" y="16" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="closePage:" destination="ZIm-Mf-lGH" eventType="touchUpInside" id="leO-jU-0EN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="vAd-x8-dg6" firstAttribute="top" secondItem="LVA-7r-jNs" secondAttribute="top" id="Jnp-lP-wxK"/>
-                            <constraint firstItem="fiP-LE-7GS" firstAttribute="top" secondItem="LVA-7r-jNs" secondAttribute="top" id="LCo-3Y-vQ6"/>
+                            <constraint firstItem="vAd-x8-dg6" firstAttribute="top" secondItem="LVA-7r-jNs" secondAttribute="top" constant="16" id="Jnp-lP-wxK"/>
+                            <constraint firstItem="fiP-LE-7GS" firstAttribute="top" secondItem="LVA-7r-jNs" secondAttribute="top" constant="16" id="LCo-3Y-vQ6"/>
                             <constraint firstItem="vAd-x8-dg6" firstAttribute="height" secondItem="ebo-Xh-6Gk" secondAttribute="height" multiplier="0.0554187" id="LkM-ef-yCz"/>
                             <constraint firstItem="fiP-LE-7GS" firstAttribute="height" secondItem="ebo-Xh-6Gk" secondAttribute="height" multiplier="0.0554187" id="Mf4-6T-erG"/>
                             <constraint firstItem="AVK-0K-gQw" firstAttribute="leading" secondItem="LVA-7r-jNs" secondAttribute="leading" constant="32" id="csi-o2-Uii"/>
                             <constraint firstItem="fiP-LE-7GS" firstAttribute="leading" secondItem="vAd-x8-dg6" secondAttribute="trailing" constant="8" id="dLQ-kE-foV"/>
                             <constraint firstItem="vAd-x8-dg6" firstAttribute="width" secondItem="ebo-Xh-6Gk" secondAttribute="width" multiplier="0.12" id="eKG-h3-u7Z"/>
                             <constraint firstItem="fiP-LE-7GS" firstAttribute="width" secondItem="ebo-Xh-6Gk" secondAttribute="width" multiplier="0.24" id="i78-Zd-WBr"/>
-                            <constraint firstItem="AVK-0K-gQw" firstAttribute="top" secondItem="vAd-x8-dg6" secondAttribute="bottom" constant="36" id="kIL-Ne-vHl"/>
+                            <constraint firstItem="AVK-0K-gQw" firstAttribute="top" secondItem="vAd-x8-dg6" secondAttribute="bottom" constant="20" id="kIL-Ne-vHl"/>
                             <constraint firstItem="LVA-7r-jNs" firstAttribute="trailing" secondItem="fiP-LE-7GS" secondAttribute="trailing" constant="135" id="p0o-L5-W6r"/>
                             <constraint firstItem="LVA-7r-jNs" firstAttribute="trailing" secondItem="AVK-0K-gQw" secondAttribute="trailing" constant="32" id="v57-wK-YfF"/>
                         </constraints>
@@ -453,19 +565,19 @@
         <!--Water View Controller-->
         <scene sceneID="AKI-qk-IAv">
             <objects>
-                <viewController id="IJJ-JE-TzW" customClass="WaterViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="water" id="IJJ-JE-TzW" customClass="WaterViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02P-cD-QDv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お水" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-ry-OI4">
-                                <rect key="frame" x="150" y="88" width="75" height="45"/>
+                                <rect key="frame" x="150" y="16" width="75" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.8684985017589042" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="いつ？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lby-Sv-E3a">
-                                <rect key="frame" x="32" y="171" width="315" height="26"/>
+                                <rect key="frame" x="32" y="80" width="315" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Lby-Sv-E3a" secondAttribute="height" multiplier="315:26" id="jpD-ND-q3c"/>
                                 </constraints>
@@ -473,39 +585,69 @@
                                 <color key="textColor" white="0.0" alpha="0.77276862162191784" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Mr-Ngq">
-                                <rect key="frame" x="32" y="228" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Mr-Ngq" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="213" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どこで？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeu-Tj-4sj">
-                                <rect key="frame" x="32" y="324" width="311" height="26"/>
+                                <rect key="frame" x="32" y="302" width="311" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.76784567641643842" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="量は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-Bb-Wcy">
-                                <rect key="frame" x="32" y="477" width="311" height="26"/>
+                                <rect key="frame" x="32" y="442" width="311" height="28"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.76653467470410963" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-Dx-vjS">
-                                <rect key="frame" x="32" y="534" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-Dx-vjS" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="498" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Water" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-eq-Cro">
-                                <rect key="frame" x="97" y="90" width="45" height="45"/>
+                                <rect key="frame" x="97" y="20" width="45" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.015686274509803921" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2u-fb-yTI">
-                                <rect key="frame" x="22" y="720" width="331" height="58"/>
+                                <rect key="frame" x="22" y="667" width="331" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.015686274509803921" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -514,26 +656,49 @@
                                 </state>
                                 <connections>
                                     <action selector="saveWaterString:" destination="IJJ-JE-TzW" eventType="touchUpInside" id="oN6-N2-9hN"/>
-                                    <segue destination="aFc-jw-2IY" kind="push" identifier="FinishedWater" id="Mf9-Rb-QDW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-2R-pKW">
-                                <rect key="frame" x="32" y="381" width="311" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-2R-pKW" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORG-ho-kxk">
+                                <rect key="frame" x="19" y="19" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="closePage:" destination="IJJ-JE-TzW" eventType="touchUpInside" id="QBp-FN-DiU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Wse-ry-OI4" firstAttribute="leading" secondItem="9l4-eq-Cro" secondAttribute="trailing" constant="8" id="0Qq-NS-dwn"/>
                             <constraint firstItem="9l4-eq-Cro" firstAttribute="height" secondItem="02P-cD-QDv" secondAttribute="height" multiplier="0.0554187" id="8CT-aj-XRT"/>
-                            <constraint firstItem="9l4-eq-Cro" firstAttribute="top" secondItem="ayX-yy-TBK" secondAttribute="top" constant="2" id="9X7-bJ-YdC"/>
-                            <constraint firstItem="Lby-Sv-E3a" firstAttribute="top" secondItem="9l4-eq-Cro" secondAttribute="bottom" constant="36" id="HXI-Zp-9Wf"/>
+                            <constraint firstItem="9l4-eq-Cro" firstAttribute="top" secondItem="ayX-yy-TBK" secondAttribute="top" constant="20" id="9X7-bJ-YdC"/>
+                            <constraint firstItem="Lby-Sv-E3a" firstAttribute="top" secondItem="9l4-eq-Cro" secondAttribute="bottom" constant="18" id="HXI-Zp-9Wf"/>
                             <constraint firstItem="9l4-eq-Cro" firstAttribute="width" secondItem="02P-cD-QDv" secondAttribute="width" multiplier="0.12" id="TNP-QR-mvv"/>
                             <constraint firstItem="Lby-Sv-E3a" firstAttribute="leading" secondItem="ayX-yy-TBK" secondAttribute="leading" constant="32" id="WTu-22-tGi"/>
                             <constraint firstItem="ayX-yy-TBK" firstAttribute="trailing" secondItem="Lby-Sv-E3a" secondAttribute="trailing" constant="28" id="eN0-NL-q10"/>
-                            <constraint firstItem="Wse-ry-OI4" firstAttribute="top" secondItem="ayX-yy-TBK" secondAttribute="top" id="qVG-38-g26"/>
+                            <constraint firstItem="Wse-ry-OI4" firstAttribute="top" secondItem="ayX-yy-TBK" secondAttribute="top" constant="16" id="qVG-38-g26"/>
                             <constraint firstItem="Wse-ry-OI4" firstAttribute="width" secondItem="02P-cD-QDv" secondAttribute="width" multiplier="0.2" id="u3h-AW-rhn"/>
                             <constraint firstItem="ayX-yy-TBK" firstAttribute="trailing" secondItem="Wse-ry-OI4" secondAttribute="trailing" constant="150" id="vVd-kM-iuM"/>
                             <constraint firstItem="Wse-ry-OI4" firstAttribute="height" secondItem="02P-cD-QDv" secondAttribute="height" multiplier="0.0554187" id="wrN-rl-dzx"/>
@@ -555,79 +720,139 @@
         <!--Walk View Controller-->
         <scene sceneID="95x-aU-gdp">
             <objects>
-                <viewController id="Plx-Ib-aFp" customClass="WalkViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk" id="Plx-Ib-aFp" customClass="WalkViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mx6-gm-8mA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="運動した距離" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-HU-geS">
-                                <rect key="frame" x="32" y="598" width="315" height="26"/>
+                                <rect key="frame" x="32" y="554" width="315" height="29"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="運動" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfH-L7-vGz">
-                                <rect key="frame" x="150" y="88" width="75" height="45"/>
+                                <rect key="frame" x="150" y="16" width="75" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.86697345895068501" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="開始時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HW-iP-c74">
-                                <rect key="frame" x="32" y="217" width="315" height="26"/>
+                                <rect key="frame" x="32" y="203" width="315" height="24"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765415616454" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="終了時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeL-hY-oi2">
-                                <rect key="frame" x="32" y="344" width="315" height="26"/>
+                                <rect key="frame" x="32" y="316" width="315" height="28"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGW-JO-Nm7">
-                                <rect key="frame" x="32" y="268" width="302" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGW-JO-Nm7" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="246" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erT-RZ-Fdl">
-                                <rect key="frame" x="32" y="395" width="302" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erT-RZ-Fdl" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="369" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-ep-KAk">
-                                <rect key="frame" x="337" y="649" width="37" height="45"/>
+                                <rect key="frame" x="337" y="606" width="37" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-pa-ccU">
-                                <rect key="frame" x="32" y="522" width="302" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-pa-ccU" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="484" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uW-M3-Wsl">
-                                <rect key="frame" x="32" y="649" width="302" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uW-M3-Wsl" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                <rect key="frame" x="32" y="606" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.80000000000000004"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.85882352941176465" green="0.85882352941176465" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="padding">
+                                        <point key="value" x="10" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="運動した場所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOi-U9-bdl">
-                                <rect key="frame" x="32" y="471" width="315" height="26"/>
+                                <rect key="frame" x="32" y="440" width="315" height="24"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="運動した時間" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPq-c6-3cs">
-                                <rect key="frame" x="32" y="169" width="315" height="26"/>
+                                <rect key="frame" x="32" y="78" width="315" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RPq-c6-3cs" secondAttribute="height" multiplier="315:26" id="Acg-m8-hfC"/>
                                 </constraints>
@@ -636,7 +861,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="144-fK-4px">
-                                <rect key="frame" x="22" y="720" width="331" height="58"/>
+                                <rect key="frame" x="22" y="667" width="331" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.73725490196078436" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -645,24 +870,32 @@
                                 </state>
                                 <connections>
                                     <action selector="saveWalkInfo:" destination="Plx-Ib-aFp" eventType="touchUpInside" id="0n7-MV-vKA"/>
-                                    <segue destination="aFc-jw-2IY" kind="push" identifier="FinishedWalk" id="9FB-yT-c8r"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walk" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-6B-14u">
-                                <rect key="frame" x="97" y="88" width="45" height="45"/>
+                                <rect key="frame" x="97" y="16" width="45" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="1" green="0.73725490196078436" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nso-hM-haT">
+                                <rect key="frame" x="16" y="16" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="closePage:" destination="Plx-Ib-aFp" eventType="touchUpInside" id="AsJ-mt-hZw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RPq-c6-3cs" firstAttribute="top" secondItem="ltI-6B-14u" secondAttribute="bottom" constant="36" id="8JN-nJ-uao"/>
+                            <constraint firstItem="RPq-c6-3cs" firstAttribute="top" secondItem="ltI-6B-14u" secondAttribute="bottom" constant="20" id="8JN-nJ-uao"/>
                             <constraint firstItem="ltI-6B-14u" firstAttribute="height" secondItem="mx6-gm-8mA" secondAttribute="height" multiplier="0.0554187" id="COH-1A-RGY"/>
                             <constraint firstItem="Llh-0a-4bH" firstAttribute="trailing" secondItem="dfH-L7-vGz" secondAttribute="trailing" constant="150" id="UHj-XY-tqo"/>
                             <constraint firstItem="dfH-L7-vGz" firstAttribute="height" secondItem="mx6-gm-8mA" secondAttribute="height" multiplier="0.0554187" id="dNa-jl-8WA"/>
-                            <constraint firstItem="ltI-6B-14u" firstAttribute="top" secondItem="Llh-0a-4bH" secondAttribute="top" id="eSt-zR-vHE"/>
+                            <constraint firstItem="ltI-6B-14u" firstAttribute="top" secondItem="Llh-0a-4bH" secondAttribute="top" constant="16" id="eSt-zR-vHE"/>
                             <constraint firstItem="Llh-0a-4bH" firstAttribute="trailing" secondItem="RPq-c6-3cs" secondAttribute="trailing" constant="28" id="fr1-rd-T9E"/>
-                            <constraint firstItem="dfH-L7-vGz" firstAttribute="top" secondItem="Llh-0a-4bH" secondAttribute="top" id="kmp-Fu-1L8"/>
+                            <constraint firstItem="dfH-L7-vGz" firstAttribute="top" secondItem="Llh-0a-4bH" secondAttribute="top" constant="16" id="kmp-Fu-1L8"/>
                             <constraint firstItem="RPq-c6-3cs" firstAttribute="leading" secondItem="Llh-0a-4bH" secondAttribute="leading" constant="32" id="nhr-7v-dKz"/>
                             <constraint firstItem="ltI-6B-14u" firstAttribute="width" secondItem="mx6-gm-8mA" secondAttribute="width" multiplier="0.12" id="oWZ-fN-udl"/>
                             <constraint firstItem="dfH-L7-vGz" firstAttribute="leading" secondItem="ltI-6B-14u" secondAttribute="trailing" constant="8" id="paR-Gz-aA5"/>
@@ -684,9 +917,57 @@
             <point key="canvasLocation" x="2224.8000000000002" y="435.96059113300493"/>
         </scene>
         <!--End Input Condition View Controller-->
+        <scene sceneID="ECO-dJ-of1">
+            <objects>
+                <viewController storyboardIdentifier="EndInputConditionView" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r4V-1K-9p9" customClass="EndInputConditionViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J78-yh-OXY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZG-HJ-MjL" userLabel="popUpView">
+                                <rect key="frame" x="44" y="316" width="286" height="179"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="記録完了" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCt-F4-T22">
+                                        <rect key="frame" x="56" y="151" width="175" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XCt-F4-T22" secondAttribute="height" multiplier="25:3" id="suD-Yj-xFf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="0.8725117723068494" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="XCt-F4-T22" firstAttribute="leading" secondItem="LZG-HJ-MjL" secondAttribute="leading" constant="56" id="IAg-wP-Sdr"/>
+                                    <constraint firstAttribute="bottom" secondItem="XCt-F4-T22" secondAttribute="bottom" constant="7" id="K3W-bH-GKs"/>
+                                    <constraint firstAttribute="trailing" secondItem="XCt-F4-T22" secondAttribute="trailing" constant="55" id="dkY-j8-r7Z"/>
+                                    <constraint firstAttribute="width" secondItem="LZG-HJ-MjL" secondAttribute="height" multiplier="287:179" constant="-1" id="zUA-LU-eSl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.2009845890410959" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LZG-HJ-MjL" firstAttribute="leading" secondItem="dVZ-iH-ang" secondAttribute="leading" constant="44" id="64o-Cu-bdO"/>
+                            <constraint firstItem="dVZ-iH-ang" firstAttribute="trailing" secondItem="LZG-HJ-MjL" secondAttribute="trailing" constant="45" id="7O2-IM-vmb"/>
+                            <constraint firstItem="LZG-HJ-MjL" firstAttribute="top" secondItem="dVZ-iH-ang" secondAttribute="top" constant="272" id="Ngp-cS-1wz"/>
+                            <constraint firstItem="dVZ-iH-ang" firstAttribute="bottom" secondItem="LZG-HJ-MjL" secondAttribute="bottom" constant="283" id="YNc-4S-Tom"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dVZ-iH-ang"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8i6-dN-rin"/>
+                    <connections>
+                        <outlet property="popUp" destination="LZG-HJ-MjL" id="zJP-KQ-24t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QT-j6-YX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2920.8000000000002" y="-1128.3251231527095"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="FgV-eV-Ti2">
             <objects>
-                <viewController id="aFc-jw-2IY" customClass="EndInputConditionViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aFc-jw-2IY" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTy-xJ-IHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -697,7 +978,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saS-DV-ca4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="0.0"/>
+            <point key="canvasLocation" x="4009" y="-319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vH0-At-SSg">
@@ -722,12 +1003,10 @@
     </scenes>
     <resources>
         <image name="Water" width="700" height="700"/>
+        <image name="clear" width="24" height="24"/>
         <image name="memo" width="24" height="24"/>
         <image name="petfood" width="700" height="700"/>
         <image name="toilet" width="700" height="800"/>
         <image name="walk" width="700" height="800"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="WYK-Mi-JXl"/>
-    </inferredMetricsTieBreakers>
 </document>
