@@ -121,6 +121,35 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         self.calender.calendarWeekdayView.weekdayLabels[4].text = "木"
         self.calender.calendarWeekdayView.weekdayLabels[5].text = "金"
         self.calender.calendarWeekdayView.weekdayLabels[6].text = "土" //Saturday
+        
+        //画面に出た段階でCalendar予定を取得し、TableView に反映
+        let fetchFirstScheduleInfo =  Firestore.firestore().collection("user").document(uid!).collection("scheduleList").whereField("scheduleDate", isEqualTo: dayDate.text!)
+                        fetchFirstScheduleInfo.addSnapshotListener { snapShot, err in
+                                   guard let documents = snapShot?.documents else {
+                                        print("snapShotがerrですよ！")
+                                        return
+                                    }
+                        //カレンダーの日付がタップされた時、他のタップられた日付の予定を表示させないためにScheduleを初期化しなければならない
+                        self.scheduleContentArray = []
+                        for snap in documents {
+                        if let postData = snap.data() as? [String: Any]{
+                        self.selectedDayId = snap.documentID
+                                                //String型で保存していたものを取り出す
+                                                let titleString = postData["scheduletitle"] as? String
+                                                let startString = postData["scheduleStartTimeString"] as? String
+                                                let endString = postData["scheduleEndTimeString"] as? String
+                                                let contentString = postData["scheduleContent"] as? String
+                                                let colorString = postData["scheduleCilorString"] as? String
+                                                print(startString!)
+                                                print(endString!)
+                                                print(contentString!)
+                                                print(self.selectedDayId!)
+                                                
+                                                self.scheduleContentArray.append(ScheduleContent(titleString: titleString!, startString: startString!, endString: endString!, contentString: contentString!, documentId: self.selectedDayId!, colorString: colorString!))
+                                        }
+                                    }
+                            self.scheduleTableView.reloadData()
+                }
     }
     
     
@@ -129,7 +158,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     //カレンダー上の日付をタップした時
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         //カレンダーの日付がタップされた時、他のタップられた日付の予定を表示させないためにScheduleを初期化しなければならない
-        self.scheduleContentArray = []
+        
         let tmpDate = Calendar(identifier: .gregorian)
         let year = tmpDate.component(.year, from: date)
         let month = tmpDate.component(.month, from: date)
@@ -151,7 +180,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
                                 return
                             }
                     //カレンダーの日付がタップされた時、他のタップられた日付の予定を表示させないためにScheduleを初期化しなければならない
-//                    self.scheduleContentArray = []
+                    self.scheduleContentArray = []
                                 for snap in documents {
                                     if let postData = snap.data() as? [String: Any]{
                                         self.selectedDayId = snap.documentID
@@ -197,7 +226,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     //スケジュールの追加ボタン
     @objc func addSchedule(){
-//        self.performSegue(withIdentifier: "toAddSchedule", sender: nil)
         self.performSegue(withIdentifier: "toAddSumple", sender: nil)
       }
     
@@ -258,8 +286,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-//        let storybordA: UIStoryboard = UIStoryboard(name: "ProfileInput", bundle: nil)
         
         let scheduleInfomation = scheduleContentArray[indexPath.row]
         //セルをタップしたときにプロフィール表示に必要な情報(文字列を保存する)

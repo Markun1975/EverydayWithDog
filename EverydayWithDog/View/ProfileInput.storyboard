@@ -110,11 +110,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Qp-Dv4">
+                                <rect key="frame" x="49" y="337" width="276" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5XT-h3-S83"/>
                     </view>
                     <connections>
+                        <outlet property="Label1" destination="thc-Qp-Dv4" id="hyz-PV-LWE"/>
                         <outlet property="memoLabel" destination="W3i-3D-Tfd" id="Ohg-Ol-Ngf"/>
                         <outlet property="nameLabel" destination="9N8-sG-PHJ" id="UeC-KR-u0C"/>
                         <outlet property="profileIconImage" destination="Gaa-wS-7f1" id="8Zv-mK-sLK"/>
@@ -526,6 +534,9 @@
                                 <state key="normal" title="退会">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="withdrawalProgress:" destination="reD-Nh-40a" eventType="touchUpInside" id="fRP-h0-af4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -13,7 +13,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class WalkDataTableViewController1: UITableViewController,SegementSlideContentScrollViewDelegate {
+class WalkDataTableViewController: UITableViewController,SegementSlideContentScrollViewDelegate {
 
        let fetchData = FetchDogData()
        var walkDataInfoArray = [WalkInfo]()
@@ -35,9 +35,9 @@ class WalkDataTableViewController1: UITableViewController,SegementSlideContentSc
                .Name("deleteDocument"),object: nil)
         
         //カスタムセルを定義
-         let nib = UINib(nibName: "WalkDataViewCellTableViewCell", bundle: nil)
+         let nib = UINib(nibName: "WalkDataLogCell", bundle: nil)
         //register()の引数に渡す定数「nib」を定義
-         tableView.register(nib, forCellReuseIdentifier: "walkDayDataCell")
+         tableView.register(nib, forCellReuseIdentifier: "walkDataLogCell")
        }
 
        // MARK: - Table view data source
@@ -59,22 +59,25 @@ class WalkDataTableViewController1: UITableViewController,SegementSlideContentSc
            return 1
          }else{
            return walkDataInfoArray.count
+//            return 62 // 2/1Day × 31Days(1Month)
          }
          
      }
 
        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let walkDataCell = tableView.dequeueReusableCell(withIdentifier: "walkDayDataCell", for: indexPath) as! WalkDataViewCellTableViewCell
+         let walkDataCell = tableView.dequeueReusableCell(withIdentifier: "walkDataLogCell", for: indexPath) as! WalkDataLogCell
         
          let walkDayLabel = walkDataCell.viewWithTag(1) as! UILabel
          let walkTimeLabel = walkDataCell.viewWithTag(2) as! UILabel
-         let walkDistanceLabel = walkDataCell.viewWithTag(3) as! UILabel
+         let walkPlaceLabel = walkDataCell.viewWithTag(3) as! UILabel
+         let walkDistanceLabel = walkDataCell.viewWithTag(4) as! UILabel
         
          if self.walkDataInfoArray.count == 0 {
             //データが無い場合は中央のラベルは表示し他の３項目は非表示
              walkDataCell.textLabel?.text = "データなし"
              walkDayLabel.text = ""
              walkTimeLabel.text = ""
+             walkPlaceLabel.text = ""
              walkDistanceLabel.text = ""
              
            return walkDataCell
@@ -84,6 +87,8 @@ class WalkDataTableViewController1: UITableViewController,SegementSlideContentSc
            walkDayLabel.text = walkDataInfoArray[indexPath.row].dayString
            //運動した時間
            walkTimeLabel.text = walkDataInfoArray[indexPath.row].walkTimeString
+           //運動した場所
+            walkPlaceLabel.text = walkDataInfoArray[indexPath.row].walkPlaceString
            //運動した距離
            walkDistanceLabel.text = walkDataInfoArray[indexPath.row].distanceString
             
@@ -146,7 +151,7 @@ class WalkDataTableViewController1: UITableViewController,SegementSlideContentSc
            
        func loadWalkInfo() {
                print("Load呼ばれてる！")
-               let fetchWalkInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("walkInfomation").limit(to: 50)
+        let fetchWalkInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("walkInfomation").order(by: "startTimeString", descending: true).limit(to: 50)
                fetchWalkInfo.getDocuments() { (querySnapshot, err) in
                    if let err = err {
                        print("Error getting documents: \(err)")

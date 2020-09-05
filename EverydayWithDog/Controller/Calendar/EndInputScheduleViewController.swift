@@ -33,7 +33,6 @@ class EndInputScheduleViewController: UIViewController {
     }
     
     @IBAction func selfnavigationControllerpopToRootViewControlleranimatedtruebackToCalendar(_ sender: Any) {
-//        self.navigationController?.popToRootViewController(animated: true)
         self.navigationController?.navigationBar.isHidden = false
         self.dismiss(animated: true, completion: nil)
     }

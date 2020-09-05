@@ -1,27 +1,29 @@
 //
-//  WalkDataViewCellTableViewCell.swift
+//  WalkDataLogCell.swift
 //  EverydayWithDog
 //
-//  Created by Masaki on 5/14/2 R.
+//  Created by Masaki on 9/3/2 R.
 //  Copyright © 2 Reiwa Sugita Masaki. All rights reserved.
 //
 
 import UIKit
 
+class WalkDataLogCell: UITableViewCell {
+    
+    @IBOutlet var walkDataLogCell: UIView!
+    
+    @IBOutlet var walkDayLabel: UILabel!
+    
+    @IBOutlet var content1Label: UILabel!
+    
+    @IBOutlet var content2Label: UILabel!
+    
+    @IBOutlet var content3Label: UILabel!
+    
 
-class WalkDataViewCellTableViewCell: UITableViewCell {
-
-    @IBOutlet var WalkDataCell: UIView!
-    
-    @IBOutlet var dayLabel: UILabel!
-    
-    @IBOutlet var timeLabel: UILabel!
-    
-    @IBOutlet var distanceLabel: UILabel!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,4 +32,5 @@ class WalkDataViewCellTableViewCell: UITableViewCell {
     
     func register(_ cellClass: AnyClass?, forCellReuseIdentifier identifier: String){
     }
+    
 }

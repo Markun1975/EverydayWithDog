@@ -14,7 +14,8 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class MealDataTableViewController1: UITableViewController,SegementSlideContentScrollViewDelegate {
+
+class MealDataTableViewController: UITableViewController,SegementSlideContentScrollViewDelegate {
     
     let fetchData = FetchDogData()
     var mealDataInfoArray = [MealInfo]()
@@ -33,6 +34,11 @@ class MealDataTableViewController1: UITableViewController,SegementSlideContentSc
         self,selector:
             #selector(catchDeleteEndNotification(notification:)),name:Notification
             .Name("deleteDocument"),object: nil)
+        
+        //カスタムセルを定義
+         let nib = UINib(nibName: "DataLogTableViewCell", bundle: nil)
+        //register()の引数に渡す定数「nib」を定義
+         tableView.register(nib, forCellReuseIdentifier: "dataLogCell")
     }
 
     // MARK: - Table view data source
@@ -55,19 +61,35 @@ class MealDataTableViewController1: UITableViewController,SegementSlideContentSc
           return 1
         }else{
         return mealDataInfoArray.count
+//            return 93 // 3/1Day ×　31Days(1Month)
         }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        
+        let mealDataCell = tableView.dequeueReusableCell(withIdentifier: "dataLogCell", for: indexPath) as! DataLogTableViewCell
+        
+         let mealDayLabel = mealDataCell.viewWithTag(1) as! UILabel
+         let mealLabel = mealDataCell.viewWithTag(2) as! UILabel
+         let mealContentLabel = mealDataCell.viewWithTag(3) as! UILabel
+        
+        
         if self.mealDataInfoArray.count == 0 {
-            cell.textLabel?.text = "データなし"
-          return cell
+            //データが無い場合は中央のラベルは表示し他の３項目は非表示
+            mealDataCell.textLabel?.text = "データなし"
+            mealDayLabel.text = ""
+            mealLabel.text = ""
+            mealContentLabel.text = ""
+          return mealDataCell
         }else{
         //いつ食べたか時刻を表示
-        cell.textLabel?.text = mealDataInfoArray[indexPath.row].mealTimeString
-        cell.detailTextLabel?.text =  mealDataInfoArray[indexPath.row].mealContentString
-        return cell
+        mealDayLabel.text = mealDataInfoArray[indexPath.row].mealTimeString
+        mealLabel.text =  mealDataInfoArray[indexPath.row].mealString
+        mealContentLabel.text = mealDataInfoArray[indexPath.row].mealContentString
+            
+        //データが有る場合は中央のラベルは非表示
+        mealDataCell.textLabel?.text = ""
+        return mealDataCell
         }
     }
     
@@ -118,7 +140,7 @@ class MealDataTableViewController1: UITableViewController,SegementSlideContentSc
         
         
     func loadMealInfo() {
-            let fetchMealInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("mealInfomation").limit(to: 50)
+            let fetchMealInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("mealInfomation").order(by: "mealTimeString", descending: true).limit(to: 50)
                    fetchMealInfo.getDocuments() { (querySnapshot, err) in
                        if let err = err {
                            print("Error getting documents: \(err)")
@@ -137,7 +159,7 @@ class MealDataTableViewController1: UITableViewController,SegementSlideContentSc
     
                                     let mealContentString = mealData["mealContentString"] as? String
     
-                        self.mealDataInfoArray.append(MealInfo(mealString: mealString!, mealTimeString: mealTimeString!, mealContentString: mealContentString!,mealDocumentId: documentId))
+                        self.mealDataInfoArray.append(MealInfo(mealString: mealString! + "g", mealTimeString: mealTimeString!, mealContentString: mealContentString!,mealDocumentId: documentId))
                                }
                            }
                         //読み込みが終わったタイミングですぐにTableViewにリロードして反映

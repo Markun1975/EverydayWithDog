@@ -46,7 +46,7 @@ class FetchDogData {
             
             
         } else {
-        print(dogName!,"だよ！")
+        print("犬の名前入ってる！")
         }
     }
     

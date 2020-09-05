@@ -102,7 +102,6 @@ class confirmViewController: UIViewController {
         case .wrongPassword: message = "入力した認証情報でサインインできません"
         case .userDisabled: message = "このアカウントは無効です"
         case .weakPassword: message = "パスワードが脆弱すぎます"
-        // これは一例です。必要に応じて増減させてください
         default: break
         }
         return message
@@ -111,7 +110,6 @@ class confirmViewController: UIViewController {
         
 
     func displayAlertMessage(userMessage: String) {
-//            let userMessage = ""
             let alert = UIAlertController(title: "確認", message: userMessage, preferredStyle: UIAlertController.Style.alert)
             let okMessage = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(okMessage)

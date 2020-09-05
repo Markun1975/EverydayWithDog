@@ -13,9 +13,6 @@ import FirebaseFirestore
 
 class newAccountViewController: UIViewController {
     
-    
-    @IBOutlet var userName: UITextField!
-    
     @IBOutlet var mailAddress: UITextField!
     
     @IBOutlet var passWord: UITextField!
@@ -28,8 +25,6 @@ class newAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userNameSetup()
         mailAddressSetup()
         passwordSetup()
         registerButtonSetup()
@@ -39,48 +34,26 @@ class newAccountViewController: UIViewController {
     @IBAction func newLogin(_ sender: Any) {
         let email = mailAddress.text ?? ""
         let password = passWord.text ?? ""
-        let name = userName.text ?? ""
+//        let name = userName.text ?? ""
         
-        if name == "" || email == "" || password == "" {
+        if email == "" || password == "" {
             displayAlertMessage(userMesage:"全て入力してください")
             return
         }else {
-            signUp(email: email, password: password, name: name)
+            signUp(email: email, password: password)
         }
     }
     
-    private func signUp(email: String, password: String, name: String){
+    private func signUp(email: String, password: String){
           Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
               guard let self = self else {
                 return
             }
-              if let user = result?.user {
-//                let userID = user.uid
-//                UserDefaults.standard.set(userID, forKey: "userID")
-                self.upDateName(createName: name, of: user)
-              print("ステップ１")
-                
-              }else{
-                self.showError(error)
-                print("エラー１")
-            }}
-          }
+            
+            let user = result?.user
+            self.sendMail(to: user!)
+        }}
     
-    private func upDateName(createName: String, of user: User) {
-        let changeRequest = user.createProfileChangeRequest()
-        changeRequest.displayName = createName
-        changeRequest.commitChanges() { [weak self] error in
-            guard let self = self else {
-                return
-            }
-            if error == nil {
-            self.sendMail(to: user)
-                print("ステップ2")
-            }else{
-            self.showError(error)
-            print("エラー２")
-            }}
-    }
 
     private func sendMail(to user: User) {
         user.sendEmailVerification() { [weak self] error in
@@ -147,7 +120,6 @@ class newAccountViewController: UIViewController {
         case .wrongPassword: message = "入力した認証情報でサインインできません"
         case .userDisabled: message = "このアカウントは無効です"
         case .weakPassword: message = "パスワードが脆弱すぎます"
-        // これは一例です。必要に応じて増減させてください
         default: break
         }
         return message
@@ -161,16 +133,6 @@ class newAccountViewController: UIViewController {
                   alert.addAction(okMessage)
                   present(alert,animated: true, completion: nil)
               }
-    
-    
-    private func userNameSetup(){
-           userName.layer.cornerRadius = 10
-           userName.layer.borderColor = UIColor.black.cgColor
-           userName.layer.shadowColor = UIColor.black.cgColor
-           userName.layer.shadowOffset = CGSize(width: 0, height: 1)
-           userName.layer.shadowOpacity = 0.2
-           userName.layer.shadowRadius = 1
-       }
     
     private func mailAddressSetup(){
         mailAddress.layer.cornerRadius = 10

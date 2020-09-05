@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class deleteAlert: UIAlertController{
+class deleteAlert: UIViewController{
 
 
     override func viewWillAppear(_ animated: Bool) {

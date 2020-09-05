@@ -85,7 +85,6 @@ class dogListSideMenuController: UITableViewController {
         //データベースから犬の情報を取得する　referenceする
         //インプット（登録ボタン）押したときに登録した、Key値("dogList")を使って情報を取得する
         let fetchDogInfo =  Firestore.firestore().collection("user").document(uid!).collection("dogList")
-//        fetchDogInfo.addSnapshotListener { snapShot, err in
             fetchDogInfo.getDocuments() { snapShot, err in
                 
             self.dogInfoArray.removeAll()
@@ -97,7 +96,6 @@ class dogListSideMenuController: UITableViewController {
                     if let postData = snap.data() as? [String: Any]{
                         
                         let dogID = snap.documentID
-//                        print(snap.documentID)
                         
                         //String型で保存していたものをFirebaseから取り出す
                         let nameData = postData["dogName"] as? String

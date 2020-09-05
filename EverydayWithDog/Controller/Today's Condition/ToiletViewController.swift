@@ -42,6 +42,8 @@ class ToiletViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
        var drinkimeData: UIDatePicker = UIDatePicker()
        var toitelPlaceString: String?
        var toiletTypeString: String?
+    
+       let warningAlert = warningAlertController()
        
     
     
@@ -72,14 +74,17 @@ class ToiletViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         toitelPlaceString = toiletPlaceView.text!
         toiletTypeString = toiletTypeView.text!
         
-        let toiletInfoArray:Dictionary = ["toiletTimeString": toiletTimeString as Any,"toitelPlaceString": toitelPlaceString as Any,"toiletTypeView": toiletTypeString as Any] as [String:Any]
+        if toiletTimeString == nil || toiletTimeString == "" {
+            
+        present(warningAlert, animated: true)
+        } else {
+        let toiletInfoArray:Dictionary = ["toiletTimeString": toiletTimeString as Any,"toitelPlaceString": toitelPlaceString as Any,"toiletTypeString": toiletTypeString as Any] as [String:Any]
             
         print(toiletTimeString!)
         print(toitelPlaceString!)
         let uid = Auth.auth().currentUser?.uid
         let aDog = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(dogId!)
         aDog.collection("toiletInfomation").addDocument(data: toiletInfoArray)
-        self.performSegue(withIdentifier: "FinishToilet", sender: nil)
         
         //登録完了のポップアップを出す
         let storyBoard: UIStoryboard = self.storyboard!
@@ -90,6 +95,7 @@ class ToiletViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDa
         self.present(popupView, animated: true, completion: nil)
         //二秒後にTop画面へ繊維
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
+        }
     }
     
     //以下各入力フォームの設定

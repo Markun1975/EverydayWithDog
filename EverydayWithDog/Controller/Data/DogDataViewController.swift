@@ -14,7 +14,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class DogDataViewController1: SegementSlideDefaultViewController{
+class DogDataViewController: SegementSlideDefaultViewController{
     
     let fetchFirstDogIdInfo = FetchDogData()
     
@@ -27,21 +27,21 @@ class DogDataViewController1: SegementSlideDefaultViewController{
     var dogsName:String?
     
     override func viewWillAppear(_ animated: Bool) {
-    //画面表示初期の名前を表示
-    fetchFirstDogIdInfo.fetchFirstDogId()
     self.tabBarController?.tabBar.isHidden = false
     self.navigationController?.setNavigationBarHidden(false, animated: true)
+        if self.dogsName != nil {
+            self.dogNamelabel.text = self.dogsName
+        } else {
+            self.dogNamelabel.text = "登録なし"
+        }
      }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //画面表示初期の名前を表示
+        fetchFirstDogIdInfo.fetchFirstDogId()
+    
         self.dogsName = UserDefaults.standard.object(forKey: "dogFirstName") as? String
-        if self.dogsName != nil {
-        self.dogNamelabel.text = self.dogsName
-        } else {
-            self.dogNamelabel.text = "登録なし"
-        }
 
         //NavigationBar設定
         self.navigationController?.navigationBar.isTranslucent = false
@@ -92,14 +92,14 @@ class DogDataViewController1: SegementSlideDefaultViewController{
      override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
                 switch index {
                 case 0:
-                    return MealDataTableViewController1()
+                    return MealDataTableViewController()
                 case 1:
-                    return WaterDataTableViewController1()
+                    return WaterDataTableViewController()
                 case 2:
-                    return WalkDataTableViewController1()
+                    return WalkDataTableViewController()
                 case 3:
-                    return ToiletDataTableViewController1()
-                default: return MealDataTableViewController1()
+                    return ToiletDataTableViewController()
+                default: return MealDataTableViewController()
                 }
         
             }
@@ -142,7 +142,7 @@ class DogDataViewController1: SegementSlideDefaultViewController{
     }
 
     
-    //    // 選択されたサイドバーのアイテムを取得
+    // 選択されたサイドバーのアイテムを取得
     @objc func selectNameNotification(notification: Notification) -> Void {
      // メニューからの返り値を取得
      self.dogsName = notification.userInfo!["dataDogName"] as! String //dogsNameの返り値が格納されている変数
@@ -156,10 +156,5 @@ class DogDataViewController1: SegementSlideDefaultViewController{
         //dogsIdの返り値が格納されている変数
         self.dogID = notification.userInfo!["dataDogId"] as! String // 返り値が格納されている変数
         print(self.dogID! as Any, "親ViewでDogID変更取得できました")
-    }
-    
-    func SegementAutoLayout(){
-//        let view1 = DogDataViewController1()
-        
     }
 }

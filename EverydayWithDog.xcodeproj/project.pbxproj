@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		738059BB351055F1C73F5E0D /* Pods_EverydayWithDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D8A21DC1498C95F5364C55 /* Pods_EverydayWithDog.framework */; };
-		F40130172478C33100F84F01 /* DogDataViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40130162478C33100F84F01 /* DogDataViewController1.swift */; };
+		F40130172478C33100F84F01 /* DogDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40130162478C33100F84F01 /* DogDataViewController.swift */; };
 		F40B7B2A241F620B0086F94D /* MealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B29241F620B0086F94D /* MealInfo.swift */; };
 		F40B7B2C241F63340086F94D /* WaterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40B7B2B241F63340086F94D /* WaterInfo.swift */; };
 		F4101005241C03E6002C732D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4101004241C03E6002C732D /* Assets.xcassets */; };
@@ -24,6 +24,8 @@
 		F414CDD423E6B96C000CD579 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414CDD323E6B96C000CD579 /* ProfileViewController.swift */; };
 		F415C20E23E05F9B00C50148 /* finishLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F415C20D23E05F9B00C50148 /* finishLoginViewController.swift */; };
 		F415C21723E086CB00C50148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F415C21523E086CB00C50148 /* Main.storyboard */; };
+		F41771DC2500CAA90008B6AD /* WalkDataLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41771DA2500CAA90008B6AD /* WalkDataLogCell.swift */; };
+		F41771DD2500CAA90008B6AD /* WalkDataLogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41771DB2500CAA90008B6AD /* WalkDataLogCell.xib */; };
 		F4191D24244F07050096D951 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4191D23244F07050096D951 /* SettingViewController.swift */; };
 		F41C2B0A241770C200B05A72 /* WalkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C2B09241770C200B05A72 /* WalkInfo.swift */; };
 		F42444EF242BB0D700C7825A /* FriendProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42444EE242BB0D700C7825A /* FriendProfileViewController.swift */; };
@@ -42,12 +44,10 @@
 		F477F3DF24A223BD00F43BE6 /* ButtonBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */; };
 		F479313023D9549000125D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479312F23D9549000125D47 /* AppDelegate.swift */; };
 		F479313223D9549000125D47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479313123D9549000125D47 /* SceneDelegate.swift */; };
-		F479313423D9549000125D47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479313323D9549000125D47 /* ViewController.swift */; };
 		F479313C23D9549900125D47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479313A23D9549900125D47 /* LaunchScreen.storyboard */; };
 		F479315123D95DE200125D47 /* newAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315023D95DE200125D47 /* newAccountViewController.swift */; };
 		F479315323D960BB00125D47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315223D960BB00125D47 /* LoginViewController.swift */; };
 		F479315523D9617A00125D47 /* confirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315423D9617A00125D47 /* confirmViewController.swift */; };
-		F479315723D961C300125D47 /* addNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315623D961C300125D47 /* addNewAccountViewController.swift */; };
 		F479315A23D9659800125D47 /* ProfileInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479315923D9659800125D47 /* ProfileInput.storyboard */; };
 		F479315C23D965D400125D47 /* ProfileInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315B23D965D400125D47 /* ProfileInputController.swift */; };
 		F479316023D9667500125D47 /* DogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479315F23D9667500125D47 /* DogListViewController.swift */; };
@@ -65,18 +65,19 @@
 		F479318123D96B0F00125D47 /* IMG_0436.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F479317F23D96B0F00125D47 /* IMG_0436.JPG */; };
 		F479318323D973D500125D47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F479318223D973D400125D47 /* GoogleService-Info.plist */; };
 		F4839BCF244EC88400940E27 /* DataSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4839BCE244EC88400940E27 /* DataSideMenu.swift */; };
-		F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */; };
-		F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */; };
-		F4A60E71247BFDB500C31767 /* ToiletDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */; };
+		F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController.swift */; };
+		F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController.swift */; };
+		F4A60E71247BFDB500C31767 /* ToiletDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E70247BFDB500C31767 /* ToiletDataTableViewController.swift */; };
 		F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E72247CB0FB00C31767 /* FetchDogData.swift */; };
-		F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */; };
-		F4B7577B246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */; };
+		F4B7577A246D4EAE00753745 /* DataLogTableViewCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B75778246D4EAE00753745 /* DataLogTableViewCelll.swift */; };
+		F4B7577B246D4EAE00753745 /* DataLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B75779246D4EAE00753745 /* DataLogTableViewCell.xib */; };
 		F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */; };
 		F4C83E992414D7730036BF26 /* ScheduleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E982414D7730036BF26 /* ScheduleContent.swift */; };
 		F4C83E9C24154B3B0036BF26 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */; };
 		F4C83E9D24154B3B0036BF26 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C83E9B24154B3B0036BF26 /* TableViewCell.xib */; };
+		F4CF3EEE24F8F52C0042CC11 /* warningAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF3EED24F8F52C0042CC11 /* warningAlertController.swift */; };
 		F4CF529E2415FB9800711B37 /* FriendProfileInputControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF529D2415FB9700711B37 /* FriendProfileInputControllerViewController.swift */; };
-		F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */; };
+		F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController.swift */; };
 		F4E7007D23ED368600CC715C /* Friend1ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */; };
 		F4EFE3C523F6411A00F3C6EC /* timeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */; };
 		F4EFE3C723F9158F00F3C6EC /* InputScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */; };
@@ -87,7 +88,7 @@
 		25D8A21DC1498C95F5364C55 /* Pods_EverydayWithDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EverydayWithDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C186DAD5FBDE567BA537B43 /* Pods-EverydayWithDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayWithDog.release.xcconfig"; path = "Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog.release.xcconfig"; sourceTree = "<group>"; };
 		E73370DE60F88A6B0F4F27EC /* Pods-EverydayWithDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverydayWithDog.debug.xcconfig"; path = "Target Support Files/Pods-EverydayWithDog/Pods-EverydayWithDog.debug.xcconfig"; sourceTree = "<group>"; };
-		F40130162478C33100F84F01 /* DogDataViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataViewController1.swift; sourceTree = "<group>"; };
+		F40130162478C33100F84F01 /* DogDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDataViewController.swift; sourceTree = "<group>"; };
 		F40B7B29241F620B0086F94D /* MealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfo.swift; sourceTree = "<group>"; };
 		F40B7B2B241F63340086F94D /* WaterInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterInfo.swift; sourceTree = "<group>"; };
 		F4101004241C03E6002C732D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +104,8 @@
 		F414CDD323E6B96C000CD579 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F415C20D23E05F9B00C50148 /* finishLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishLoginViewController.swift; sourceTree = "<group>"; };
 		F415C21623E086CB00C50148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F41771DA2500CAA90008B6AD /* WalkDataLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataLogCell.swift; sourceTree = "<group>"; };
+		F41771DB2500CAA90008B6AD /* WalkDataLogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkDataLogCell.xib; sourceTree = "<group>"; };
 		F4191D23244F07050096D951 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F41C2B09241770C200B05A72 /* WalkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkInfo.swift; sourceTree = "<group>"; };
 		F42444EE242BB0D700C7825A /* FriendProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileViewController.swift; sourceTree = "<group>"; };
@@ -121,14 +124,12 @@
 		F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBorderColor.swift; sourceTree = "<group>"; };
 		F479312F23D9549000125D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F479313123D9549000125D47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F479313323D9549000125D47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F479313B23D9549900125D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F479313D23D9549900125D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F479314F23D95C1300125D47 /* EverydayWithDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverydayWithDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F479315023D95DE200125D47 /* newAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAccountViewController.swift; sourceTree = "<group>"; };
 		F479315223D960BB00125D47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F479315423D9617A00125D47 /* confirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmViewController.swift; sourceTree = "<group>"; };
-		F479315623D961C300125D47 /* addNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewAccountViewController.swift; sourceTree = "<group>"; };
 		F479315923D9659800125D47 /* ProfileInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileInput.storyboard; sourceTree = "<group>"; };
 		F479315B23D965D400125D47 /* ProfileInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputController.swift; sourceTree = "<group>"; };
 		F479315F23D9667500125D47 /* DogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewController.swift; sourceTree = "<group>"; };
@@ -146,22 +147,23 @@
 		F479317F23D96B0F00125D47 /* IMG_0436.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0436.JPG; sourceTree = "<group>"; };
 		F479318223D973D400125D47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F4839BCE244EC88400940E27 /* DataSideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSideMenu.swift; sourceTree = "<group>"; };
-		F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataTableViewController1.swift; sourceTree = "<group>"; };
-		F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataTableViewController1.swift; sourceTree = "<group>"; };
-		F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletDataTableViewController1.swift; sourceTree = "<group>"; };
+		F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataTableViewController.swift; sourceTree = "<group>"; };
+		F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataTableViewController.swift; sourceTree = "<group>"; };
+		F4A60E70247BFDB500C31767 /* ToiletDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletDataTableViewController.swift; sourceTree = "<group>"; };
 		F4A60E72247CB0FB00C31767 /* FetchDogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDogData.swift; sourceTree = "<group>"; };
 		F4B7576D246C5D1400753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		F4B7576E246C5D1600753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F4B7576F246C5D2900753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		F4B75770246C5D3200753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkDataViewCellTableViewCell.swift; sourceTree = "<group>"; };
-		F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkDataViewCellTableViewCell.xib; sourceTree = "<group>"; };
+		F4B75778246D4EAE00753745 /* DataLogTableViewCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogTableViewCelll.swift; sourceTree = "<group>"; };
+		F4B75779246D4EAE00753745 /* DataLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLogTableViewCell.xib; sourceTree = "<group>"; };
 		F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F4C83E982414D7730036BF26 /* ScheduleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleContent.swift; sourceTree = "<group>"; };
 		F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F4C83E9B24154B3B0036BF26 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		F4CF3EED24F8F52C0042CC11 /* warningAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = warningAlertController.swift; sourceTree = "<group>"; };
 		F4CF529D2415FB9700711B37 /* FriendProfileInputControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileInputControllerViewController.swift; sourceTree = "<group>"; };
-		F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataTableViewController1.swift; sourceTree = "<group>"; };
+		F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDataTableViewController.swift; sourceTree = "<group>"; };
 		F4E7007C23ED368600CC715C /* Friend1ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend1ProfileViewController.swift; sourceTree = "<group>"; };
 		F4EFE3C423F6411A00F3C6EC /* timeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagement.swift; sourceTree = "<group>"; };
 		F4EFE3C623F9158F00F3C6EC /* InputScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputScheduleViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,8 @@
 				F479316D23D9682800125D47 /* Calendar.storyboard */,
 				F479317223D968B800125D47 /* Data.storyboard */,
 				F4C83E9B24154B3B0036BF26 /* TableViewCell.xib */,
+				F4B75779246D4EAE00753745 /* DataLogTableViewCell.xib */,
+				F41771DB2500CAA90008B6AD /* WalkDataLogCell.xib */,
 				F479313A23D9549900125D47 /* LaunchScreen.storyboard */,
 				F4101004241C03E6002C732D /* Assets.xcassets */,
 				F4128CBA241B4C8D00A7719F /* dogAnimation.json */,
@@ -214,8 +218,6 @@
 				F479317E23D96B0E00125D47 /* IMG_2638.PNG */,
 				F452108F2465102C00A602D2 /* CustomPlanDisplayView.swift */,
 				F45210932465107D00A602D2 /* CustomPlanDisplayView.xib */,
-				F4B75778246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift */,
-				F4B75779246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -230,7 +232,6 @@
 				F479317123D9688F00125D47 /* Data */,
 				F479312F23D9549000125D47 /* AppDelegate.swift */,
 				F479313123D9549000125D47 /* SceneDelegate.swift */,
-				F479313323D9549000125D47 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,7 +255,6 @@
 				F479315223D960BB00125D47 /* LoginViewController.swift */,
 				F479315023D95DE200125D47 /* newAccountViewController.swift */,
 				F479315423D9617A00125D47 /* confirmViewController.swift */,
-				F479315623D961C300125D47 /* addNewAccountViewController.swift */,
 				F415C20D23E05F9B00C50148 /* finishLoginViewController.swift */,
 				F4FECC5924B59CDE008FF0F6 /* resetPasswordViewController.swift */,
 			);
@@ -335,11 +335,13 @@
 			isa = PBXGroup;
 			children = (
 				F4839BCE244EC88400940E27 /* DataSideMenu.swift */,
-				F40130162478C33100F84F01 /* DogDataViewController1.swift */,
-				F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController1.swift */,
-				F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController1.swift */,
-				F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController1.swift */,
-				F4A60E70247BFDB500C31767 /* ToiletDataTableViewController1.swift */,
+				F40130162478C33100F84F01 /* DogDataViewController.swift */,
+				F4DA1EF5247BF7E600AB8DB4 /* MealDataTableViewController.swift */,
+				F4A60E6C247BFBBA00C31767 /* WaterDataTableViewController.swift */,
+				F4A60E6E247BFC7E00C31767 /* WalkDataTableViewController.swift */,
+				F4A60E70247BFDB500C31767 /* ToiletDataTableViewController.swift */,
+				F4B75778246D4EAE00753745 /* DataLogTableViewCelll.swift */,
+				F41771DA2500CAA90008B6AD /* WalkDataLogCell.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -364,6 +366,7 @@
 				F477F3DE24A223BD00F43BE6 /* ButtonBorderColor.swift */,
 				F46CECCB24A46EE200BA3EA6 /* CustomUITextField.swift */,
 				F464DD6524AC671300714CAA /* InputTextField.swift */,
+				F4CF3EED24F8F52C0042CC11 /* warningAlertController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F479318123D96B0F00125D47 /* IMG_0436.JPG in Resources */,
+				F41771DD2500CAA90008B6AD /* WalkDataLogCell.xib in Resources */,
 				F45210942465107D00A602D2 /* CustomPlanDisplayView.xib in Resources */,
 				F444ED28241B79C100466D33 /* memoAnimation.json in Resources */,
 				F4C83E9D24154B3B0036BF26 /* TableViewCell.xib in Resources */,
@@ -439,7 +443,7 @@
 				F444ED24241B73D000466D33 /* calendarAnimation.json in Resources */,
 				F415C21723E086CB00C50148 /* Main.storyboard in Resources */,
 				F479313C23D9549900125D47 /* LaunchScreen.storyboard in Resources */,
-				F4B7577B246D4EAE00753745 /* WalkDataViewCellTableViewCell.xib in Resources */,
+				F4B7577B246D4EAE00753745 /* DataLogTableViewCell.xib in Resources */,
 				F479317323D968B800125D47 /* Data.storyboard in Resources */,
 				F479316923D9679A00125D47 /* Today'sBodyCondition.storyboard in Resources */,
 				F444ED22241B664F00466D33 /* check.json in Resources */,
@@ -517,15 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C83E9C24154B3B0036BF26 /* TableViewCell.swift in Sources */,
-				F479313423D9549000125D47 /* ViewController.swift in Sources */,
 				F412C7C02408F79300C1C0A8 /* dogListSideMenuController.swift in Sources */,
 				F45210902465102C00A602D2 /* CustomPlanDisplayView.swift in Sources */,
 				F41C2B0A241770C200B05A72 /* WalkInfo.swift in Sources */,
 				F479316223D966B700125D47 /* Page1ViewController.swift in Sources */,
 				F479317923D96A6300125D47 /* DogsInfo.swift in Sources */,
-				F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController1.swift in Sources */,
-				F4A60E71247BFDB500C31767 /* ToiletDataTableViewController1.swift in Sources */,
-				F479315723D961C300125D47 /* addNewAccountViewController.swift in Sources */,
+				F4A60E6F247BFC7E00C31767 /* WalkDataTableViewController.swift in Sources */,
+				F4A60E71247BFDB500C31767 /* ToiletDataTableViewController.swift in Sources */,
 				F413733423F11FD9003EF61F /* WalkViewController.swift in Sources */,
 				F444ED2A241B7A5200466D33 /* EndInputConditionViewController.swift in Sources */,
 				F479316423D966F600125D47 /* Page2ViewController.swift in Sources */,
@@ -538,17 +540,18 @@
 				F467934523FE566B00B19B6B /* ScheduleObject.swift in Sources */,
 				F4C83E992414D7730036BF26 /* ScheduleContent.swift in Sources */,
 				F4191D24244F07050096D951 /* SettingViewController.swift in Sources */,
-				F40130172478C33100F84F01 /* DogDataViewController1.swift in Sources */,
+				F40130172478C33100F84F01 /* DogDataViewController.swift in Sources */,
 				F40B7B2A241F620B0086F94D /* MealInfo.swift in Sources */,
 				F4EFE3C523F6411A00F3C6EC /* timeManagement.swift in Sources */,
 				F464DD6624AC671900714CAA /* InputTextField.swift in Sources */,
-				F4B7577A246D4EAE00753745 /* WalkDataViewCellTableViewCell.swift in Sources */,
+				F4B7577A246D4EAE00753745 /* DataLogTableViewCelll.swift in Sources */,
 				F479316B23D967BD00125D47 /* Today'sConditionViewController.swift in Sources */,
 				F4FECC5A24B59CDE008FF0F6 /* resetPasswordViewController.swift in Sources */,
+				F4CF3EEE24F8F52C0042CC11 /* warningAlertController.swift in Sources */,
 				F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */,
 				F46CECCC24A46EE200BA3EA6 /* CustomUITextField.swift in Sources */,
 				F479316023D9667500125D47 /* DogListViewController.swift in Sources */,
-				F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController1.swift in Sources */,
+				F4DA1EF6247BF7E600AB8DB4 /* MealDataTableViewController.swift in Sources */,
 				F4CF529E2415FB9800711B37 /* FriendProfileInputControllerViewController.swift in Sources */,
 				F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */,
 				F479315C23D965D400125D47 /* ProfileInputController.swift in Sources */,
@@ -560,6 +563,7 @@
 				F479315123D95DE200125D47 /* newAccountViewController.swift in Sources */,
 				F479317D23D96AE400125D47 /* FriendsInfo.swift in Sources */,
 				F477F3DF24A223BD00F43BE6 /* ButtonBorderColor.swift in Sources */,
+				F41771DC2500CAA90008B6AD /* WalkDataLogCell.swift in Sources */,
 				F4EFE3C723F9158F00F3C6EC /* InputScheduleViewController.swift in Sources */,
 				F413733A23F1490F003EF61F /* ToiletViewController.swift in Sources */,
 				F479317023D9685400125D47 /* CalendarViewController.swift in Sources */,
@@ -571,7 +575,7 @@
 				F444ED26241B74CF00466D33 /* EndInputScheduleViewController.swift in Sources */,
 				F479315523D9617A00125D47 /* confirmViewController.swift in Sources */,
 				F45C2F6324C191A600C4A14D /* CalendarModalViewController.swift in Sources */,
-				F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController1.swift in Sources */,
+				F4A60E6D247BFBBA00C31767 /* WaterDataTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

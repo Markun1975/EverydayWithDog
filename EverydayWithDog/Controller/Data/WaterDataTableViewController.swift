@@ -14,7 +14,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class WaterDataTableViewController1: UITableViewController,SegementSlideContentScrollViewDelegate {
+class WaterDataTableViewController: UITableViewController,SegementSlideContentScrollViewDelegate {
 
       let fetchData = FetchDogData()
       var waterDataInfoArray = [WaterInfo]()
@@ -34,6 +34,11 @@ class WaterDataTableViewController1: UITableViewController,SegementSlideContentS
         self,selector:
         #selector(catchDeleteEndNotification(notification:)),name:Notification
         .Name("deleteDocument"),object: nil)
+        
+        //カスタムセルを定義
+         let nib = UINib(nibName: "DataLogTableViewCell", bundle: nil)
+        //register()の引数に渡す定数「nib」を定義
+         tableView.register(nib, forCellReuseIdentifier: "dataLogCell")
     }
 
       // MARK: - Table view data source
@@ -55,20 +60,34 @@ class WaterDataTableViewController1: UITableViewController,SegementSlideContentS
           return 1
         }else{
           return waterDataInfoArray.count
+//            return 155 // 5/1Day ×31Days(1Month)
         }
         
     }
 
       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+         let drinkDataCell = tableView.dequeueReusableCell(withIdentifier: "dataLogCell", for: indexPath) as! DataLogTableViewCell
+        
+         let drinkDayLabel = drinkDataCell.viewWithTag(1) as! UILabel
+         let drinkPlaceLabel = drinkDataCell.viewWithTag(2) as! UILabel
+         let drinkLabel = drinkDataCell.viewWithTag(3) as! UILabel
+        
         if self.waterDataInfoArray.count == 0 {
-            cell.textLabel?.text = "データなし"
-          return cell
+            drinkDataCell.textLabel?.text = "データなし"
+            drinkDayLabel.text = ""
+            drinkPlaceLabel.text = ""
+            drinkLabel.text = ""
+            
+          return drinkDataCell
         }else{
           //いつ食べたか時刻を表示
-          cell.textLabel?.text = self.waterDataInfoArray[indexPath.row].waterTimeString
-          cell.detailTextLabel?.text = self.waterDataInfoArray[indexPath.row].waterPlaceString
-            return cell
+          drinkDayLabel.text = self.waterDataInfoArray[indexPath.row].waterTimeString
+          drinkPlaceLabel.text = self.waterDataInfoArray[indexPath.row].waterPlaceString
+          drinkLabel.text = self.waterDataInfoArray[indexPath.row].waterString
+          
+          //データが有る場合は中央のラベルは非表示
+          drinkDataCell.textLabel?.text = ""
+            return drinkDataCell
         }
     }
     
@@ -121,7 +140,7 @@ class WaterDataTableViewController1: UITableViewController,SegementSlideContentS
           
           
       func loadWaterInfo() {
-              let fetchWaterInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("waterInfomation").limit(to: 50)
+        let fetchWaterInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("waterInfomation").order(by: "drinkTimeString", descending: true).limit(to: 50)
               fetchWaterInfo.getDocuments() { (querySnapshot, err) in
                   if let err = err {
                       print("Error getting documents: \(err)")
@@ -139,7 +158,7 @@ class WaterDataTableViewController1: UITableViewController,SegementSlideContentS
 
                                let waterPlaceString = waterData["drinkPlaceString"] as? String
 
-                            self.waterDataInfoArray.append(WaterInfo(waterString: waterString!, waterTimeString: waterTimeString!, waterPlaceString: waterPlaceString!, waterDocumentId: documentId))
+                            self.waterDataInfoArray.append(WaterInfo(waterString: waterString! + "ml", waterTimeString: waterTimeString!, waterPlaceString: waterPlaceString!, waterDocumentId: documentId))
                                  }
                              }
                     //読み込みが終わったタイミングですぐにTableViewにリロードして反映

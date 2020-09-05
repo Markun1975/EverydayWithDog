@@ -4,6 +4,7 @@ import GooglePlaces
 
 
 //今後実装予定の機能
+//The map feature will be implemented in future updates.
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
 //    var mapView = GMSMapView()

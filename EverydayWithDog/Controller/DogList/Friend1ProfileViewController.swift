@@ -46,7 +46,6 @@ class Friend1ProfileViewController: UIViewController {
            dogType = UserDefaults.standard.object(forKey: "friendDogType") as! String
            memo = UserDefaults.standard.object(forKey: "dogMemo") as! String
            
-   //        profileIconImage.sd_setImage(with: URL(string: UserDefaults.standard.object(forKey: "imageString") as! String), completed: nil)
            profileIconImage!.sd_setImage(with: URL(string: profile!), completed: nil)
            nameLabel!.text = name!
            sexLabel!.text = sex!

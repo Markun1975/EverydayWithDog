@@ -24,12 +24,15 @@ class MealViewController: UIViewController {
     
     var timer:Timer!
     
+    var warningAlert = warningAlertController()
+    
     let setTexField = InputTextField()
     
         var dogId:String?
         var mealString: String?
         var mealTimeData: UIDatePicker = UIDatePicker()
-        var mealTimeString: String?
+//        var mealTimeString: String?
+          var mealTimeString = ""
         var mealContentString: String?
     
     let datePicker: UIDatePicker = {
@@ -39,6 +42,7 @@ class MealViewController: UIViewController {
                datePicker.addTarget(self, action: #selector(dateChange), for: .valueChanged)
                return datePicker
            }()
+    
 
     
     override func viewDidLoad() {
@@ -58,11 +62,16 @@ class MealViewController: UIViewController {
         mealTimeString = mealTimeTextView.text!
         mealContentString = mealContentTextView.text!
         
+        if mealTimeString == nil || mealTimeString == "" {
+            //Alertを出す
+            present(warningAlert, animated: true)
+        } else {
+        
         let mealInfoArray:Dictionary = ["mealString": mealString as Any,"mealTimeString": mealTimeString as Any,"mealContentString": mealContentString as Any] as [String:Any]
         
             
         print(mealString!)
-        print(mealTimeString!)
+        print(mealTimeString)
         print(mealContentString!)
         let uid = Auth.auth().currentUser?.uid
 
@@ -77,9 +86,11 @@ class MealViewController: UIViewController {
         let popupView = storyBoard.instantiateViewController(withIdentifier: "EndInputConditionView")
         popupView.modalPresentationStyle = .overFullScreen
         popupView.modalTransitionStyle = .crossDissolve
-        self.present(popupView, animated: true, completion: nil)
+        self.present(popupView, animated: true)
+        
         //二秒後にTop画面へ繊維
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
+        }
     }
     
     @objc func dateChange(){
@@ -108,7 +119,6 @@ class MealViewController: UIViewController {
         mealQuantityView.inputAccessoryView = toolBar
         mealTimeTextView.inputAccessoryView = toolBar
         mealContentTextView.inputAccessoryView = toolBar
-        
     }
 
     func saveButtonSetup(){
@@ -132,6 +142,6 @@ class MealViewController: UIViewController {
     }
     
     @objc func backToConditionView(){
-           self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }

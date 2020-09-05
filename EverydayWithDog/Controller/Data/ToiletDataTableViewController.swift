@@ -14,7 +14,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
 
-class ToiletDataTableViewController1: UITableViewController,SegementSlideContentScrollViewDelegate {
+class ToiletDataTableViewController: UITableViewController,SegementSlideContentScrollViewDelegate {
 
      let fetchData = FetchDogData()
      var toiletDataInfoArray = [ToiletInfo]()
@@ -34,6 +34,11 @@ class ToiletDataTableViewController1: UITableViewController,SegementSlideContent
             self,selector:
             #selector(catchDeleteEndNotification(notification:)),name:Notification
             .Name("deleteDocument"),object: nil)
+        
+        //カスタムセルを定義
+         let nib = UINib(nibName: "DataLogTableViewCell", bundle: nil)
+        //register()の引数に渡す定数「nib」を定義
+         tableView.register(nib, forCellReuseIdentifier: "dataLogCell")
      }
 
      // MARK: - Table view data source
@@ -55,20 +60,34 @@ class ToiletDataTableViewController1: UITableViewController,SegementSlideContent
          return 1
        }else{
          return toiletDataInfoArray.count
-       }
+//        return 372 // 12/1Day × 31Days(1Month)
+        }
        
    }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+         let toiletDataCell = tableView.dequeueReusableCell(withIdentifier: "dataLogCell", for: indexPath) as! DataLogTableViewCell
+        
+         let toietDayLabel = toiletDataCell.viewWithTag(1) as! UILabel
+         let toiletPlaceLabel = toiletDataCell.viewWithTag(2) as! UILabel
+         let toiletTypeLabel = toiletDataCell.viewWithTag(3) as! UILabel
+       
        if self.toiletDataInfoArray.count == 0 {
-           cell.textLabel?.text = "データなし"
-         return cell
+           toiletDataCell.textLabel?.text = "データなし"
+           toietDayLabel.text = ""
+           toiletPlaceLabel.text = ""
+           toiletTypeLabel.text = ""
+        
+         return toiletDataCell
        }else{
           //いつ食べたか時刻を表示
-           cell.textLabel?.text = self.toiletDataInfoArray[indexPath.row].toiletTimeString
-           cell.detailTextLabel?.text = self.toiletDataInfoArray[indexPath.row].toiletPlaceString
-           return cell
+           toietDayLabel.text = self.toiletDataInfoArray[indexPath.row].toiletTimeString
+           toiletPlaceLabel.text = self.toiletDataInfoArray[indexPath.row].toiletPlaceString
+           toiletTypeLabel.text = self.toiletDataInfoArray[indexPath.row].toiletTypeString
+        
+           toiletDataCell.textLabel?.text = ""
+        
+           return toiletDataCell
        }
    }
     
@@ -122,7 +141,7 @@ class ToiletDataTableViewController1: UITableViewController,SegementSlideContent
          
      func loadToiletInfo() {
              print("Load呼ばれてる！")
-        let fetchWaterInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("toiletInfomation").limit(to: 50)
+        let fetchWaterInfo = Firestore.firestore().collection("user").document(uid!).collection("dogList").document(self.dogId!).collection("toiletInfomation").order(by: "toiletTimeString", descending: true).limit(to: 50)
              fetchWaterInfo.getDocuments() { (querySnapshot, err) in
                  if let err = err {
                      print("Error getting documents: \(err)")
@@ -140,9 +159,9 @@ class ToiletDataTableViewController1: UITableViewController,SegementSlideContent
 
                          let toiletPlaceString = toiletData["toitelPlaceString"] as? String
                         
-                         let toiletTypeString = toiletData["toiletTypeString"]
+                         let toiletTypeString = toiletData["toiletTypeString"] as? String
 
-                        self.toiletDataInfoArray.append(ToiletInfo(toiletTimeString: toiletTimeString!, toiletPlaceString: toiletPlaceString!, toiletDocumentId: documentId, toiletTypeString: toiletTypeString as! String))
+                        self.toiletDataInfoArray.append(ToiletInfo(toiletTimeString: toiletTimeString!, toiletPlaceString: toiletPlaceString!, toiletDocumentId: documentId, toiletTypeString: toiletTypeString!))
                                 }
                             }
                    //読み込みが終わったタイミングですぐにTableViewにリロードして反映

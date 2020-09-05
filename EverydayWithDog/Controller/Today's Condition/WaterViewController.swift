@@ -37,6 +37,8 @@ class WaterViewController: UIViewController {
     var drinkTimeString: String?
     var drinkPlaceString: String?
     
+    let warningAlert = warningAlertController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dogId = UserDefaults.standard.object(forKey: "dogID") as! String
@@ -69,9 +71,11 @@ class WaterViewController: UIViewController {
         drinkTimeString = drinkTimeTextView.text!
         drinkPlaceString = drinkPlaceView.text!
         
-        print(waterString!)
-        print(drinkTimeString!)
-        print(drinkPlaceString!)
+        if drinkTimeString == nil || drinkTimeString == "" {
+
+                present(warningAlert, animated: true)
+            
+            } else {
         
         let waterInfoArray:Dictionary = ["waterString": waterString as Any,"drinkTimeString": drinkTimeString as Any,"drinkPlaceString": drinkPlaceString as Any] as [String:Any]
             
@@ -90,7 +94,9 @@ class WaterViewController: UIViewController {
         popupView.modalTransitionStyle = .crossDissolve
         self.present(popupView, animated: true, completion: nil)
         //二秒後にTop画面へ繊維
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(backToConditionView), userInfo: nil, repeats: false)
+            
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

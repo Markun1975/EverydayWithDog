@@ -78,8 +78,6 @@ class ProfileInputController: FormViewController{
                         row.options = ["男の子","女の子"]
                         row.value = "Men"
                     }.onChange { [unowned self] row in
-//                        self.sex = row.value ?? "選択なし"
-//                        print(self.sex)
                         self.sex! = row.value!
                         print(self.sex!)
                         if self.sex == ""{
@@ -106,8 +104,6 @@ class ProfileInputController: FormViewController{
                         $0.title = "誕生日を選択"
                     }.onChange() { row in
                         //Date型をString型に変換
-//                        var date = Date()
-//                        date = row.value!
                         let formatter = DateFormatter()
                         formatter.dateStyle = .long
                         formatter.timeStyle = .none
@@ -144,8 +140,6 @@ class ProfileInputController: FormViewController{
                         row.options =  ["あり","なし"]
                         row.value = row.options.first
                     }.onChange { [unowned self] row in
-//                        self.selectedDogType = row.value!
-//                        print(self.selectedDogType)
                         self.contraception! = row.value!
                         print(self.contraception!)
                 }
@@ -179,8 +173,6 @@ class ProfileInputController: FormViewController{
                         row.options =  ["あり","なし"]
                         row.value = row.options.first
                     }.onChange { [unowned self] row in
-//                        self.selectedDogType = row.value!
-//                        print(self.selectedDogType)
                         self.filaria! = row.value!
                         print(self.filaria!)
                         
@@ -273,9 +265,15 @@ func upLoadData(){
         upLoadTask.resume()
 }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //画面をタッチしたときにキーボードを閉じたい
-//        FormViewController.resignFirstResponder(<#T##self: UIResponder##UIResponder#>)
+        self.view.endEditing(true)
         }
     
 func displayAlertMessage(userMesage: String) {

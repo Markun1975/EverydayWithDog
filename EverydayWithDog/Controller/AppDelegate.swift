@@ -27,30 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                // [END default_firestore]
         print(db) // silence warning
         
-        //ログインを永続させるかの設定メソッド
-//        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
-//        .then(function() {
-//          // Existing and future Auth states are now persisted in the current
-//          // session only. Closing the window would clear any existing state even
-//          // if a user forgets to sign out.
-//          // ...
-//          // New sign-in will be persisted with session persistence.
-//          return firebase.auth().signInWithEmailAndPassword(email, password)
-//        })
-//        .catch(function(error) {
-//          // Handle Errors here.
-//          var errorCode = error.code
-//          var errorMessage = error.message
-//        })
-        
-        
         //下記GoogleMap認証
         GMSServices.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")
         GMSPlacesClient.provideAPIKey("AIzaSyCS7kLJtFqXRvd_KpY16-_tfcXMmmv0Z3k")
         return true
     }
     
-    //FBログインに使うことっぽいので保留
+    //FBログインに使うことっぽいので保留　FaceBook login function will be implemented in future updates
+    
 //    func application(_ application: UIApplication,open url: URL, sourceApplication: String?,annotation: Any) -> Bool {
 //        return
 //            UIApplicationDelegate.shar.shard.application(application, open: url, sourceApplication: sourceApplication,annotation: annotation)
@@ -61,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    }
 
     // MARK: UISceneSession Lifecycle
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        //ログインを永続させるかの設定メソッド
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

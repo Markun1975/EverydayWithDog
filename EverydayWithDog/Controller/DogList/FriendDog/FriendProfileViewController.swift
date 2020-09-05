@@ -34,7 +34,8 @@ class FriendProfileViewController: UIViewController {
     
  @IBOutlet var memoLabel: UILabel!
     
- 
+    @IBOutlet var Label1: UILabel!
+    
  
 override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,8 @@ override func viewDidLoad() {
     profileIconImage.clipsToBounds = true
     profileIconImage.layer.borderColor = UIColor.white.cgColor
     profileIconImage.layer.borderWidth = 4
+    
+    labelSetup(setLabel: Label1)
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -128,6 +131,13 @@ override func viewDidLoad() {
         //Icon
         profileIconImage.layer.cornerRadius = profileIconImage.frame.height/2
         profileIconImage.clipsToBounds = true
+    }
+    
+    func labelSetup(setLabel: UILabel){
+        var label = UILabel()
+        label = setLabel
+        label.layer.borderWidth = 0.25  // 枠線の幅
+        label.layer.borderColor = UIColor.lightGray.cgColor
     }
     
 }

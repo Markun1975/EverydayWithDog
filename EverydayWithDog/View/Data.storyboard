@@ -10,7 +10,7 @@
         <!--記録データ-->
         <scene sceneID="AhC-kG-kVI">
             <objects>
-                <viewController id="DZc-NS-e4k" customClass="DogDataViewController1" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DZc-NS-e4k" customClass="DogDataViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X23-6O-CRX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

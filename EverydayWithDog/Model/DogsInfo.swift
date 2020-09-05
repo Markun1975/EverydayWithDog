@@ -21,7 +21,6 @@ class DogInfo {
     var sexString:String = "" //ワンちゃんの性別
     var dogTypeString:String = "" //犬種
     var birthString:String = ""
-//    var birth:  = 0 //誕生日
     var chipIdString:String = "" //ICチップ番号
     var contraceptionString:String = "" //避妊有無
     var personalityString:String = "" //性格

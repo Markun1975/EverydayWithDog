@@ -1,13 +1,11 @@
-//
 //  LoginViewController.swift
 //  EverydayWithDog
-//
 //  Created by Masaki on 1/23/2 R.
 //  Copyright © 2 Reiwa Sugita Masaki. All rights reserved.
-//
 
 import UIKit
-import Lottie
+import Firebase
+//import FirebaseUI
 
 class LoginViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -35,9 +33,20 @@ class LoginViewController: UIViewController,UIImagePickerControllerDelegate,UINa
         view.addSubview(loginView)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
         self.tabBarController?.tabBar.isHidden = true
+        
+        //ログイン常態か判別
+        guard let uid = Auth.auth().currentUser?.uid else {
+        return print("no current user!ログインし直してください！")
+        }
+        continueUserAction()
+    }
+    
+    private func continueUserAction() {
+        let MainViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! UITabBarController
+        self.show(MainViewController, sender: nil)
     }
     
     @IBAction func newLoginAction(_ sender: Any) {

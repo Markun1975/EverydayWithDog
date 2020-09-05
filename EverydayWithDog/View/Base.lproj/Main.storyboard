@@ -15,7 +15,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pi4-lZ-42Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="-408"/>
+            <point key="canvasLocation" x="1506" y="-419"/>
         </scene>
         <!--Today'sBodyCondition-->
         <scene sceneID="sdw-Ug-wh7">
@@ -25,7 +25,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzv-Lc-HbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="151"/>
+            <point key="canvasLocation" x="1506" y="129"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="u06-4X-2Pf">
@@ -35,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ik-gS-LdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="610"/>
+            <point key="canvasLocation" x="1492" y="583"/>
         </scene>
         <!--Data-->
         <scene sceneID="fcp-vG-fbp">
@@ -45,7 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbg-lz-pLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="859"/>
+            <point key="canvasLocation" x="1471" y="872"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="50e-5H-UXZ">
@@ -304,7 +304,6 @@
                         <outlet property="mailAddress" destination="5Sv-fH-0a2" id="d0A-G6-eUO"/>
                         <outlet property="passWord" destination="TIl-2V-3eb" id="uJ2-zg-Pw1"/>
                         <outlet property="registerButton" destination="5sG-Hd-QJv" id="Ggu-yN-lxc"/>
-                        <outlet property="userName" destination="x5d-tZ-fLn" id="JMM-iz-94k"/>
                         <segue destination="CNC-CV-BMR" kind="presentation" identifier="loginSuccess" modalPresentationStyle="fullScreen" id="yRl-db-jlP"/>
                     </connections>
                 </viewController>
@@ -363,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wx0-dW-i0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="151"/>
+            <point key="canvasLocation" x="-303" y="-273"/>
         </scene>
         <!--Confirm View Controller-->
         <scene sceneID="iY4-9d-blV">
@@ -629,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYi-RW-1AK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="918"/>
+            <point key="canvasLocation" x="-303" y="524"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="FhH-R1-BtT">
@@ -652,7 +651,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwR-Zx-0CV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="168"/>
+            <point key="canvasLocation" x="625" y="129"/>
         </scene>
     </scenes>
     <resources>
