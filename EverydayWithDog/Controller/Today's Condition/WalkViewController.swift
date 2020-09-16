@@ -95,12 +95,22 @@ class WalkViewController: UIViewController {
         //散歩時間を入力値の差分で計算し、保存する
         let d1 = datePicker1.date
         let d2 = datePicker2.date
-        let diff = d2.timeIntervalSince(d1)
+            
+//        datePicker2.minimumDate = d1
+//        datePicker2.maximumDate = d1.addingTimeInterval(60 * 60 * 6)
+//
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+            
+        let diff = d2.timeIntervalSince(d1) + 60
         let timeFmt = DateComponentsFormatter()
         timeFmt.unitsStyle = .brief
+        //秒数を表示させないため、HH時mm分表記にする
+        timeFmt.allowedUnits = [.hour, .minute]
         //秒数を時間分に変換
+//        timeFormatter.string(from: diff)
         let walkTime = timeFmt.string(from: diff)
-        print(diff)
+        print(diff,"これが時間差なので注目してください!!!!")
         
             guard diff > 0 else {
                 let timeWarningAlert = UIAlertController(title: "エラー", message: "終了時間が開始時間より前の場合、記録が残せません。", preferredStyle: UIAlertController.Style.alert)
@@ -160,10 +170,13 @@ class WalkViewController: UIViewController {
     @objc func dateChange(){
         let formatter = DateFormatter()
         let timeFormatter = DateFormatter()
-        formatter.dateFormat = "MM月dd日 HH時mm分"
+        formatter.dateFormat = "MM月dd日HH時mm分"
         walkStartTimeView.text = "\(formatter.string(from: datePicker1.date))"
         timeFormatter.dateFormat = "HH時mm分"
         walkTimeView.text = "\(timeFormatter.string(from: datePicker2.date))"
+        //入力日時を限定する
+        datePicker2.minimumDate = datePicker1.date
+        datePicker2.maximumDate = datePicker1.date.addingTimeInterval(60 * 60 * 6)
     }
 
     @objc func done(){

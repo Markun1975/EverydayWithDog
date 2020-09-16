@@ -50,7 +50,7 @@
         <!--Login View Controller-->
         <scene sceneID="50e-5H-UXZ">
             <objects>
-                <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1K-Yk-mHf" customClass="LoginViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1K-Yk-mHf" customClass="LoginViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUt-bE-QbF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,13 +164,13 @@
         <!--New Account View Controller-->
         <scene sceneID="NS8-x0-Ft1">
             <objects>
-                <viewController id="aoz-vW-L1I" customClass="newAccountViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aoz-vW-L1I" customClass="newAccountViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fvw-3b-Wnm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Sv-fH-0a2" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="19" y="290" width="337" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Sv-fH-0a2" customClass="CustomUITextField" customModule="EverydayWithDogs" customModuleProvider="target">
+                                <rect key="frame" x="19" y="250" width="337" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -190,8 +190,8 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="mail"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-2V-3eb" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="19" y="370" width="337" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-2V-3eb" customClass="CustomUITextField" customModule="EverydayWithDogs" customModuleProvider="target">
+                                <rect key="frame" x="19" y="330" width="337" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -212,7 +212,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規アカウントを作成します" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAX-fl-b1N">
-                                <rect key="frame" x="19" y="162" width="337" height="21"/>
+                                <rect key="frame" x="19" y="190" width="337" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GAX-fl-b1N" secondAttribute="height" multiplier="337:21" id="dB6-nO-QyB"/>
                                 </constraints>
@@ -220,41 +220,17 @@
                                 <color key="textColor" white="0.0" alpha="0.53836686643835618" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント作成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n66-pU-ld5">
-                                <rect key="frame" x="22" y="107" width="251" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウント作成" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n66-pU-ld5">
+                                <rect key="frame" x="19" y="144" width="337" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="n66-pU-ld5" secondAttribute="height" multiplier="217:43" constant="34" id="Gpw-4g-knA"/>
+                                    <constraint firstAttribute="width" secondItem="n66-pU-ld5" secondAttribute="height" multiplier="217:43" constant="165.41860465116278" id="Gpw-4g-knA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.87144156678082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x5d-tZ-fLn" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="19" y="210" width="337" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="x5d-tZ-fLn" secondAttribute="height" multiplier="337:50" id="Zvv-IX-C8q"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="username"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
-                                        <real key="value" value="4"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="imageMaxHeight">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" white="0.0" alpha="0.30163741438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sG-Hd-QJv">
-                                <rect key="frame" x="19" y="505" width="337" height="59"/>
+                                <rect key="frame" x="19" y="460" width="337" height="59"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.3411764705882353" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5sG-Hd-QJv" secondAttribute="height" multiplier="337:59" id="rh3-c8-0Lh"/>
@@ -270,32 +246,25 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GAX-fl-b1N" firstAttribute="leading" secondItem="x5d-tZ-fLn" secondAttribute="leading" id="3oe-Qb-Jq3"/>
-                            <constraint firstItem="x5d-tZ-fLn" firstAttribute="width" secondItem="5Sv-fH-0a2" secondAttribute="width" id="4lX-s6-b8x"/>
-                            <constraint firstItem="GAX-fl-b1N" firstAttribute="trailing" secondItem="x5d-tZ-fLn" secondAttribute="trailing" id="7H8-ga-FPc"/>
-                            <constraint firstItem="n66-pU-ld5" firstAttribute="top" secondItem="CG7-OE-KRX" secondAttribute="top" constant="107" id="AhB-uQ-E9A"/>
+                            <constraint firstItem="TIl-2V-3eb" firstAttribute="top" secondItem="5Sv-fH-0a2" secondAttribute="bottom" constant="30" id="9ep-CB-4Ut"/>
                             <constraint firstItem="5sG-Hd-QJv" firstAttribute="leading" secondItem="CG7-OE-KRX" secondAttribute="leading" constant="19" id="BQ4-2A-WvZ"/>
-                            <constraint firstItem="5Sv-fH-0a2" firstAttribute="top" secondItem="x5d-tZ-fLn" secondAttribute="bottom" constant="30" id="C8Z-Dp-XbI"/>
                             <constraint firstItem="5Sv-fH-0a2" firstAttribute="height" secondItem="TIl-2V-3eb" secondAttribute="height" id="Dwp-Og-778"/>
                             <constraint firstItem="CG7-OE-KRX" firstAttribute="trailing" secondItem="5sG-Hd-QJv" secondAttribute="trailing" constant="19" id="E8B-df-c8Z"/>
                             <constraint firstItem="5Sv-fH-0a2" firstAttribute="width" secondItem="TIl-2V-3eb" secondAttribute="width" id="F1R-jl-WxX"/>
                             <constraint firstItem="GAX-fl-b1N" firstAttribute="leading" secondItem="CG7-OE-KRX" secondAttribute="leading" constant="19" id="I7a-Q4-yGl"/>
-                            <constraint firstItem="GAX-fl-b1N" firstAttribute="width" secondItem="x5d-tZ-fLn" secondAttribute="width" id="KRv-8u-Ctc"/>
-                            <constraint firstItem="n66-pU-ld5" firstAttribute="leading" secondItem="CG7-OE-KRX" secondAttribute="leading" constant="22" id="PkB-NL-HbJ"/>
+                            <constraint firstItem="n66-pU-ld5" firstAttribute="leading" secondItem="CG7-OE-KRX" secondAttribute="leading" constant="19" id="PkB-NL-HbJ"/>
                             <constraint firstItem="5Sv-fH-0a2" firstAttribute="leading" secondItem="TIl-2V-3eb" secondAttribute="leading" id="QCv-Sh-Dsd"/>
-                            <constraint firstItem="CG7-OE-KRX" firstAttribute="trailing" secondItem="n66-pU-ld5" secondAttribute="trailing" constant="102" id="WuA-oS-aob"/>
-                            <constraint firstItem="GAX-fl-b1N" firstAttribute="top" secondItem="n66-pU-ld5" secondAttribute="bottom" constant="12" id="cHj-k4-olW"/>
-                            <constraint firstItem="TIl-2V-3eb" firstAttribute="top" secondItem="5Sv-fH-0a2" secondAttribute="bottom" constant="30" id="dSv-Fa-Vgu"/>
+                            <constraint firstItem="5Sv-fH-0a2" firstAttribute="width" secondItem="TIl-2V-3eb" secondAttribute="height" multiplier="337:50" id="W5c-cT-b0S"/>
+                            <constraint firstItem="CG7-OE-KRX" firstAttribute="trailing" secondItem="n66-pU-ld5" secondAttribute="trailing" constant="19" id="WuA-oS-aob"/>
+                            <constraint firstItem="GAX-fl-b1N" firstAttribute="top" secondItem="n66-pU-ld5" secondAttribute="bottom" constant="12" id="c9k-Un-9QX"/>
                             <constraint firstItem="5sG-Hd-QJv" firstAttribute="trailing" secondItem="TIl-2V-3eb" secondAttribute="trailing" id="hLz-Tx-1bs"/>
                             <constraint firstItem="5Sv-fH-0a2" firstAttribute="trailing" secondItem="TIl-2V-3eb" secondAttribute="trailing" id="iRd-S9-hUT"/>
-                            <constraint firstItem="x5d-tZ-fLn" firstAttribute="top" secondItem="GAX-fl-b1N" secondAttribute="bottom" constant="27" id="kgb-j4-KRp"/>
+                            <constraint firstItem="CG7-OE-KRX" firstAttribute="bottom" secondItem="5sG-Hd-QJv" secondAttribute="bottom" constant="205" id="mTN-NA-hef"/>
                             <constraint firstItem="CG7-OE-KRX" firstAttribute="trailing" secondItem="GAX-fl-b1N" secondAttribute="trailing" constant="19" id="nXP-7y-sGj"/>
                             <constraint firstItem="5sG-Hd-QJv" firstAttribute="leading" secondItem="TIl-2V-3eb" secondAttribute="leading" id="qFh-OJ-l4V"/>
                             <constraint firstItem="5sG-Hd-QJv" firstAttribute="width" secondItem="TIl-2V-3eb" secondAttribute="width" id="rAa-Q9-WTY"/>
-                            <constraint firstItem="x5d-tZ-fLn" firstAttribute="trailing" secondItem="5Sv-fH-0a2" secondAttribute="trailing" id="sQh-XQ-FKl"/>
-                            <constraint firstItem="x5d-tZ-fLn" firstAttribute="leading" secondItem="5Sv-fH-0a2" secondAttribute="leading" id="tTR-Gv-PZw"/>
-                            <constraint firstItem="5sG-Hd-QJv" firstAttribute="top" secondItem="TIl-2V-3eb" secondAttribute="bottom" constant="85" id="ubZ-ZI-L4o"/>
-                            <constraint firstItem="x5d-tZ-fLn" firstAttribute="height" secondItem="5Sv-fH-0a2" secondAttribute="height" id="vQw-5e-6ch"/>
+                            <constraint firstItem="5Sv-fH-0a2" firstAttribute="top" secondItem="GAX-fl-b1N" secondAttribute="bottom" constant="39" id="vAO-bv-4la"/>
+                            <constraint firstItem="n66-pU-ld5" firstAttribute="top" secondItem="CG7-OE-KRX" secondAttribute="top" constant="144" id="yEs-re-JFc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CG7-OE-KRX"/>
                     </view>
@@ -314,7 +283,7 @@
         <!--Finish Login View Controller-->
         <scene sceneID="rlh-S3-wab">
             <objects>
-                <viewController id="CNC-CV-BMR" customClass="finishLoginViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CNC-CV-BMR" customClass="finishLoginViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hWQ-8i-XTe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,12 +336,12 @@
         <!--Confirm View Controller-->
         <scene sceneID="iY4-9d-blV">
             <objects>
-                <viewController storyboardIdentifier="confirmVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w3n-at-sTy" customClass="confirmViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confirmVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w3n-at-sTy" customClass="confirmViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qbz-gR-DAM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kg-cO-sbs" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" パスワード" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Kg-cO-sbs" customClass="CustomUITextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="19" y="330" width="337" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -405,7 +374,7 @@
                                 <color key="textColor" white="0.0" alpha="0.53991866438356162" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログイン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-rp-LtG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログイン" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-rp-LtG">
                                 <rect key="frame" x="19" y="144" width="337" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hhz-rp-LtG" secondAttribute="height" multiplier="337:34" id="F1s-ag-Efn"/>
@@ -429,7 +398,7 @@
                                     <action selector="loginAction:" destination="w3n-at-sTy" eventType="touchUpInside" id="Vwd-RV-N31"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-0M-KEa" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-0M-KEa" customClass="CustomUITextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="19" y="250" width="337" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -519,25 +488,23 @@
         <!--Reset Password View Controller-->
         <scene sceneID="tqX-VL-hAc">
             <objects>
-                <viewController id="yh2-cp-EeI" customClass="resetPasswordViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yh2-cp-EeI" customClass="resetPasswordViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8g-Jc-Cnc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワードのリセット" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-qD-Z5c">
-                                <rect key="frame" x="44" y="74" width="287" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワードのリセット" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-qD-Z5c">
+                                <rect key="frame" x="45" y="74" width="285" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="lFA-0y-uez"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="p4M-hE-3NP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="0.0" alpha="0.8653413955479452" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード再設定のための手順をメールで送信します。アカウント登録に使用したメールアドレスを入力してください。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uu-9V-PHc">
-                                <rect key="frame" x="20" y="139" width="335" height="83"/>
+                                <rect key="frame" x="20" y="139" width="322" height="83"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="335" id="EYx-FY-dQC"/>
                                     <constraint firstAttribute="height" constant="83" id="kCz-g5-w6R"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -547,7 +514,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0n-Za-zg6">
                                 <rect key="frame" x="16" y="228" width="343" height="212"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-St-TGq" customClass="CustomUITextField" customModule="EverydayWithDog" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2b-St-TGq" customClass="CustomUITextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                         <rect key="frame" x="21" y="34" width="300" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -575,10 +542,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2r-BAb">
                                         <rect key="frame" x="21" y="119" width="300" height="50"/>
                                         <color key="backgroundColor" red="0.0039215686274509803" green="0.72941176470588232" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KJk-qi-MFa"/>
-                                            <constraint firstAttribute="height" constant="50" id="Nxc-e6-yb4"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="メールを送る">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -592,13 +555,12 @@
                                 <constraints>
                                     <constraint firstItem="i2b-St-TGq" firstAttribute="leading" secondItem="TYd-2r-BAb" secondAttribute="leading" id="8em-Tp-afH"/>
                                     <constraint firstAttribute="bottom" secondItem="TYd-2r-BAb" secondAttribute="bottom" constant="43" id="AOx-Sg-RrY"/>
-                                    <constraint firstItem="TYd-2r-BAb" firstAttribute="top" secondItem="i2b-St-TGq" secondAttribute="bottom" constant="35" id="DRX-9W-2Pk"/>
                                     <constraint firstAttribute="height" constant="212" id="Dgb-gB-otY"/>
                                     <constraint firstItem="i2b-St-TGq" firstAttribute="top" secondItem="q0n-Za-zg6" secondAttribute="top" constant="34" id="EOb-7z-ij9"/>
-                                    <constraint firstItem="TYd-2r-BAb" firstAttribute="leading" secondItem="q0n-Za-zg6" secondAttribute="leading" constant="21" id="K9B-1w-lxM"/>
+                                    <constraint firstItem="i2b-St-TGq" firstAttribute="height" secondItem="TYd-2r-BAb" secondAttribute="height" id="Gie-ZZ-mcy"/>
                                     <constraint firstAttribute="trailing" secondItem="i2b-St-TGq" secondAttribute="trailing" constant="22" id="LDf-u7-Kff"/>
-                                    <constraint firstAttribute="trailing" secondItem="TYd-2r-BAb" secondAttribute="trailing" constant="22" id="Miv-oR-T7f"/>
                                     <constraint firstAttribute="width" constant="343" id="eup-F6-Xfm"/>
+                                    <constraint firstItem="i2b-St-TGq" firstAttribute="width" secondItem="TYd-2r-BAb" secondAttribute="height" multiplier="6:1" id="seA-Qp-dLB"/>
                                     <constraint firstItem="i2b-St-TGq" firstAttribute="leading" secondItem="q0n-Za-zg6" secondAttribute="leading" constant="21" id="u5n-FQ-qR4"/>
                                     <constraint firstItem="i2b-St-TGq" firstAttribute="trailing" secondItem="TYd-2r-BAb" secondAttribute="trailing" id="x8D-zV-FJk"/>
                                 </constraints>
@@ -606,16 +568,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" secondItem="6Uu-9V-PHc" secondAttribute="trailing" constant="20" id="7TQ-ti-GN9"/>
+                            <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" secondItem="aNS-qD-Z5c" secondAttribute="trailing" constant="45" id="FGZ-N7-GPh"/>
                             <constraint firstItem="q0n-Za-zg6" firstAttribute="leading" secondItem="1S0-nU-N5j" secondAttribute="leading" constant="16" id="FUa-kg-UqP"/>
-                            <constraint firstItem="aNS-qD-Z5c" firstAttribute="top" secondItem="1S0-nU-N5j" secondAttribute="top" constant="74" id="MDj-H1-Q8h"/>
-                            <constraint firstItem="6Uu-9V-PHc" firstAttribute="top" secondItem="aNS-qD-Z5c" secondAttribute="bottom" constant="23" id="Mdy-Cb-odR"/>
+                            <constraint firstItem="aNS-qD-Z5c" firstAttribute="top" secondItem="1S0-nU-N5j" secondAttribute="top" constant="74" id="PgL-C7-njC"/>
+                            <constraint firstItem="6Uu-9V-PHc" firstAttribute="leading" secondItem="1S0-nU-N5j" secondAttribute="leading" constant="20" id="Sjm-7l-awr"/>
                             <constraint firstItem="q0n-Za-zg6" firstAttribute="top" secondItem="6Uu-9V-PHc" secondAttribute="bottom" constant="6" id="T9m-a8-XIM"/>
                             <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" secondItem="q0n-Za-zg6" secondAttribute="trailing" constant="16" id="VGl-tF-Ac4"/>
-                            <constraint firstItem="1S0-nU-N5j" firstAttribute="bottom" secondItem="q0n-Za-zg6" secondAttribute="bottom" constant="284" id="XfG-Lp-IzU"/>
-                            <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" secondItem="aNS-qD-Z5c" secondAttribute="trailing" constant="44" id="bfQ-kC-EKt"/>
-                            <constraint firstItem="aNS-qD-Z5c" firstAttribute="leading" secondItem="1S0-nU-N5j" secondAttribute="leading" constant="44" id="cbr-wT-iKp"/>
-                            <constraint firstItem="6Uu-9V-PHc" firstAttribute="leading" secondItem="1S0-nU-N5j" secondAttribute="leading" constant="20" id="vij-XB-l7w"/>
+                            <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" secondItem="6Uu-9V-PHc" secondAttribute="trailing" constant="33" id="bh3-FO-d7u"/>
+                            <constraint firstItem="1S0-nU-N5j" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aNS-qD-Z5c" secondAttribute="trailing" symbolic="YES" id="hD0-YW-VAc"/>
+                            <constraint firstItem="aNS-qD-Z5c" firstAttribute="leading" secondItem="1S0-nU-N5j" secondAttribute="leading" constant="45" id="jHd-fT-DjS"/>
+                            <constraint firstItem="6Uu-9V-PHc" firstAttribute="top" secondItem="aNS-qD-Z5c" secondAttribute="bottom" constant="23" id="rar-Y4-qUn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1S0-nU-N5j"/>
                     </view>
@@ -628,12 +590,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYi-RW-1AK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-303" y="524"/>
+            <point key="canvasLocation" x="-303.19999999999999" y="523.89162561576359"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="FhH-R1-BtT">
             <objects>
-                <tabBarController storyboardIdentifier="mainView" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="hSw-xa-oen" customClass="MyTabBarController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainView" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="hSw-xa-oen" customClass="MyTabBarController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Rlv-Tj-yYi"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jVm-0M-DCg">
@@ -664,7 +626,6 @@
         <image name="key" width="24" height="24"/>
         <image name="mail" width="24" height="24"/>
         <image name="memo" width="24" height="24"/>
-        <image name="username" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yRl-db-jlP"/>

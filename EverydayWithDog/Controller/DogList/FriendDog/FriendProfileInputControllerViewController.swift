@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import Eureka
 import ImageRow
 import Firebase
@@ -39,10 +40,6 @@ class FriendProfileInputControllerViewController: FormViewController{
 //        photoOfProfile()
         
     }
-    
-//    func photoOfProfile(){
-//        let photoPF = UIImageView(frame: CGRect(origin: view.center, size: CGSize(width: 50, height: 50)))
-//    }
 
     
     
@@ -53,12 +50,11 @@ class FriendProfileInputControllerViewController: FormViewController{
                     //フレンド写真登録フォーム
                     +++ Section("写真")
                     <<< ImageRow() {
-                        $0.title = "画像"
-                        $0.sourceTypes = [.PhotoLibrary, .SavedPhotosAlbum, .Camera]
-                        $0.clearAction = .yes(style: .destructive)
-                        $0.onChange { [unowned self] row in
-                            self.profileImg = row.value!
-                        }
+                       $0.sourceTypes = [.Camera,.PhotoLibrary]
+                       $0.clearAction = .no
+                       $0.onChange { [unowned self] row in
+                       self.profileImg = row.value!
+                       }
                     }
                     
                    //フレンド名前登録
@@ -104,8 +100,6 @@ class FriendProfileInputControllerViewController: FormViewController{
 
                         row.value = row.options.first
                     }.onChange { [unowned self] row in
-//                        self.selectedDogType = row.value!
-//                        print(self.selectedDogType)
                         self.dogType! = row.value!
                         print(self.dogType!)
                 }

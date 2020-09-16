@@ -1,0 +1,72 @@
+
+/* Class = "UITabBarItem"; title = "今日の体調"; ObjectID = "2Lu-ww-Euv"; */
+"2Lu-ww-Euv.title" = "今日の体調";
+
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "4DK-Ww-C6g"; */
+"4DK-Ww-C6g.normalTitle" = "ログイン";
+
+/* Class = "UITextField"; placeholder = " パスワード"; ObjectID = "4Kg-cO-sbs"; */
+"4Kg-cO-sbs.placeholder" = " パスワード";
+
+/* Class = "UITextField"; placeholder = "メールアドレス"; ObjectID = "5Sv-fH-0a2"; */
+"5Sv-fH-0a2.placeholder" = "メールアドレス";
+
+/* Class = "UIButton"; normalTitle = "登録メールを送る"; ObjectID = "5sG-Hd-QJv"; */
+"5sG-Hd-QJv.normalTitle" = "登録メールを送る";
+
+/* Class = "UILabel"; text = "パスワード再設定のための手順をメールで送信します。アカウント登録に使用したメールアドレスを入力してください。"; ObjectID = "6Uu-9V-PHc"; */
+"6Uu-9V-PHc.text" = "パスワード再設定のための手順をメールで送信します。アカウント登録に使用したメールアドレスを入力してください。";
+
+/* Class = "UIButton"; normalTitle = "新規登録"; ObjectID = "8tJ-pe-16h"; */
+"8tJ-pe-16h.normalTitle" = "新規登録";
+
+/* Class = "UILabel"; text = "新規アカウントを作成します"; ObjectID = "GAX-fl-b1N"; */
+"GAX-fl-b1N.text" = "新規アカウントを作成します";
+
+/* Class = "UITabBarItem"; title = "データ"; ObjectID = "RY1-bY-qFg"; */
+"RY1-bY-qFg.title" = "データ";
+
+/* Class = "UILabel"; text = "ログインが完了しました！"; ObjectID = "Rll-0m-M3Z"; */
+"Rll-0m-M3Z.text" = "ログインが完了しました！";
+
+/* Class = "UITextField"; placeholder = "パスワード"; ObjectID = "TIl-2V-3eb"; */
+"TIl-2V-3eb.placeholder" = "パスワード";
+
+/* Class = "UIButton"; normalTitle = "メールを送る"; ObjectID = "TYd-2r-BAb"; */
+"TYd-2r-BAb.normalTitle" = "メールを送る";
+
+/* Class = "UIButton"; normalTitle = "メイン画面へ"; ObjectID = "U8N-Ut-T35"; */
+"U8N-Ut-T35.normalTitle" = "メイン画面へ";
+
+/* Class = "UILabel"; text = "パスワードのリセット"; ObjectID = "aNS-qD-Z5c"; */
+"aNS-qD-Z5c.text" = "パスワードのリセット";
+
+/* Class = "UITextField"; placeholder = " メールアドレス"; ObjectID = "bzA-0M-KEa"; */
+"bzA-0M-KEa.placeholder" = " メールアドレス";
+
+/* Class = "UIButton"; normalTitle = "ログイン"; ObjectID = "cTx-fp-z5g"; */
+"cTx-fp-z5g.normalTitle" = "ログイン";
+
+/* Class = "UILabel"; text = "ログイン"; ObjectID = "hhz-rp-LtG"; */
+"hhz-rp-LtG.text" = "ログイン";
+
+/* Class = "UITextField"; placeholder = " メールアドレス"; ObjectID = "i2b-St-TGq"; */
+"i2b-St-TGq.placeholder" = " メールアドレス";
+
+/* Class = "UILabel"; text = "アカウント作成"; ObjectID = "n66-pU-ld5"; */
+"n66-pU-ld5.text" = "アカウント作成";
+
+/* Class = "UIButton"; normalTitle = "パスワードを忘れましたか？"; ObjectID = "pzr-vf-U7c"; */
+"pzr-vf-U7c.normalTitle" = "パスワードを忘れましたか？";
+
+/* Class = "UITabBarItem"; title = "リスト"; ObjectID = "qmE-31-52E"; */
+"qmE-31-52E.title" = "リスト";
+
+/* Class = "UITabBarItem"; title = "カレンダー"; ObjectID = "ra5-Co-eSg"; */
+"ra5-Co-eSg.title" = "カレンダー";
+
+/* Class = "UILabel"; text = "メールアドレスでログインします"; ObjectID = "ys6-qh-kdz"; */
+"ys6-qh-kdz.text" = "メールアドレスでログインします";
+
+/* Class = "UILabel"; text = "まいにちわんこ"; ObjectID = "zzs-t4-oHl"; */
+"zzs-t4-oHl.text" = "まいにちわんこ";

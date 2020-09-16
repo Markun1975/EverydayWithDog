@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 import Eureka
 import ImageRow
 import Firebase
@@ -47,12 +48,13 @@ class ProfileInputController: FormViewController{
                     +++ Section("写真")
                     <<< ImageRow() {
                         $0.title = "画像"
-                        $0.sourceTypes = [.PhotoLibrary, .SavedPhotosAlbum, .Camera]
-                        $0.clearAction = .yes(style: .destructive)
+                        $0.sourceTypes = [.Camera,.PhotoLibrary]
+                        $0.clearAction = .no
                         $0.onChange { [unowned self] row in
-                            self.profileImg = row.value!
+                        self.profileImg = row.value!
                         }
-                    }
+                        
+                }
                     //名前入力フォーム
                     +++ Section("お名前")
                     <<< TextRow("NameTag") { row in
@@ -318,6 +320,3 @@ func displayAlertMessage(userMesage: String) {
         }
     }
 }
-
-
-

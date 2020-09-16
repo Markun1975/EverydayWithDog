@@ -10,7 +10,7 @@
         <!--体調管理-->
         <scene sceneID="KGJ-BA-Ygy">
             <objects>
-                <viewController storyboardIdentifier="ConditionView" id="Dg2-fc-0pk" customClass="Today_sConditionViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConditionView" id="Dg2-fc-0pk" customClass="Today_sConditionViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIi-n5-NRo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
         <!--Dog List Side Menu View Controller-->
         <scene sceneID="Xty-p7-TCZ">
             <objects>
-                <viewController id="Vr0-QT-imb" customClass="dogListSideMenuViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vr0-QT-imb" customClass="dogListSideMenuViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7N4-x9-opm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
         <!--Dog List Side Menu2 Controller-->
         <scene sceneID="EGz-w2-XHA">
             <objects>
-                <tableViewController id="28D-Ud-YoJ" customClass="dogListSideMenu2Controller" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="28D-Ud-YoJ" customClass="dogListSideMenu2Controller" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="g4w-Fg-dxT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@
         <!--Meal View Controller-->
         <scene sceneID="Xap-Zq-lFF">
             <objects>
-                <viewController storyboardIdentifier="inputMeal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aMY-qd-RSn" customClass="MealViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inputMeal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aMY-qd-RSn" customClass="MealViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdk-NS-vZQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +253,7 @@
                                 <color key="textColor" white="0.0" alpha="0.7693172089041096" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-gO-Lik" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-gO-Lik" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="213" width="246" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -304,7 +304,7 @@
                                 <color key="textColor" white="0.0" alpha="0.77065496575342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-dg-TFt" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qo5-dg-TFt" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -337,7 +337,7 @@
                                 <color key="textColor" white="0.0" alpha="0.86710723458904104" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-PK-cOv" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ps-PK-cOv" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="498" width="312" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -408,12 +408,12 @@
         <!--Toilet View Controller-->
         <scene sceneID="HlD-Do-U9D">
             <objects>
-                <viewController storyboardIdentifier="toilet" id="ZIm-Mf-lGH" customClass="ToiletViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="toilet" id="ZIm-Mf-lGH" customClass="ToiletViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ebo-Xh-6Gk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どっち？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-cz-wTc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どっち？(大きいか小さいか)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-cz-wTc">
                                 <rect key="frame" x="32" y="442" width="315" height="36"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -427,7 +427,7 @@
                                 <color key="textColor" white="0.0" alpha="0.77266160110000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5o-cp-ah1" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5o-cp-ah1" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="213" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -449,7 +449,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgo-BS-wkD" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgo-BS-wkD" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -471,7 +471,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Sd-xo6" userLabel="ToiletType" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg2-Sd-xo6" userLabel="ToiletType" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="498" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -565,7 +565,7 @@
         <!--Water View Controller-->
         <scene sceneID="AKI-qk-IAv">
             <objects>
-                <viewController storyboardIdentifier="water" id="IJJ-JE-TzW" customClass="WaterViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="water" id="IJJ-JE-TzW" customClass="WaterViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02P-cD-QDv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -585,7 +585,7 @@
                                 <color key="textColor" white="0.0" alpha="0.77276862162191784" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Mr-Ngq" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fne-Mr-Ngq" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="213" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -620,8 +620,8 @@
                                 <color key="textColor" white="0.0" alpha="0.76653467470410963" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-Dx-vjS" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="32" y="498" width="311" height="42"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cil-Dx-vjS" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
+                                <rect key="frame" x="32" y="498" width="246" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
@@ -658,7 +658,7 @@
                                     <action selector="saveWaterString:" destination="IJJ-JE-TzW" eventType="touchUpInside" id="oN6-N2-9hN"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-2R-pKW" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9FB-2R-pKW" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="356" width="311" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -689,7 +689,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCe-HZ-dLr">
-                                <rect key="frame" x="348" y="498" width="25" height="42"/>
+                                <rect key="frame" x="302" y="498" width="33" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -727,7 +727,7 @@
         <!--Walk View Controller-->
         <scene sceneID="95x-aU-gdp">
             <objects>
-                <viewController storyboardIdentifier="walk" id="Plx-Ib-aFp" customClass="WalkViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="walk" id="Plx-Ib-aFp" customClass="WalkViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mx6-gm-8mA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -759,7 +759,7 @@
                                 <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGW-JO-Nm7" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGW-JO-Nm7" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="246" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -781,7 +781,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erT-RZ-Fdl" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erT-RZ-Fdl" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="369" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -802,14 +802,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-ep-KAk">
-                                <rect key="frame" x="337" y="606" width="37" height="42"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-pa-ccU" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Auy-pa-ccU" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="32" y="484" width="302" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -830,8 +823,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uW-M3-Wsl" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
-                                <rect key="frame" x="32" y="606" width="302" height="42"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uW-M3-Wsl" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
+                                <rect key="frame" x="32" y="606" width="246" height="42"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
@@ -893,6 +886,13 @@
                                     <action selector="closePage:" destination="Plx-Ib-aFp" eventType="touchUpInside" id="AsJ-mt-hZw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNj-ep-KAk">
+                                <rect key="frame" x="302" y="606" width="33" height="42"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="0.76642765420000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -926,7 +926,7 @@
         <!--End Input Condition View Controller-->
         <scene sceneID="ECO-dJ-of1">
             <objects>
-                <viewController storyboardIdentifier="EndInputConditionView" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r4V-1K-9p9" customClass="EndInputConditionViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndInputConditionView" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r4V-1K-9p9" customClass="EndInputConditionViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J78-yh-OXY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

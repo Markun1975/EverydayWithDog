@@ -10,7 +10,7 @@
         <!--Data Source-->
         <scene sceneID="B3J-tT-PMq">
             <objects>
-                <viewController id="u4p-VT-2wz" customClass="CalendarViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u4p-VT-2wz" customClass="CalendarViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xp4-ja-S6F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,18 +161,19 @@
         <!--Calendar Modal View Controller-->
         <scene sceneID="R4a-Vk-Ha7">
             <objects>
-                <viewController id="6em-QO-BaO" customClass="CalendarModalViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6em-QO-BaO" customClass="CalendarModalViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTM-eq-e5v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFt-jy-qxP">
-                                <rect key="frame" x="0.0" y="107" width="375" height="702"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="702"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8b-wx-Yzk">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1000" id="3Iw-ZL-RDH"/>
+                                            <constraint firstAttribute="width" secondItem="i8b-wx-Yzk" secondAttribute="height" multiplier="3:8" id="mba-Cx-5g1"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="ohf-UA-TcX" kind="embed" id="xml-g0-34Y"/>
@@ -203,14 +204,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zFt-jy-qxP" firstAttribute="top" secondItem="mMv-6J-sFU" secondAttribute="top" constant="51" id="1Wx-oq-e1H"/>
+                            <constraint firstItem="zFt-jy-qxP" firstAttribute="top" secondItem="mMv-6J-sFU" secondAttribute="top" constant="52" id="1Wx-oq-e1H"/>
                             <constraint firstItem="mMv-6J-sFU" firstAttribute="trailing" secondItem="xGv-YR-jcb" secondAttribute="trailing" constant="332" id="Gpq-ZT-obD"/>
                             <constraint firstItem="xGv-YR-jcb" firstAttribute="leading" secondItem="mMv-6J-sFU" secondAttribute="leading" constant="8" id="PH0-V5-Qf7"/>
                             <constraint firstItem="zFt-jy-qxP" firstAttribute="centerX" secondItem="tTM-eq-e5v" secondAttribute="centerX" id="gpr-ro-RIL"/>
-                            <constraint firstItem="zFt-jy-qxP" firstAttribute="top" secondItem="xGv-YR-jcb" secondAttribute="bottom" constant="8" id="kWj-BP-SMh"/>
+                            <constraint firstItem="zFt-jy-qxP" firstAttribute="top" secondItem="xGv-YR-jcb" secondAttribute="bottom" constant="9" id="kWj-BP-SMh"/>
                             <constraint firstItem="zFt-jy-qxP" firstAttribute="leading" secondItem="mMv-6J-sFU" secondAttribute="leading" id="koz-uW-FTj"/>
                             <constraint firstItem="xGv-YR-jcb" firstAttribute="top" secondItem="mMv-6J-sFU" secondAttribute="top" constant="8" id="nSz-Yo-2JT"/>
-                            <constraint firstItem="mMv-6J-sFU" firstAttribute="bottom" secondItem="zFt-jy-qxP" secondAttribute="bottom" constant="-85" id="wdg-Rh-dDm"/>
+                            <constraint firstItem="mMv-6J-sFU" firstAttribute="bottom" secondItem="zFt-jy-qxP" secondAttribute="bottom" constant="-86" id="wdg-Rh-dDm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mMv-6J-sFU"/>
                     </view>
@@ -223,7 +224,7 @@
         <!--End Input Schedule View Controller-->
         <scene sceneID="spL-Nq-J6V">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="JIL-Jy-cGA" customClass="EndInputScheduleViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="JIL-Jy-cGA" customClass="EndInputScheduleViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAy-Iv-d1k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,21 +338,11 @@
         <!--Input Schedule View Controller-->
         <scene sceneID="u4b-dZ-KlL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ohf-UA-TcX" customClass="InputScheduleViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Ss-hU-cx1">
+                <viewController modalPresentationStyle="fullScreen" id="ohf-UA-TcX" customClass="InputScheduleViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Ss-hU-cx1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-YT-4tr">
-                                <rect key="frame" x="24" y="52" width="327" height="42"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="DQM-YT-4tr" secondAttribute="height" multiplier="109:14" id="qrE-Xc-gxi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" white="0.0" alpha="0.8729933647" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="vmm-rE-K6w">
                                 <rect key="frame" x="24" y="118" width="327" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -411,7 +402,7 @@
                                 <color key="textColor" white="0.0" alpha="0.76559824489999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baG-Xg-UvH" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baG-Xg-UvH" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="24" y="407" width="327" height="42"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.87007705479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -445,7 +436,7 @@
                                 <color key="textColor" white="0.0" alpha="0.76554473460000005" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LS-QA-C3K" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1LS-QA-C3K" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="24" y="576" width="327" height="42"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.8709867295" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -470,7 +461,7 @@
                                 <color key="textColor" white="0.0" alpha="0.77052119009999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-QZ-oFK" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-QZ-oFK" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="24" y="678" width="327" height="134"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -505,7 +496,7 @@
                                     <segue destination="JIL-Jy-cGA" kind="push" id="LvI-ND-hZ7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lf-DJ-UKG" customClass="InputTextField" customModule="EverydayWithDog" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9lf-DJ-UKG" customClass="InputTextField" customModule="EverydayWithDogs" customModuleProvider="target">
                                 <rect key="frame" x="24" y="154" width="327" height="42"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="0.87007705479999997" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -523,6 +514,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000596046448" translatesAutoresizingMaskIntoConstraints="NO" id="DQM-YT-4tr">
+                                <rect key="frame" x="24" y="28" width="327" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DQM-YT-4tr" secondAttribute="height" multiplier="109:14" id="qrE-Xc-gxi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="0.8729933647" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -561,7 +562,7 @@
                             <constraint firstItem="PxJ-ok-PB5" firstAttribute="height" secondItem="bW2-Xe-1Bb" secondAttribute="height" id="KRU-CF-dfV"/>
                             <constraint firstItem="DQM-YT-4tr" firstAttribute="leading" secondItem="fEk-ry-mKO" secondAttribute="leading" constant="24" id="Kln-qc-rdW"/>
                             <constraint firstItem="AaJ-QZ-oFK" firstAttribute="top" secondItem="TUT-pM-ygr" secondAttribute="bottom" constant="16" id="KrJ-D7-wHG"/>
-                            <constraint firstItem="DQM-YT-4tr" firstAttribute="top" secondItem="fEk-ry-mKO" secondAttribute="top" constant="8" id="M5L-Dd-aYJ"/>
+                            <constraint firstItem="DQM-YT-4tr" firstAttribute="top" secondItem="fEk-ry-mKO" secondAttribute="top" constant="-16" id="M5L-Dd-aYJ"/>
                             <constraint firstItem="vmm-rE-K6w" firstAttribute="width" secondItem="kyR-Mh-ofC" secondAttribute="width" id="MUk-8D-EVv"/>
                             <constraint firstItem="fmV-zX-CGA" firstAttribute="leading" secondItem="gHz-DD-Iko" secondAttribute="trailing" constant="35.670000000000002" id="N7A-fc-C3Z"/>
                             <constraint firstItem="kyR-Mh-ofC" firstAttribute="leading" secondItem="sxG-6h-nFV" secondAttribute="leading" id="N87-hj-d8U"/>
@@ -574,7 +575,6 @@
                             <constraint firstItem="1LS-QA-C3K" firstAttribute="height" secondItem="baG-Xg-UvH" secondAttribute="height" id="UyD-qQ-SF6"/>
                             <constraint firstItem="sxG-6h-nFV" firstAttribute="leading" secondItem="fEk-ry-mKO" secondAttribute="leading" constant="24" id="V7E-2x-2Ln"/>
                             <constraint firstItem="XD9-cM-Hcv" firstAttribute="top" secondItem="kyR-Mh-ofC" secondAttribute="bottom" constant="16" id="Wu6-x3-X4I"/>
-                            <constraint firstItem="bW2-Xe-1Bb" firstAttribute="height" secondItem="1Ss-hU-cx1" secondAttribute="height" multiplier="0.02" id="Z47-T6-izC"/>
                             <constraint firstItem="DQM-YT-4tr" firstAttribute="trailing" secondItem="vmm-rE-K6w" secondAttribute="trailing" id="bJu-Io-MT2"/>
                             <constraint firstItem="gHz-DD-Iko" firstAttribute="leading" secondItem="sxG-6h-nFV" secondAttribute="trailing" constant="35.670000000000002" id="cLE-zC-HrD"/>
                             <constraint firstItem="PxJ-ok-PB5" firstAttribute="trailing" secondItem="baG-Xg-UvH" secondAttribute="trailing" id="dMh-cc-1zo"/>
@@ -589,7 +589,7 @@
                             <constraint firstItem="gHz-DD-Iko" firstAttribute="width" secondItem="fmV-zX-CGA" secondAttribute="height" multiplier="1:1" id="lfK-is-Xkl"/>
                             <constraint firstItem="fmV-zX-CGA" firstAttribute="width" secondItem="XD9-cM-Hcv" secondAttribute="height" multiplier="1:1" id="nq0-aM-QGP"/>
                             <constraint firstItem="gHz-DD-Iko" firstAttribute="width" secondItem="fmV-zX-CGA" secondAttribute="width" id="oQ8-yy-sW0"/>
-                            <constraint firstItem="vmm-rE-K6w" firstAttribute="top" secondItem="DQM-YT-4tr" secondAttribute="bottom" constant="24" id="q4e-Ws-O0h"/>
+                            <constraint firstItem="vmm-rE-K6w" firstAttribute="top" secondItem="DQM-YT-4tr" secondAttribute="bottom" constant="48" id="q4e-Ws-O0h"/>
                             <constraint firstItem="baG-Xg-UvH" firstAttribute="top" secondItem="PxJ-ok-PB5" secondAttribute="bottom" constant="16" id="qLm-Lp-QUp"/>
                             <constraint firstItem="kyR-Mh-ofC" firstAttribute="top" secondItem="9lf-DJ-UKG" secondAttribute="bottom" constant="24" id="rM6-aP-E4k"/>
                             <constraint firstItem="bW2-Xe-1Bb" firstAttribute="leading" secondItem="PxJ-ok-PB5" secondAttribute="leading" id="s4b-xB-dBs"/>
@@ -603,6 +603,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fEk-ry-mKO"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="blueButton" destination="gHz-DD-Iko" id="zRW-5C-I4s"/>
                         <outlet property="greenButton" destination="XD9-cM-Hcv" id="WpG-y0-ohm"/>

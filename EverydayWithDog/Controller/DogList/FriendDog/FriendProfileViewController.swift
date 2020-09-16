@@ -14,7 +14,8 @@ import FirebaseStorage
 import FirebaseFirestore
 
 class FriendProfileViewController: UIViewController {
- 
+    @IBOutlet var TopFriendProfileView: UIView!
+    
  var profileImageData = UIImage()
  var profile:String! //プロフィール写真
  var name:String! //名前

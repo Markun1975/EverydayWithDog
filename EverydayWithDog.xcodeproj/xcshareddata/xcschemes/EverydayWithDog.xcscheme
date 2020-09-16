@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F479312B23D9549000125D47"
-               BuildableName = "EverydayWithDog.app"
+               BuildableName = "EverydayWithDogs.app"
                BlueprintName = "EverydayWithDog"
                ReferencedContainer = "container:EverydayWithDog.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F479312B23D9549000125D47"
-            BuildableName = "EverydayWithDog.app"
+            BuildableName = "EverydayWithDogs.app"
             BlueprintName = "EverydayWithDog"
             ReferencedContainer = "container:EverydayWithDog.xcodeproj">
          </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F479312B23D9549000125D47"
-            BuildableName = "EverydayWithDog.app"
+            BuildableName = "EverydayWithDogs.app"
             BlueprintName = "EverydayWithDog"
             ReferencedContainer = "container:EverydayWithDog.xcodeproj">
          </BuildableReference>

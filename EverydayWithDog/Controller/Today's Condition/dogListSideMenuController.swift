@@ -5,7 +5,6 @@
 //  Created by Masaki on 2/28/2 R.
 //  Copyright © 2 Reiwa Sugita Masaki. All rights reserved.
 //
-
 import UIKit
 import SideMenu
 import Firebase
@@ -52,9 +51,9 @@ class dogListSideMenuController: UITableViewController {
         
     //名前を表示
         cell.textLabel?.text = self.dogInfoArray[indexPath.row].nameString
-        let ID = self.dogInfoArray[indexPath.row].dogID
+        _ = self.dogInfoArray[indexPath.row].dogID
         
-        let NAME = self.dogInfoArray[indexPath.row].nameString
+        _ = self.dogInfoArray[indexPath.row].nameString
         return cell
     }
     

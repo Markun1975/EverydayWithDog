@@ -49,9 +49,13 @@ class newAccountViewController: UIViewController {
               guard let self = self else {
                 return
             }
-            
             let user = result?.user
-            self.sendMail(to: user!)
+            
+            guard user == nil else {
+                self.sendMail(to: user!)
+                return
+            }
+            self.showError(error)
         }}
     
 

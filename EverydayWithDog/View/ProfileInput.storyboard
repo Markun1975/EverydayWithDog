@@ -10,7 +10,7 @@
         <!--わんこリスト-->
         <scene sceneID="NtM-95-lo8">
             <objects>
-                <viewController storyboardIdentifier="DogListViewController" id="e1e-96-dUj" customClass="DogListViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogListViewController" id="e1e-96-dUj" customClass="DogListViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="194-eo-5a4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
         <!--Profile View Controller-->
         <scene sceneID="BYf-sm-kvt">
             <objects>
-                <viewController storyboardIdentifier="friendProfileView" id="cyX-Q8-1Th" userLabel="Profile View Controller" customClass="FriendProfileViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="friendProfileView" id="cyX-Q8-1Th" userLabel="Profile View Controller" customClass="FriendProfileViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxq-yO-K2v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,24 +68,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" id="aMj-EH-7wa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-iE-crD">
-                                        <rect key="frame" x="15" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="close"/>
-                                        <connections>
-                                            <action selector="closeProfile:" destination="cyX-Q8-1Th" eventType="touchUpInside" id="XCH-zo-gOV"/>
-                                            <action selector="closeProfile:" destination="ngD-7c-INd" eventType="touchUpInside" id="aPL-mI-AGF"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.42352941176470588" green="0.83137254901960778" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <viewLayoutGuide key="safeArea" id="AlC-DY-ihA"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdC-bT-uvh">
                                 <rect key="frame" x="53" y="771" width="269" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -94,10 +76,44 @@
                                     <action selector="friendDogDeleteMethod:" destination="cyX-Q8-1Th" eventType="touchUpInside" id="gnI-31-Sth"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-wS-7f1">
-                                <rect key="frame" x="130" y="60" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-4c-RUP" userLabel="ProfileBaseView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJT-zr-vfX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                        <color key="backgroundColor" red="0.42352941176470588" green="0.83137254901960778" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rJT-zr-vfX" secondAttribute="height" multiplier="25:7" id="Sf9-kd-idk"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gaa-wS-7f1">
+                                        <rect key="frame" x="140" y="48" width="95" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Gaa-wS-7f1" secondAttribute="height" multiplier="1:1" id="cZx-Ka-LCO"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gaa-wS-7f1" firstAttribute="centerX" secondItem="rJT-zr-vfX" secondAttribute="centerX" id="8OY-Eh-1bf"/>
+                                    <constraint firstItem="rJT-zr-vfX" firstAttribute="leading" secondItem="zVu-4c-RUP" secondAttribute="leading" id="JV8-3M-Oyj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gaa-wS-7f1" secondAttribute="bottom" constant="-3" id="MHx-Dl-FA2"/>
+                                    <constraint firstItem="Gaa-wS-7f1" firstAttribute="top" secondItem="zVu-4c-RUP" secondAttribute="top" constant="48" id="Ueb-nS-WQj"/>
+                                    <constraint firstItem="rJT-zr-vfX" firstAttribute="top" secondItem="zVu-4c-RUP" secondAttribute="top" id="ZsB-qU-QBl"/>
+                                    <constraint firstAttribute="width" secondItem="zVu-4c-RUP" secondAttribute="height" multiplier="375:151" constant="27.317880794701978" id="f3j-fL-qWc"/>
+                                    <constraint firstAttribute="trailing" secondItem="rJT-zr-vfX" secondAttribute="trailing" id="rZJ-ag-SxC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9n-hc-O3o">
+                                <rect key="frame" x="14" y="-2" width="51" height="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeProfile:" destination="cyX-Q8-1Th" eventType="touchUpInside" id="5zd-4V-0ws"/>
+                                    <action selector="closeProfile:" destination="ngD-7c-INd" eventType="touchUpInside" id="RNL-sF-2d3"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ckY-cw-sCu">
                                 <rect key="frame" x="280" y="192" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -119,10 +135,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zVu-4c-RUP" firstAttribute="leading" secondItem="5XT-h3-S83" secondAttribute="leading" id="8Ys-Z3-NjS"/>
+                            <constraint firstItem="zVu-4c-RUP" firstAttribute="trailing" secondItem="5XT-h3-S83" secondAttribute="trailing" id="Vvu-zN-PQE"/>
+                            <constraint firstItem="zVu-4c-RUP" firstAttribute="top" secondItem="oxq-yO-K2v" secondAttribute="top" id="r9W-WG-yzw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5XT-h3-S83"/>
                     </view>
                     <connections>
                         <outlet property="Label1" destination="thc-Qp-Dv4" id="hyz-PV-LWE"/>
+                        <outlet property="TopFriendProfileView" destination="rJT-zr-vfX" id="oSy-J3-PU8"/>
                         <outlet property="memoLabel" destination="W3i-3D-Tfd" id="Ohg-Ol-Ngf"/>
                         <outlet property="nameLabel" destination="9N8-sG-PHJ" id="UeC-KR-u0C"/>
                         <outlet property="profileIconImage" destination="Gaa-wS-7f1" id="8Zv-mK-sLK"/>
@@ -137,7 +159,7 @@
         <!--Profile View Controller-->
         <scene sceneID="gl8-Oz-bny">
             <objects>
-                <viewController storyboardIdentifier="profileView" id="ngD-7c-INd" customClass="ProfileViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileView" id="ngD-7c-INd" customClass="ProfileViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6d-3f-V9Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,21 +262,44 @@
                                 <color key="textColor" white="0.0" alpha="0.77255458047945191" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kv-Sr-wqt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXK-7a-UdU" userLabel="ProfileBaseView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw0-gW-AQ5">
-                                        <rect key="frame" x="15" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="close"/>
-                                        <connections>
-                                            <action selector="closeProfile:" destination="ngD-7c-INd" eventType="touchUpInside" id="dQx-di-pWl"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Kv-Sr-wqt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw0-gW-AQ5">
+                                                <rect key="frame" x="14" y="-3" width="52" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="close"/>
+                                                <connections>
+                                                    <action selector="closeProfile:" destination="ngD-7c-INd" eventType="touchUpInside" id="dQx-di-pWl"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sTS-yC-ihe">
+                                                <rect key="frame" x="140" y="48" width="95" height="95"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="sTS-yC-ihe" secondAttribute="height" multiplier="1:1" id="R1n-A7-cCd"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.3411764705882353" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5Kv-Sr-wqt" secondAttribute="height" multiplier="25:7" id="4t3-CB-cZw"/>
+                                            <constraint firstAttribute="bottom" secondItem="sTS-yC-ihe" secondAttribute="bottom" constant="-38" id="CnE-wk-WSj"/>
+                                            <constraint firstItem="sTS-yC-ihe" firstAttribute="top" secondItem="5Kv-Sr-wqt" secondAttribute="top" constant="48" id="OvK-ma-xcE"/>
+                                            <constraint firstItem="sTS-yC-ihe" firstAttribute="centerX" secondItem="5Kv-Sr-wqt" secondAttribute="centerX" id="zsB-S7-nXc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.3411764705882353" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5Kv-Sr-wqt" firstAttribute="top" secondItem="qXK-7a-UdU" secondAttribute="top" id="Bdt-SK-zPO"/>
+                                    <constraint firstAttribute="width" secondItem="qXK-7a-UdU" secondAttribute="height" multiplier="375:151" constant="27.317880794701978" id="f3G-kB-H1L"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Kv-Sr-wqt" secondAttribute="trailing" id="ipd-Sc-1Og"/>
+                                    <constraint firstItem="5Kv-Sr-wqt" firstAttribute="leading" secondItem="qXK-7a-UdU" secondAttribute="leading" id="iqv-YM-cgH"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ポチ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="xX9-D6-5rC">
                                 <rect key="frame" x="102" y="189" width="170" height="30"/>
@@ -264,10 +309,6 @@
                                 <color key="textColor" white="0.0" alpha="0.76744434931506844" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTS-yC-ihe">
-                                <rect key="frame" x="130" y="60" width="115" height="115"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="犬種" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="yWu-bK-cl3">
                                 <rect key="frame" x="46" y="235" width="101" height="19"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -345,6 +386,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qXK-7a-UdU" firstAttribute="trailing" secondItem="EgS-Dc-G1V" secondAttribute="trailing" id="BdE-kW-clD"/>
+                            <constraint firstItem="qXK-7a-UdU" firstAttribute="top" secondItem="y6d-3f-V9Q" secondAttribute="top" id="QIO-Us-w3H"/>
+                            <constraint firstItem="qXK-7a-UdU" firstAttribute="leading" secondItem="EgS-Dc-G1V" secondAttribute="leading" id="rW8-Oq-ZAN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EgS-Dc-G1V"/>
                     </view>
                     <navigationItem key="navigationItem" id="uyh-Ad-e4c"/>
@@ -377,7 +423,7 @@
         <!--お友達登録-->
         <scene sceneID="i04-70-DiB">
             <objects>
-                <viewController id="zfC-4u-FMl" customClass="FriendProfileInputControllerViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zfC-4u-FMl" customClass="FriendProfileInputControllerViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eHF-qb-zR8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,7 +442,7 @@
         <!--アカウント-->
         <scene sceneID="4ky-uJ-wME">
             <objects>
-                <viewController id="reD-Nh-40a" customClass="SettingViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="reD-Nh-40a" customClass="SettingViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWU-W1-HJN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,7 +629,7 @@
         <!--ワンちゃんプロフィール-->
         <scene sceneID="Smm-LO-jug">
             <objects>
-                <viewController id="V8c-fW-ppJ" customClass="ProfileInputController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V8c-fW-ppJ" customClass="ProfileInputController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aeV-CU-GXt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -606,7 +652,7 @@
         <!--Touroku.view-->
         <scene sceneID="MOe-O4-nSd">
             <objects>
-                <viewController title="Touroku.view" id="2dG-rz-w2X" customClass="completeRegisterViewController" customModule="EverydayWithDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Touroku.view" id="2dG-rz-w2X" customClass="completeRegisterViewController" customModule="EverydayWithDogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qO5-tT-kbV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

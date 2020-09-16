@@ -71,6 +71,7 @@
 		F4A60E73247CB0FB00C31767 /* FetchDogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A60E72247CB0FB00C31767 /* FetchDogData.swift */; };
 		F4B7577A246D4EAE00753745 /* DataLogTableViewCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B75778246D4EAE00753745 /* DataLogTableViewCelll.swift */; };
 		F4B7577B246D4EAE00753745 /* DataLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B75779246D4EAE00753745 /* DataLogTableViewCell.xib */; };
+		F4BB34102510D6F300E7125D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4BB34122510D6F300E7125D /* Localizable.strings */; };
 		F4BEFAB523FA760E00BAC3DF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */; };
 		F4C83E992414D7730036BF26 /* ScheduleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E982414D7730036BF26 /* ScheduleContent.swift */; };
 		F4C83E9C24154B3B0036BF26 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */; };
@@ -126,7 +127,7 @@
 		F479313123D9549000125D47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F479313B23D9549900125D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F479313D23D9549900125D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F479314F23D95C1300125D47 /* EverydayWithDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverydayWithDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F479314F23D95C1300125D47 /* EverydayWithDogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverydayWithDogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F479315023D95DE200125D47 /* newAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newAccountViewController.swift; sourceTree = "<group>"; };
 		F479315223D960BB00125D47 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F479315423D9617A00125D47 /* confirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +158,10 @@
 		F4B75770246C5D3200753745 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F4B75778246D4EAE00753745 /* DataLogTableViewCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLogTableViewCelll.swift; sourceTree = "<group>"; };
 		F4B75779246D4EAE00753745 /* DataLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataLogTableViewCell.xib; sourceTree = "<group>"; };
+		F4BB34002510D1BB00E7125D /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Main.strings"; sourceTree = "<group>"; };
+		F4BB34012510D1C200E7125D /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		F4BB34112510D6F300E7125D /* ja-JP */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ja-JP"; path = "ja-JP.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F4BB34132510D70B00E7125D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4BEFAB423FA760E00BAC3DF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F4C83E982414D7730036BF26 /* ScheduleContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleContent.swift; sourceTree = "<group>"; };
 		F4C83E9A24154B3B0036BF26 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -284,10 +289,11 @@
 		F479312323D9548F00125D47 = {
 			isa = PBXGroup;
 			children = (
+				F4BB34122510D6F300E7125D /* Localizable.strings */,
 				F479312E23D9549000125D47 /* EverydayWithDog */,
 				291AEC7FCFC3CB3292F39DC8 /* Pods */,
 				BE30E040F38EDEDB704765DD /* Frameworks */,
-				F479314F23D95C1300125D47 /* EverydayWithDog.app */,
+				F479314F23D95C1300125D47 /* EverydayWithDogs.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -391,7 +397,7 @@
 			);
 			name = EverydayWithDog;
 			productName = EverydayWithDog;
-			productReference = F479314F23D95C1300125D47 /* EverydayWithDog.app */;
+			productReference = F479314F23D95C1300125D47 /* EverydayWithDogs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -417,6 +423,7 @@
 				en,
 				Base,
 				ja,
+				"ja-JP",
 			);
 			mainGroup = F479312323D9548F00125D47;
 			productRefGroup = F479312323D9548F00125D47;
@@ -449,6 +456,7 @@
 				F444ED22241B664F00466D33 /* check.json in Resources */,
 				F479318323D973D500125D47 /* GoogleService-Info.plist in Resources */,
 				F479318023D96B0F00125D47 /* IMG_2638.PNG in Resources */,
+				F4BB34102510D6F300E7125D /* Localizable.strings in Resources */,
 				F479315A23D9659800125D47 /* ProfileInput.storyboard in Resources */,
 				F4128CBB241B4C8D00A7719F /* dogAnimation.json in Resources */,
 			);
@@ -588,6 +596,7 @@
 				F415C21623E086CB00C50148 /* Base */,
 				F4B7576D246C5D1400753745 /* ja */,
 				F4B7576F246C5D2900753745 /* ja */,
+				F4BB34002510D1BB00E7125D /* ja-JP */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -598,8 +607,18 @@
 				F479313B23D9549900125D47 /* Base */,
 				F4B7576E246C5D1600753745 /* ja */,
 				F4B75770246C5D3200753745 /* ja */,
+				F4BB34012510D1C200E7125D /* ja-JP */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F4BB34122510D6F300E7125D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4BB34112510D6F300E7125D /* ja-JP */,
+				F4BB34132510D70B00E7125D /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -727,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = 3WQ9Z2LKN7;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = EverydayWithDog/Info.plist;
@@ -735,8 +755,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.masaki.EverydayWithDog;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.EverydayWithDogsApp;
+				PRODUCT_NAME = EverydayWithDogs;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -748,6 +769,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = 3WQ9Z2LKN7;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = EverydayWithDog/Info.plist;
@@ -756,8 +778,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.masaki.EverydayWithDog;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.EverydayWithDogsApp;
+				PRODUCT_NAME = EverydayWithDogs;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
